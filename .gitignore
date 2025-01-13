@@ -47,3 +47,17 @@ po/*~
 
 # RStudio Connect folder
 rsconnect/
+
+# Media files
+*.wav
+*.mpg
+
+# Complied files
+*.doc
+*.pdf
+*.png
+*.jpeg
+
+# Meta-process files
+*.log
+*.zip
