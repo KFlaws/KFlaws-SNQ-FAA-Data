@@ -54,6 +54,7 @@ rsconnect/
 
 # Complied files
 *.doc
+*.pdf
 *.png
 *.jpeg
 
