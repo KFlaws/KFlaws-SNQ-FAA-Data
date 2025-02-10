@@ -68,4 +68,4 @@ print(participant_counts)
 
 Next Steps:
 
-Next, I have to calculate FAA for each participant. Once I do this, I can plot both social network size and FAA together which will give me the results and table I need related to the first question and hypothesis for my thesis.
+Next, I have to calculate FAA for each participant. Once I do this, I can plot both social network size and FAA together which will give me the results and table I need related to the first question and hypothesis for my thesis. 
