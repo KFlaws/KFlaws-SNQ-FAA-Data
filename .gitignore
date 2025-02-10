@@ -61,3 +61,6 @@ rsconnect/
 # Meta-process files
 *.log
 *.zip
+
+# Using the wrong data set
+SNQ_Data_Cleaning.qmd
