@@ -24,23 +24,23 @@ To complete this assessment:
 
 ## Basic information
 
-Name:
+Name: Kristen Flaws
 
-CNetID:
+CNetID: 12454764
 
-Section:
+Section: 1
 
-Research project title:
+Research project title: SNQ-FAA-Data
 
-Submission date:
+Submission date: 2/10/2025
 
-Submission number (1-4):
+Submission number (1-4): 1
 
-Project GitHub repository URL:
+Project GitHub repository URL: https://github.com/KFlaws/KFlaws-SNQ-FAA-Data/blob/main/SNQ-FAA-Data.qmd
 
-Filename of manuscript .qmd:
+Filename of manuscript .qmd: SNQ-FAA-Data.qmd
 
-Filename of knitted .pdf:
+Filename of knitted .pdf: SNQ-FAA-Data.pdf
 
 ## Basic requirements
 
@@ -62,7 +62,7 @@ Refer to the website for general tips on meeting these objectives and an FAQ.
     2.  Uses relative paths correctly
     3.  Does not have duplicate/redundant elements
 
-        -   [ ] Objective attempt
+        -   [X] Objective attempt
         -   [ ] Objective met
         -   Grader comments: 
 
@@ -71,7 +71,7 @@ Refer to the website for general tips on meeting these objectives and an FAQ.
     1.  Includes description of repo purpose, data use, research questions, etc.
     2.  Outlines the repo structure with file tree or similar
 
-        -   [ ] Objective attempt
+        -   [X] Objective attempt
         -   [ ] Objective met
         -   Grader comments:
 
@@ -80,7 +80,7 @@ Refer to the website for general tips on meeting these objectives and an FAQ.
     1.  All scripts run and all notebooks render if the repo is cloned to another location
     2.  .gitingore comprehensively excludes unnecessary, private, and very large files and is be commeted appropriately
 
-        -   [ ] Objective attempt
+        -   [X] Objective attempt
         -   [ ] Objective met
         -   Grader comments:
 
@@ -89,7 +89,7 @@ Refer to the website for general tips on meeting these objectives and an FAQ.
     1.  Used frequent, informative commit messages
     2.  Relies on document revisions rather than manually created new versions
 
-        -   [ ] Objective attempt
+        -   [X] Objective attempt
         -   [ ] Objective met
         -   Grader comments:
 
@@ -102,7 +102,7 @@ Refer to the website for general tips on meeting these objectives and an FAQ.
         2. When a reader opts-in to installing packages by uncommenting the code, it runs without errors 
     2. Uses more than one function to install/load/require packages (including those used in commented code)
 
-        -   [ ] Objective attempt
+        -   [X] Objective attempt
         -   [ ] Objective met
         -   Grader comments:
         
@@ -140,7 +140,7 @@ Refer to the website for general tips on meeting these objectives and an FAQ.
     1. Reads in data from at least one source in code chunk or sourced script
     2. Writes out intermediate and/or final datasets in code chunks or sourced scripts
 
-        -   [ ] Objective attempt
+        -   [X] Objective attempt
         -   [ ] Objective met
         -   Grader comments:
 
@@ -150,7 +150,7 @@ Refer to the website for general tips on meeting these objectives and an FAQ.
     2. Uses at least 1 `tidyr` function in a data transformation pipeline
     3. Combines `dplyr` and `tidyr` functions in a data transformation pipeline
 
-        -   [ ] Objective attempt
+        -   [X] Objective attempt
         -   [ ] Objective met
         -   Grader comments:
 
@@ -277,7 +277,7 @@ Refer to the website for general tips on meeting these objectives and an FAQ.
     3.  Follows the "1-chunk-1-thing" rule
     4.  Chunks are distributed throughout the manuscript, sensibly placed near the text they support
 
-        -   [ ] Objective attempt
+        -   [X] Objective attempt
         -   [ ] Objective met
         -   Grader comments: 
         
@@ -288,7 +288,7 @@ Refer to the website for general tips on meeting these objectives and an FAQ.
     3. Sets preferences/options in at least 1 code chunk
     4. Organizes setup chunks sensibly
 
-        -   [ ] Objective attempt
+        -   [X] Objective attempt
         -   [ ] Objective met
         -   Grader comments:
         
@@ -300,7 +300,7 @@ Refer to the website for general tips on meeting these objectives and an FAQ.
     4. All tables and figures are referenced in the narrative text (e.g., Figure 1)
     5. References render without error and link to the correct table/figure in pdf/html output
 
-        -   [ ] Objective attempt
+        -   [X] Objective attempt
         -   [ ] Objective met
         -   Grader comments:
 
@@ -322,7 +322,7 @@ Refer to the website for general tips on meeting these objectives and an FAQ.
     
     1. Includes all necessary metadata, output options, and formatting options necessary to render an APA styled document (or other specified style if appropriate for the project)
 
-        -   [ ] Objective attempt
+        -   [X] Objective attempt
         -   [ ] Objective met
         -   Grader comments:
         
