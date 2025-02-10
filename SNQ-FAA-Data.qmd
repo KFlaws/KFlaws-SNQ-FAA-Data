@@ -5,6 +5,18 @@ format: html
 editor: visual
 ---
 
+Load SNQ Dataset
+
+```{r}
+#| label: load_dataset
+
+library(dplyr)
+library(readr)
+
+Expanded_VP_EEG_SNQ <- read.csv("~/Desktop/d2mr/Expanded_VP_EEG_SNQ.csv", header=FALSE)
+snq <- Expanded_VP_EEG_SNQ
+```
+
 Remove Unnecessary Columns
 
 ```{r}
