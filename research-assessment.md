@@ -44,7 +44,7 @@ Filename of knitted .pdf: SNQ-FAA-Data.pdf
 
 ## Basic requirements
 
-Basic requirements for the dataset are as follows:
+Basic requirements for the dataset are as follows: Dataset is "Expanded_VP_EEG_SNQ.csv"
 
 ## Assessment
 
