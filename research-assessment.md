@@ -26,7 +26,7 @@ To complete this assessment:
 
 Name: Kristen Flaws
 
-CNetID: 12454764
+CNetID: kflaws
 
 Section: 1
 
@@ -36,7 +36,7 @@ Submission date: 2/10/2025
 
 Submission number (1-4): 1
 
-Project GitHub repository URL: https://github.com/KFlaws/KFlaws-SNQ-FAA-Data/blob/main/SNQ-FAA-Data.qmd
+Project GitHub repository URL: [https://github.com/KFlaws/KFlaws-SNQ-FAA-Data/blob/main/SNQ-FAA-Data.qmd](https://github.com/KFlaws/KFlaws-SNQ-FAA-Data.git)
 
 Filename of manuscript .qmd: SNQ-FAA-Data.qmd
 
