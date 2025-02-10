@@ -1,0 +1,59 @@
+---
+title: "SNQ-FAA-Data"
+author: Kristen Flaws
+format: html
+editor: visual
+---
+
+Remove Unnecessary Columns
+
+```{r}
+#| label: remove-columns
+# The SNQ collects demographic information that is not neccesary for what I am looking at. I am using this code to remove all columns that I do not need.
+
+library(dplyr)
+snq <- snq %>%
+  select(-5, -6, -7, -8, -9, -10, -11, -12, -13, -14)
+
+```
+
+Remove Repeated Rows
+
+```{r}
+#| label: remove-repeats
+
+# Repeated rows are indicated with a 1 in column V2. All rows that are necessary for counting social network size have 'NA' in that column.
+
+snq <- subset(snq, V2 != 1 | is.na(V2))
+```
+
+Remove Column V2
+
+```{r}
+#| label: remove-v2
+
+#Now that I have removed all unnecessary rows, column V2 only has 'NA' values and therfore can be removed. The cleaned data set that is left is all I need to calculate social network size for each participant.
+
+library(dplyr)
+snq <- snq %>%
+  select(-2)
+
+```
+
+Count Occurrences for Each Participant
+
+```{r}
+#| label: calculate-sns
+
+#Now I can calculate social network size for each participant. I need R to count the number of occurrences for each participant. The number produced for each participant is their social network size that I will use for my data analysis.
+
+participant_counts <- snq %>%
+  group_by(V1) %>%
+  tally()
+
+print(participant_counts)
+```
+
+Next Steps:
+
+Next, I have to calculate FAA for each participant. Once I do this, I can plot both social network size and FAA together which will give me the results and table I need related to the first question and hypothesis for my thesis.
