@@ -63,7 +63,7 @@ Refer to the website for general tips on meeting these objectives and an FAQ.
     3.  Does not have duplicate/redundant elements
 
         -   [X] Objective attempt
-        -   [ ] Objective met
+        -   [X] Objective met
         -   Grader comments: 
 
 2.  Maintain an informative and up-to-date README.md
@@ -73,7 +73,7 @@ Refer to the website for general tips on meeting these objectives and an FAQ.
 
         -   [X] Objective attempt
         -   [ ] Objective met
-        -   Grader comments:
+        -   Grader comments: Good overview, but missing a file tree/repo structure explanation.
 
 3.  integrate a GitHub repo with an R studio project, including .gitignore file
 
@@ -81,8 +81,8 @@ Refer to the website for general tips on meeting these objectives and an FAQ.
     2.  .gitingore comprehensively excludes unnecessary, private, and very large files and is be commeted appropriately
 
         -   [X] Objective attempt
-        -   [ ] Objective met
-        -   Grader comments:
+        -   [X] Objective met
+        -   Grader comments: Giving you the point for now, but your read-in chunk does not work because of the absolute path. You'll need to use relative paths to get credit for both this point and the readr point.
 
 4.  effectively use version control
 
@@ -90,7 +90,7 @@ Refer to the website for general tips on meeting these objectives and an FAQ.
     2.  Relies on document revisions rather than manually created new versions
 
         -   [X] Objective attempt
-        -   [ ] Objective met
+        -   [X] Objective met
         -   Grader comments:
 
 ### R programming
@@ -104,7 +104,7 @@ Refer to the website for general tips on meeting these objectives and an FAQ.
 
         -   [X] Objective attempt
         -   [ ] Objective met
-        -   Grader comments:
+        -   Grader comments: Include another install/load/unload/require/etc. function other than library(). Do not reload libraries across multiple chunks; just put them in the setup chunks.
         
 6.  Use arithmetic, comparison, and logical operators
 
@@ -142,7 +142,7 @@ Refer to the website for general tips on meeting these objectives and an FAQ.
 
         -   [X] Objective attempt
         -   [ ] Objective met
-        -   Grader comments:
+        -   Grader comments: Uses an absolute file path, so I have to edit it to make it work. Use relative paths.
 
 10. Use `dplyr` and `tidyr` functions to transform data
 
@@ -152,7 +152,7 @@ Refer to the website for general tips on meeting these objectives and an FAQ.
 
         -   [X] Objective attempt
         -   [ ] Objective met
-        -   Grader comments:
+        -   Grader comments: Although you do pipe data to functions, you don't really have a "pipeline." A tidyverse pipeline is a sequence of operations, with each building on the last. Your functions here don't build on each other.
 
 11. Use `stringr` functions to work with string variables
 
@@ -278,7 +278,7 @@ Refer to the website for general tips on meeting these objectives and an FAQ.
     4.  Chunks are distributed throughout the manuscript, sensibly placed near the text they support
 
         -   [X] Objective attempt
-        -   [ ] Objective met
+        -   [X] Objective met
         -   Grader comments: 
         
 23. Use code chunks to set up a quarto document
@@ -290,7 +290,7 @@ Refer to the website for general tips on meeting these objectives and an FAQ.
 
         -   [X] Objective attempt
         -   [ ] Objective met
-        -   Grader comments:
+        -   Grader comments: Use a setup chunk to set at least 1 default chunk option (like disabling warning messages or hiding raw code).
         
 24. Render publication-quality tables, figures, and images from code chunks
 
@@ -302,7 +302,7 @@ Refer to the website for general tips on meeting these objectives and an FAQ.
 
         -   [X] Objective attempt
         -   [ ] Objective met
-        -   Grader comments:
+        -   Grader comments: I don't see any tables or figures?
 
 25. Execute descriptive analyses and/or hypothesis testing in code chunks
 
@@ -324,7 +324,7 @@ Refer to the website for general tips on meeting these objectives and an FAQ.
 
         -   [X] Objective attempt
         -   [ ] Objective met
-        -   Grader comments:
+        -   Grader comments: Renders to default pdf options without APA styling (use apaquarto yaml options to do so).
         
 27. Use quarto R Markdown to compose an academic manuscript
 
@@ -365,6 +365,14 @@ Refer to the website for general tips on meeting these objectives and an FAQ.
 
         -   [ ] Objective attempt
         -   [ ] Objective met
-        -   Grader comments:        
-        
+        -   Grader comments:   Be sure that when you do attempt this objective you revise your YAML header to output to PDF instead of HTML.
 
+
+## Grading
+
+*All final projects are graded by Dr. Dowling.*
+
+-   **Submission:** 1/4
+-   **Objective points:** 4/30
+-   **Engagement points:** 1/10
+-   **Total points:** 5/40
