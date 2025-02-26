@@ -32,19 +32,60 @@ Section: 1
 
 Research project title: SNQ-FAA-Data
 
-Submission date: 2/10/2025
+Submission date: 2/26/2025
 
-Submission number (1-4): 1
+Submission number (1-4): 2
 
-Project GitHub repository URL: [https://github.com/KFlaws/KFlaws-SNQ-FAA-Data/blob/main/SNQ-FAA-Data.qmd](https://github.com/KFlaws/KFlaws-SNQ-FAA-Data.git)
+Project GitHub repository URL: https://github.com/KFlaws/KFlaws-SNQ-FAA-Data.git
 
 Filename of manuscript .qmd: SNQ-FAA-Data.qmd
 
 Filename of knitted .pdf: SNQ-FAA-Data.pdf
 
-## Basic requirements
+## AI Statement
 
-Basic requirements for the dataset are as follows: Dataset is "Expanded_VP_EEG_SNQ.csv"
+Describe whether and how you used AI/LLMs when completing this project: 
+
+I used ChatGPT for this project to help me understand error messages when they came up.
+
+Optionally (for engagement points) reflect on your use of AI:
+
+I tried to not use ChatGPT for error messages as much as in previous mini-projects, 
+however it is very useful! For this attempt, I made my best effort to follow the slides
+or other walk-throughs to sort out my issues. Still, ChatGPT has been super helpful for me
+especially when I start to get very frustrated with something not working. For this project
+specifically, I used ChatGPT to effectively solve particular issues from my first draft
+(ex. making sure my files are going to a relative, not absolute, path).
+
+## Overall requirements
+
+Overall requirements for the research project are as follows:
+
+1. The project must be a research project. It must provide background on a research topic, ask at least one research question, use data to attempt to answer that question, report the results of the data analysis, and interpret the results in the context of the research question.
+2. The project must be contained in a github repository that follows git best practices and includes all necessary files to run the project from start to finish, including:
+    1. The .qmd file for the manuscript
+    2. All data files used in the project
+    3. All scripts used in the project
+    4. A README.md file & .gitignore file
+3. The project must be reproducible -- a reader should be able to clone the repo and run the .qmd from start to finish without error. The .qmd file should include:
+    1. A YAML header with all fields necessary for an APA manuscript
+    2. Setup source chunks that load libraries, read in data, set chunk options, set seed, etc.
+    3. Minimally, an IMRD structure (Introduction, Methods, Results, Discussion), though it may be more complex
+    4. Integration of markdown and code chunks throughout, following best practices for using code chunks
+    5. Figures and tables rendered in code chunks
+    6. Inline R code & references to render data-dependent text
+    7. At least 1 descriptive analysis and 1 hypothesis test, either in code chunks or sourced scripts
+    8. Frequent and informative code comments throughout
+4. The .qmd file should knit/render to an APA7 formatted manuscript with one click and no errors. The knitted manuscript should include:
+    1. A title page with title, author, and institutional affiliation
+    2. An abstract (this may be minimal, but should exist)
+    3. Narrative text comprising a complete research report
+    4. APA7 references, both in-text citations and a References page
+    5. Publication-ready figures (2+) and tables (1+)
+    6. Results of all analyses presented in-text (and where appropriate, in tables), with no raw R output; where possible, all text should be data-dependent and rendered with inline R code
+    7. Quarto generated references to all figures and tables
+    8. Statistical analyses and figures interpreted in narrative text
+5. The .qmd should render a .pdf identical to the .pdf you submit for grading
 
 ## Assessment
 
@@ -130,7 +171,7 @@ Refer to the website for general tips on meeting these objectives and an FAQ.
     1. Uses conditional in multiple contexts, including dplyr pipelines
     2. Uses multiple types of conditional/loop functions (e.g., `if_else()`, `case_when()`, `for`, `while`)
 
-        -   [ ] Objective attempt
+        -   [X] Objective attempt
         -   [ ] Objective met
         -   Grader comments:
         
@@ -179,7 +220,7 @@ Refer to the website for general tips on meeting these objectives and an FAQ.
     1. Creates at least 2 figures with different `geom_*` layers (e.g., a scatter plot and a bar plot)
     2. At least one plot is multi-variable
 
-        -   [ ] Objective attempt
+        -   [X] Objective attempt
         -   [ ] Objective met
         -   Grader comments:
 
@@ -187,7 +228,7 @@ Refer to the website for general tips on meeting these objectives and an FAQ.
 
     1. Uses at least 2 unique data-mapped `aes()` arguments (e.g., color, shape, size) to group data in a plot in one or multiple plots
 
-        -   [ ] Objective attempt
+        -   [X] Objective attempt
         -   [ ] Objective met
         -   Grader comments:
         
@@ -196,7 +237,7 @@ Refer to the website for general tips on meeting these objectives and an FAQ.
     1. Uses facets in at least 2 ways (e.g., using both `facet_wrap()` and `facet_grid()`), modifying the number of rows and columns, using free vs fixed scales, etc.)
     2. Combines facets with other dynamic grouping aesthetics
 
-        -   [ ] Objective attempt
+        -   [X] Objective attempt
         -   [ ] Objective met
         -   Grader comments:
         
@@ -207,7 +248,7 @@ Refer to the website for general tips on meeting these objectives and an FAQ.
     3. Variables display in plain English (e.g., "Age (years)" not "child_age_yrs"
     4. Uses at least 1 static aesthetic (e.g., color, shape, size) that improves visual clarity without mapping to data
 
-        -   [ ] Objective attempt
+        -   [X] Objective attempt
         -   [ ] Objective met
         -   Grader comments:
 
@@ -229,7 +270,7 @@ Refer to the website for general tips on meeting these objectives and an FAQ.
     2. Performs at least 1 hypothesis test for factor data (e.g., chi-square, ANOVA)
     3. Presents results in narrative text, table, or plot
 
-        -   [ ] Objective attempt
+        -   [X] Objective attempt
         -   [ ] Objective met
         -   Grader comments:
 
@@ -334,7 +375,7 @@ Refer to the website for general tips on meeting these objectives and an FAQ.
     4. Includes at least 1 footnote
     - NOTE: This is going to be one of the most flexible objectives to demonstrate.  You need to demonstrate a range of markdown skills and use them to make a readable, informative manuscript. Hitting the four points above should do that, but you can use your judgment about what kind of markdown features will best serve your project. No matter what, you should use markdown to follow APA7 guidelines.
 
-        -   [ ] Objective attempt
+        -   [X] Objective attempt
         -   [ ] Objective met
         -   Grader comments:
 
@@ -363,7 +404,7 @@ Refer to the website for general tips on meeting these objectives and an FAQ.
     3. PDF renders without error and includes all text, tables, and figures
     4. No additional steps are needed (e.g., finding data, determining necessary packages to install and load, running unsourced scripts)
 
-        -   [ ] Objective attempt
+        -   [X] Objective attempt
         -   [ ] Objective met
         -   Grader comments:   Be sure that when you do attempt this objective you revise your YAML header to output to PDF instead of HTML.
 
