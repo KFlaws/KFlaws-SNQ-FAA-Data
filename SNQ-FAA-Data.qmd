@@ -1,61 +1,158 @@
 ---
-title: "SNQ-FAA-Data"
-author: Kristen Flaws
-format: html
+title: "The relationship between social network size and frontal alpha asymmetry to strangers during infancy: The moderation of temperament"
+shorttitle: "Social Network Size, Frontal Alpha Asymmetry, & Temperament"
+author: 
+  - name: Kristen Flaws
+    corresponding: true
+    orcid: 0009-0008-7373-4992
+    email: kflaws@uchicago.edu
+    affiliations: 
+    - id: id1
+      name: "University of Chicago"
+      department: MA Program in the Social Sciences
+      address: "1155 E 60th St."
+      city: Chicago
+      region: IL
+      country: USA
+      postal-code: 60637
+abstract: "Multiple previous studies have reported the close relationship between children’s social network size and social cognition. However, the connection between social network size and social emotional development has been less examined. The current study aims to examine the connection between infants’ social network sizes and their neural response to strangers. We will examine the relationship between social network sizes and neural responses to strangers during infancy using an infant’s frontal alpha asymmetry (FAA) as a neural indicator. Additionally, we will investigate how temperament, especially fear, can moderate the relationship between social network size and responses to strangers during infancy. Our study will use an Electroencephalogram (EEG) machine to measure the infant's neural processing of strangers, specifically alpha wave frequency, and in turn calculate the infant’s FAA while watching videos of strangers. In order to measure an infant’s temperament and social network size, parents will be instructed to fill out the Revised Infant Behavior Questionnaire (IBQ-R) and Child Social Network Questionnaire (CSNQ). If we find that a larger social network size is associated with more positive FAA while viewing the videos of strangers, we will be further interested in the moderating effect of fear in this relationship. If we find that fear acts as a moderator, we will be able to determine if fear increases or decreases the effectiveness of social network size on infant’s responses to strangers. The findings of this study will contribute to the understanding of the neurological reactions, and affecting factors, toward strangers during infancy."
+keywords: [social network size, frontal alpha asymmetry, fear, temperament, infancy]
+floatsintext: true
+numbered-lines: false
+suppress-title-page: false
+link-citations: true
+draft-date: false
+lang: en
+language:
+  citation-last-author-separator: "and"
+  citation-masked-author: "Masked Citation"
+  citation-masked-date: "n.d."
+  citation-masked-title: "Masked Title"
+  email: "Email"
+  title-block-correspondence-note: "Correspondence concerning this article should be addressed to"
+  title-impact-statement: "Impact Statement"
+format:
+  apaquarto-docx: default
+  apaquarto-html: default
+  apaquarto-typst: 
+    keep-typ: true
+    list-of-figures: true
+    list-of-tables: true
+    toc: true
+  apaquarto-pdf:
+    documentmode: man
+    keep-tex: true
+    list-of-figures: true
+    list-of-tables: true
 editor: visual
 ---
 
-Load SNQ Dataset
-
 ```{r}
-#| label: load_dataset
+#| label: setup
+#| include: false
 
+library(conflicted)
+library(tidyverse)
+library(flextable)
+library(ftExtra)
+library(knitr)
 library(dplyr)
 library(readr)
+library(ggplot2)
+install.packages("lme4")
+library(lme4)
+conflicts_prefer(dplyr::filter, .quiet = TRUE)
+conflicts_prefer(flextable::separate_header, .quiet = TRUE)
 
+```
+
+  Infants learn about the world from the people around them. An infant’s social network allows them to explore the world and learn how to connect and communicate with others. It has been previously suggested that children with a larger social network size are better at taking others’ perspectives (Burke et al., 2023). In the current study, we aim to expand these findings from behavioral domain to neural domain and examine the relation between children’s social network size and their neural responses to strangers during infancy.
+
+## Literature Review
+## *Social Network Size*
+  Previous studies found that social networks play an important role in social cognition throughout infancy and childhood (Burke et al., 2022; Burke et al., 2023). Burke and colleagues (2023) examined the relation between a three year-old’s social network size and their perspective-taking skills. The researchers were observing the children’s basic understanding that what they see may be different from what someone else sees (Burke et al., 2023). The results revealed that children with larger social networks displayed significantly better explicit perspective-taking skills. This finding indicates that a larger social network might improve a child’s ability to consider things from another person’s point of view, or on the other hand,better perspective taking skills can help children build a larger social network (Burke et al., 2023). 
+
+  Some indirect findings also support the role of social networks on the development of social cognition. It has been previously found that children aged 5-11 with at least one sibling are more likely to develop positive peer relationships because having a sibling allows children to have more opportunities to develop social and interpersonal skills during early childhood (Downey & Condron, 2004). These findings support the close relationship between children’s social network size and social cognition. However, the connection between social network size and social emotional development has been less examined. In addition, most studies focused on older children, the role of social network size during the first year of life remains unclear. 
+
+  Based on these gaps in previous studies, the current study will examine the relationship between social network size and response to strangers of infants from 8 - 12 months of age. More specifically, we will focus on infants’ neural responses, frontal alpha asymmetry (FAA), while watching socially interactive videos of strangers.
+
+## *Frontal Alpha Asymmetry*
+  Frontal alpha asymmetry (FAA) is an important neural indicator of infants’ approach/withdrawal tendency (Davidson & Fox, 1982; Fox & Davidson, 1986; Fox, 1991; Garstein et al., 2020; Harrewijn et al., 2019; Haworth et al., 2016). FAA is the measurement of the imbalance in cortical activation between the right and left frontal hemispheres, measured by psycho-physiological markers using electroencephalogram (EEG) (Davidson & Fox, 1982; Fox & Davidson, 1986; Fox, 1991). Rightward/negative FAA signifies increased right hemispheric activation as compared to left and leftward/positive FAA signifies increased left hemispheric activation (Vincent et al., 2021). FAA is thought to be a moderator reflecting fearful inhibition and impulsivity-anger (Liu et al., 2021), with left FAA being associated with higher levels of activity/approach while right FAA is associated with higher levels of fear/withdrawal (Davidson & Fox, 1982; Fox & Davidson, 1986; Fox, 1991; Garstein et al., 2020; Harrewijn et al., 2019; Haworth et al., 2016). Based on these findings, we will use FAA as a neural indicator of infants’ approach/withdrawal tendency towards strangers. 
+
+  It is advantageous to utilize FAA to study the relationship between social network size and infants’ responses to strangers because neural indicators can be more sensitive than behavioral indicators (Davidson & Fox, 1982; Fox & Davidson, 1986; Fox, 1991; Harrewijn et al., 2019; Haworth et al., 2016). The behavioral changes of 8- to 12-month-olds might be too subtle to code, whereas neural indicators can be more sensitive to capture individual differences, given that FAA has been widely used to study individual differences (e.g. motivation, affect, depression severity, Gollan et al., 2014). Furthermore, examining the relationship between social network size and FAA can enhance our understanding of how social networks may shape infant’s brains.
+
+  Previous studies suggest that larger social network sizes are associated with better perspective-taking skills (Burke et al., 2023) and social and interpersonal skills (Downey & Condron, 2004), which indicates a positive relationship between social network sizes and social development. In the current study, we also expect social network sizes to be related to more positive responses to strangers. Since positive FAA is associated with approach tendencies in infants (Davidson & Fox, 1982; Fox & Davidson, 1986; Fox, 1991), we hypothesize that an infant with a larger social network will be more likely to display more positive FAA to strangers. 
+
+## *The Moderating Effect of Temperament*
+  Temperament was found to play a large role in an infant’s responses to strangers (Rubin et al., 2009). Children who are shy or display reticent behavior will show more avoidance to strangers (Rubin et al., 2009). Furthermore, children with different temperament will react to the same environment differently, or in other words, temperament can moderate the effect of the environment on child development. Ertekin and colleagues (2021) found that infants with a more reactive temperament, including higher levels of fear, irritability, and activity may be more sensitive to the surrounding environment as they are more likely to be overwhelmed. More specifically, infants with a higher rate of recovery from distress were less impacted by adverse environments than infants with a low rate of recovery from distress (Ertekin et al., 2021). Another study found that temperament can moderate children’s social wariness towards strangers of the same race and different races than their own (i.e. ‘ingroup’ versus ‘outgroup’, Hwang et al., 2023). More shy children displayed greater social wariness towards strangers of a different race than of the same race to their own, while less shy children did not (Hwang et al., 2023). These findings suggest that individual differences in temperament can have a moderating effect between social environment and children’s responses to strangers.
+
+  Based on these findings, the current study will examine the moderating role of temperament between social network size and infants’ FAA to strangers. Specifically, we will focus on the fear dimension, which refers to the level of fearfulness or anxiousness in response to novel or unfamiliar stimuli (Gartstein & Rothbart, 2003), given that this dimension is viewed as an important characteristic during the first year of life.
+
+## Current Study
+  The current study aims to examine two questions. First, this study will examine the relationship between social network sizes and neural responses to strangers during infancy. We used an infant’s FAA as an indicator of the infant’s neural response to strangers. Given the positive relation between social network sizes and children’ social cognition (Burke et al., 2023; Downey & Condron, 2004), we predicted that larger social network size will correlate with more positive FAA (i.e. increased left frontal activation) toward strangers. 
+
+  The second question we were interested in is how temperament, especially fear, can moderate the relationship between social network size and responses to strangers during infancy. There are three possibilities. First, a high level of fear may weaken the relationship between social network size and an infant’s neural response to strangers. Second, a high level of fear may magnify the relationship between social network size and an infant’s neural response to strangers. The third possibility is that there is no influence of fear on the relationship between social network size and an infant's neural responses to strangers. 
+
+  In summary, this study aimed to examine the connection between infants’ social network sizes and their neural response to strangers. It contributes to the understanding of how early social environments can shape infants’ brains and how individual temperament plays a moderating role. These factors are essential in understanding an infant’s stranger anxiety/fear and are important for caregivers to take into consideration when scaffolding infants build their social networks.
+
+## Methods
+## *Participants*
+  All participants in this study were recruited by the Infant Learning and Development Laboratory at the University of Chicago. The parents of approximately 80 infants from 8 months to 12 months old were asked to participate in the study. Inclusion criteria is as follows: (1) 8 to 12 months of age, (2) English language spoken at least 80% of the time at home, (3) full-term; 37 weeks and beyond gestational age, and (4) no developmental delays.
+
+## *Procedure*
+  Our study uses an Electroencephalogram (EEG) machine and related materials (i.e. infant EEG cap, software, and technical equipment) to measure the infant's neural processing of strangers, specifically alpha wave frequency. During the EEG task, infants watched videos of two strangers grasping a toy alternatively. One stranger speaks English, and the other speaks French. Our analyses focus on infants’ neural responses while watching the native speaker. To calculate FAA, we subtracted the natural log-transformed relative alpha power of the 6-9 Hz frequency band in the left hemisphere from the natural log-transformed relative alpha power in the right hemisphere (Anaya et al., 2021; Vincent et al., 2021; Fox et al., 2001). Therefore, in our calculations of FAA, stronger left frontal activation is indicated by a positive FAA score (Harrewijn et al., 2019; Vincent et al., 2021). 
+
+  In order to measure an infant’s temperament and social network size, parents were instructed to fill out the Revised Infant Behavior Questionnaire (IBQ-R), a parent report of a reaction on a seven point scale during the past one or two weeks, and Child Social Network Questionnaire (CSNQ), a demographic form for each person the child sees on a regular basis, regarding their child (Gartstein & Rothbart, 2003; Burke et al., 2022). 
+
+## *Analyses*
+  This study used linear regression models to examine our hypotheses. First, to examine the relationship between social network sizes and infants’ neural responses to strangers, we conducted a linear regression model, with FAA while viewing the English speaking strangers as the outcome, and social network size as the predictor. Second, to examine the moderating effect of fear between social network sizes and infants’ responses to strangers, we conducted a moderating model with fear scores as the moderator between social network size and infants’ FAA. 
+
+## Results
+
+The results presented below will accomplish the following aims. First, we present the descriptive information about the variables. Next we aim to answer the question: what is the relationship between social network size and frontal alpha asymmetry in infants? And finally, we will look at the potential moderating effect of temperament, specifically fear, between the realtionship of social network size and FAA.
+```{r}
+#| label: load_dataset
+#| include: false
+
+# MAKE THIS A RELATIVE PATH
 Expanded_VP_EEG_SNQ <- read.csv("~/Desktop/d2mr/Expanded_VP_EEG_SNQ.csv", header=FALSE)
 snq <- Expanded_VP_EEG_SNQ
 ```
 
-Remove Unnecessary Columns
 
 ```{r}
 #| label: remove-columns
+#| include: false
 # The SNQ collects demographic information that is not neccesary for what I am looking at. I am using this code to remove all columns that I do not need.
 
-library(dplyr)
 snq <- snq %>%
   select(-5, -6, -7, -8, -9, -10, -11, -12, -13, -14)
 
 ```
 
-Remove Repeated Rows
-
 ```{r}
 #| label: remove-repeats
+#| include: false
 
 # Repeated rows are indicated with a 1 in column V2. All rows that are necessary for counting social network size have 'NA' in that column.
 
 snq <- subset(snq, V2 != 1 | is.na(V2))
 ```
 
-Remove Column V2
-
 ```{r}
 #| label: remove-v2
+#| include: false
 
 #Now that I have removed all unnecessary rows, column V2 only has 'NA' values and therfore can be removed. The cleaned data set that is left is all I need to calculate social network size for each participant.
 
-library(dplyr)
 snq <- snq %>%
   select(-2)
 
 ```
 
-Count Occurrences for Each Participant
-
 ```{r}
 #| label: calculate-sns
+#| include: false
 
 #Now I can calculate social network size for each participant. I need R to count the number of occurrences for each participant. The number produced for each participant is their social network size that I will use for my data analysis.
 
@@ -63,9 +160,153 @@ participant_counts <- snq %>%
   group_by(V1) %>%
   tally()
 
-print(participant_counts)
 ```
 
-Next Steps:
+```{r}
+#| label: load-faa-dataset
+#| include: false
 
+FAA_infants_reachgrasp_relative.csv <- read.csv("~/Desktop/d2mr/Faa_infants_reachgrasp_relative.csv", header = FALSE)
+action_faa <- FAA_infants_reachgrasp_relative.csv
+
+```
+
+```{r}
+#| label: remove-rows
+#| include: false
+
+## Remove rows for foreign speaker (only measuring FAA in response to native speaker). Remove row 1 which is currently not being recognized as the column labels.
+
+action_faa <- action_faa %>%
+  filter(V2 != "FrTT")
+
+action_faa <- action_faa[-1, ]
+```
+
+
+```{r}
+#| label: change-subject-names
+#| include: false
+
+## Attempting to change the subject names in the FAA data document because I need the participat id numbers to match between both datasets. First I need to add column names
+
+colnames(action_faa) <- c("ID", "Condition", "Time", "FAA")
+
+action_faa$"ID" <- case_when(
+  grepl("^VPEEG_PB_", action_faa$"ID") ~ sub("^VPEEG_(PB_\\d+)_.*$", "\\1", action_faa$"ID"),
+  grepl("^VPEEG_SB_", action_faa$"ID") ~ sub("^VPEEG_(SB_\\d+)_.*$", "\\1", action_faa$"ID"),
+  TRUE ~ action_faa$"ID")
+
+```
+
+```{r}
+#| label: combine-datasets
+#| include: false
+
+## I need to combine the snq and faa datasets to see which how many total participants we have (ie participants that completed both aspects of the study)
+## Once I do this, I can calculate FAA(?) and create LMM(?)
+
+common_participants <- merge(participant_counts, action_faa, by = "ID", "V1")
+
+## This left me with 70 participants who completed the snq and eeg parts of the study.
+```
+
+```{r}
+#| label: column-cleaning
+#| include: false
+
+#I am fixing the column names so the data is easier to work with
+
+colnames(common_participants) <- c("ID", "SNQ", "Condition", "Time", "FAA")
+
+```
+
+```{r}
+#| label: tbl-snq-faa
+#| tbl-cap: "Social Network Size and FAA Data (First 6 Rows)"
+#| apa-note: Table 1 displays social network size (SNQ) and FAA data for the first three participants. Each participant has FAA measured for two conditions, -1000 to 0 and 0 to 1000.
+
+head(common_participants) %>%
+  flextable() %>%
+  theme_apa()
+
+```
+
+```{r}
+#| label: tbl-snq-faa-2
+#| eval: false
+#| include: false
+#| tbl-cap: SNQ and FAA Data
+
+kable(head(common_participants))
+```
+
+
+```{r}
+#| label: lmm
+#| include: false
+
+## I need to create a linear mixed model because each participant has two instances of faa data (from -1000 to 0 and 0 to 1000). I will use the common_participants dataset so then I can plot snq and faa.
+
+common_participants$FAA <- as.numeric(common_participants$FAA)
+lmm <- lmer(FAA ~ SNQ + (1 | ID), data = common_participants)
+```
+
+```{r}
+#| label: fig-lmm
+#| eval: false
+#| apa-note: Plotting LMM
+#| fig-cap: Random Effects for ID
+#| include: false
+
+# Extract random effects
+random_effects <- ranef(lmm)$ID
+
+# Plot random effects
+plot(random_effects, main = "Random Effects for ID")
+
+```
+
+The statistics below detail a 1-way ANOVA between social network size and FAA.
+
+```{r}
+#| label: anova-1way
+
+anova_faa <- aov(SNQ ~ FAA, data = common_participants)
+summary.aov(anova_faa)
+```
+
+Figure 1 below demonstrates the relationship between social network size and FAA for each participant during the two time periods. As we can see, FAA has a tendency to increase as social network size increases. This supports our hypothesis that a larger social network size will lead to more positive FAA.
+
+```{r}
+#| label: fig-scatter-2
+#| fig-cap: "Social Network Size and FAA by Time Blocks"
+#| apa-note: Figure 1 displays levels of FAA and infants' social network sizes. Each participant has two occurences, one in each of the time blocks.
+#| fig-width: 7
+#| fig-height: 5
+
+## Categorize Time
+common_participants$Time <- factor(common_participants$Time, levels = c("-1000 to 0", "0 to 1000"))
+
+## Create scatterplot, adjust color and size of points, add linear regression line and smoothed conditional means, add facet, adjust grid lines and background colors
+ggplot(common_participants, aes(x = SNQ, y = FAA))+
+  geom_point()+
+  geom_smooth(method = "lm", linetype = "dashed", color = "blue", linewidth = .8)+
+  facet_wrap(~ Time)+
+ theme(panel.grid.major = element_line(linewidth = 0.2, color = "lightgrey"), panel.grid.minor = element_line(linewidth = 0.1, color = "lightgrey"), panel.background = element_rect(fill = "white"))+
+   labs(x = "Social Network Size", y ="FAA")
+
+```
+
+## Discussion
+  The aim of our study was to answer two questions: what is the realtionship between social network size and FAA in infants towards strangers and what is the moderating effect of fear in this relationship?
+
+  We have found evidence to support our first hypothesis, that a larger social network size is associated with more positive FAA while viewing the videos of strangers.
+
+  Therefore, we are be further interested in the moderating effect of fear in this relationship.
+  The findings of this study will contribute to the understanding of the neurological reactions, and affecting factors, toward strangers during infancy. 
+
+<<<<<<< HEAD
 Next, I have to calculate FAA for each participant. Once I do this, I can plot both social network size and FAA together which will give me the results and table I need related to the first question and hypothesis for my thesis. 
+=======
+>>>>>>> a8c3156 (Final Project Draft 2 commit)
