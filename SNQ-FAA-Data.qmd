@@ -59,7 +59,6 @@ library(knitr)
 library(dplyr)
 library(readr)
 library(ggplot2)
-install.packages("lme4")
 library(lme4)
 conflicts_prefer(dplyr::filter, .quiet = TRUE)
 conflicts_prefer(flextable::separate_header, .quiet = TRUE)
@@ -114,8 +113,7 @@ The results presented below will accomplish the following aims. First, we presen
 #| label: load_dataset
 #| include: false
 
-# MAKE THIS A RELATIVE PATH
-Expanded_VP_EEG_SNQ <- read.csv("~/Desktop/d2mr/Expanded_VP_EEG_SNQ.csv", header=FALSE)
+Expanded_VP_EEG_SNQ <- read.csv("SNQ-FAA Datasets/Expanded_VP_EEG_SNQ.csv", header=FALSE)
 snq <- Expanded_VP_EEG_SNQ
 ```
 
@@ -166,7 +164,7 @@ participant_counts <- snq %>%
 #| label: load-faa-dataset
 #| include: false
 
-FAA_infants_reachgrasp_relative.csv <- read.csv("~/Desktop/d2mr/Faa_infants_reachgrasp_relative.csv", header = FALSE)
+FAA_infants_reachgrasp_relative.csv <- read.csv("SNQ-FAA Datasets/FAA_infants_reachgrasp_relative.csv", header = FALSE)
 action_faa <- FAA_infants_reachgrasp_relative.csv
 
 ```
