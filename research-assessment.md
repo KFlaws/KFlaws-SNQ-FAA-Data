@@ -114,7 +114,7 @@ Refer to the website for general tips on meeting these objectives and an FAQ.
 
         -   [X] Objective attempt
         -   [ ] Objective met
-        -   Grader comments: Good overview, but missing a file tree/repo structure explanation.
+        -   Grader comments: Still missing a file tree! ~~Good overview, but missing a file tree/repo structure explanation.~~ 
 
 3.  integrate a GitHub repo with an R studio project, including .gitignore file
 
@@ -123,7 +123,7 @@ Refer to the website for general tips on meeting these objectives and an FAQ.
 
         -   [X] Objective attempt
         -   [X] Objective met
-        -   Grader comments: Giving you the point for now, but your read-in chunk does not work because of the absolute path. You'll need to use relative paths to get credit for both this point and the readr point.
+        -   Grader comments: ~~Giving you the point for now, but your read-in chunk does not work because of the absolute path. You'll need to use relative paths to get credit for both this point and the readr point.~~
 
 4.  effectively use version control
 
@@ -140,12 +140,12 @@ Refer to the website for general tips on meeting these objectives and an FAQ.
 
     1. No errors occur when running scripts in a new environment 
         1. If packages other than the "class packages" listed on the resources page are used, code to install/require them is included *and commented out*
-        2. When a reader opts-in to installing packages by uncommenting the code, it runs without errors 
+        2. When a reader opts-in to installing packages by uncommenting the code, it runs without errors
     2. Uses more than one function to install/load/require packages (including those used in commented code)
 
         -   [X] Objective attempt
-        -   [ ] Objective met
-        -   Grader comments: Include another install/load/unload/require/etc. function other than library(). Do not reload libraries across multiple chunks; just put them in the setup chunks.
+        -   [x] Objective met
+        -   Grader comments: ~~Include another install/load/unload/require/etc. function other than library(). Do not reload libraries across multiple chunks; just put them in the setup chunks.~~
         
 6.  Use arithmetic, comparison, and logical operators
 
@@ -173,7 +173,7 @@ Refer to the website for general tips on meeting these objectives and an FAQ.
 
         -   [X] Objective attempt
         -   [ ] Objective met
-        -   Grader comments:
+        -   Grader comments: I see case_when() but not a second type
         
 
 9.  Use `readr` functions to read in and write out data
@@ -182,8 +182,8 @@ Refer to the website for general tips on meeting these objectives and an FAQ.
     2. Writes out intermediate and/or final datasets in code chunks or sourced scripts
 
         -   [X] Objective attempt
-        -   [ ] Objective met
-        -   Grader comments: Uses an absolute file path, so I have to edit it to make it work. Use relative paths.
+        -   [x] Objective met
+        -   Grader comments: ~~Uses an absolute file path, so I have to edit it to make it work. Use relative paths.~~
 
 10. Use `dplyr` and `tidyr` functions to transform data
 
@@ -192,8 +192,8 @@ Refer to the website for general tips on meeting these objectives and an FAQ.
     3. Combines `dplyr` and `tidyr` functions in a data transformation pipeline
 
         -   [X] Objective attempt
-        -   [ ] Objective met
-        -   Grader comments: Although you do pipe data to functions, you don't really have a "pipeline." A tidyverse pipeline is a sequence of operations, with each building on the last. Your functions here don't build on each other.
+        -   [x] Objective met
+        -   Grader comments: ~~Although you do pipe data to functions, you don't really have a "pipeline." A tidyverse pipeline is a sequence of operations, with each building on the last. Your functions here don't build on each other.~~
 
 11. Use `stringr` functions to work with string variables
 
@@ -208,6 +208,7 @@ Refer to the website for general tips on meeting these objectives and an FAQ.
 
     1. Uses ate least 2 unique `forcats` functions or one function in 2 unique contexts (with different purposes)
     2. Uses `forcats` functions in a data transformation pipeline
+    - NOTE: Though they are base R functions, `factor()` and `levels()` can be used to meet this objective as long as they are used in a way that demonstrates the same skills as `forcats` functions, which should involve including optional arguments
 
         -   [ ] Objective attempt
         -   [ ] Objective met
@@ -222,7 +223,7 @@ Refer to the website for general tips on meeting these objectives and an FAQ.
 
         -   [X] Objective attempt
         -   [ ] Objective met
-        -   Grader comments:
+        -   Grader comments: only 1 figure, need at least 2
 
 14. Use dynamic aesthetics to group data
 
@@ -230,16 +231,19 @@ Refer to the website for general tips on meeting these objectives and an FAQ.
 
         -   [X] Objective attempt
         -   [ ] Objective met
-        -   Grader comments:
+        -   Grader comments: no grouping aesthetics used
         
 15. Use facets to create parallel plots
 
-    1. Uses facets in at least 2 ways (e.g., using both `facet_wrap()` and `facet_grid()`), modifying the number of rows and columns, using free vs fixed scales, etc.)
+    1. EITHER:
+      1. Uses both `facet_wrap()` and `facet_grid()` in two different plots *or*
+      2. Uses facets with at least one plot using at least two optional arguments (e.g., modifying the number of rows and columns, using free vs fixed scales, etc.)
     2. Combines facets with other dynamic grouping aesthetics
+      1. If data only includes 1 sensible grouping variable, it may be used for both the faceting and grouping aes. 
 
         -   [X] Objective attempt
         -   [ ] Objective met
-        -   Grader comments:
+        -   Grader comments: need to use facets in 2 plots or use facets with at least one plot using at least two optional arguments; need to combine with a grouping aesthetic (it can be the same as the one you facet on)
         
 16. Create publication-quality plots using `theme` and `labs` layers
 
@@ -249,8 +253,8 @@ Refer to the website for general tips on meeting these objectives and an FAQ.
     4. Uses at least 1 static aesthetic (e.g., color, shape, size) that improves visual clarity without mapping to data
 
         -   [X] Objective attempt
-        -   [ ] Objective met
-        -   Grader comments:
+        -   [x] Objective met
+        -   Grader comments: looking great!
 
 ### Data analysis
 
@@ -271,7 +275,7 @@ Refer to the website for general tips on meeting these objectives and an FAQ.
     3. Presents results in narrative text, table, or plot
 
         -   [X] Objective attempt
-        -   [ ] Objective met
+        -   [x] Objective met
         -   Grader comments:
 
 19. Present and interpret statistics in manuscript narrative
@@ -330,8 +334,8 @@ Refer to the website for general tips on meeting these objectives and an FAQ.
     4. Organizes setup chunks sensibly
 
         -   [X] Objective attempt
-        -   [ ] Objective met
-        -   Grader comments: Use a setup chunk to set at least 1 default chunk option (like disabling warning messages or hiding raw code).
+        -   [x] Objective met
+        -   Grader comments: ~~Use a setup chunk to set at least 1 default chunk option (like disabling warning messages or hiding raw code).~~
         
 24. Render publication-quality tables, figures, and images from code chunks
 
@@ -343,7 +347,7 @@ Refer to the website for general tips on meeting these objectives and an FAQ.
 
         -   [X] Objective attempt
         -   [ ] Objective met
-        -   Grader comments: I don't see any tables or figures?
+        -   Grader comments: Need in-text crossreferencing (the @fig- and @tbl- thing) ~~I don't see any tables or figures?~~
 
 25. Execute descriptive analyses and/or hypothesis testing in code chunks
 
@@ -364,8 +368,8 @@ Refer to the website for general tips on meeting these objectives and an FAQ.
     1. Includes all necessary metadata, output options, and formatting options necessary to render an APA styled document (or other specified style if appropriate for the project)
 
         -   [X] Objective attempt
-        -   [ ] Objective met
-        -   Grader comments: Renders to default pdf options without APA styling (use apaquarto yaml options to do so).
+        -   [x] Objective met
+        -   Grader comments: ~~Renders to default pdf options without APA styling (use apaquarto yaml options to do so).~~
         
 27. Use quarto R Markdown to compose an academic manuscript
 
@@ -377,7 +381,7 @@ Refer to the website for general tips on meeting these objectives and an FAQ.
 
         -   [X] Objective attempt
         -   [ ] Objective met
-        -   Grader comments:
+        -   Grader comments: I don't see any text styling or markdown elements (lists, footnotes, etc). Note that you should not put headings in italics using `*`. Just label them with the right number of `#`s for the appropriate heading level and apaquarto will format as needed.
 
 28. Use inline R variables to replace static text
 
@@ -406,14 +410,14 @@ Refer to the website for general tips on meeting these objectives and an FAQ.
 
         -   [X] Objective attempt
         -   [ ] Objective met
-        -   Grader comments:   Be sure that when you do attempt this objective you revise your YAML header to output to PDF instead of HTML.
+        -   Grader comments:  No references section. Headings not formatted correctly (Lit review should be heading 2: "## Literature Review", subsections should be H3: "### Social Network Size", etc.) ~~Be sure that when you do attempt this objective you revise your YAML header to output to PDF instead of HTML.~~
 
 
 ## Grading
 
 *All final projects are graded by Dr. Dowling.*
 
--   **Submission:** 1/4
--   **Objective points:** 4/30
--   **Engagement points:** 1/10
--   **Total points:** 5/40
+-   **Submission:** 2/4
+-   **Objective points:** 11/30
+-   **Engagement points:** 4/10
+-   **Total points:** 15/40
