@@ -103,6 +103,39 @@
 \makeatother
 
 
+% definitions for citeproc citations
+\NewDocumentCommand\citeproctext{}{}
+\NewDocumentCommand\citeproc{mm}{%
+  \begingroup\def\citeproctext{#2}\cite{#1}\endgroup}
+\makeatletter
+ % allow citations to break across lines
+ \let\@cite@ofmt\@firstofone
+ % avoid brackets around text for \cite:
+ \def\@biblabel#1{}
+ \def\@cite#1#2{{#1\if@tempswa , #2\fi}}
+\makeatother
+\newlength{\cslhangindent}
+\setlength{\cslhangindent}{1.5em}
+\newlength{\csllabelwidth}
+\setlength{\csllabelwidth}{3em}
+\newenvironment{CSLReferences}[2] % #1 hanging-indent, #2 entry-spacing
+ {\begin{list}{}{%
+  \setlength{\itemindent}{0pt}
+  \setlength{\leftmargin}{0pt}
+  \setlength{\parsep}{0pt}
+  % turn on hanging indent if param 1 is 1
+  \ifodd #1
+   \setlength{\leftmargin}{\cslhangindent}
+   \setlength{\itemindent}{-1\cslhangindent}
+  \fi
+  % set entry spacing
+  \setlength{\itemsep}{#2\baselineskip}}}
+ {\end{list}}
+\usepackage{calc}
+\newcommand{\CSLBlock}[1]{\hfill\break\parbox[t]{\linewidth}{\strut\ignorespaces#1\strut}}
+\newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{\strut#1\strut}}
+\newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{\strut#1\strut}}
+\newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
 
 
 
@@ -294,41 +327,46 @@ Infants learn about the world from the people around them. An infant's
 social network allows them to explore the world and learn how to connect
 and communicate with others. It has been previously suggested that
 children with a larger social network size are better at taking others'
-perspectives (Burke et al., 2023). In the current study, we aim to
-expand these findings from behavioral domain to neural domain and
-examine the relation between children's social network size and their
-neural responses to strangers during infancy.
+perspectives (\citeproc{ref-burkeChildrensSocialNetwork2023}{Burke et
+al., 2023}). In the current study, we aim to expand these findings from
+behavioral domain to neural domain and examine the relation between
+children's social network size and their neural responses to strangers
+during infancy.
 
 \subsection{Literature Review}\label{literature-review}
 
-\subsection{\texorpdfstring{\emph{Social Network
-Size}}{Social Network Size}}\label{social-network-size}
+\subsubsection{Social Network Size}\label{social-network-size}
 
 Previous studies found that social networks play an important role in
-social cognition throughout infancy and childhood (Burke et al., 2022;
-Burke et al., 2023). Burke and colleagues (2023) examined the relation
-between a three year-old's social network size and their
-perspective-taking skills. The researchers were observing the children's
-basic understanding that what they see may be different from what
-someone else sees (Burke et al., 2023). The results revealed that
-children with larger social networks displayed significantly better
-explicit perspective-taking skills. This finding indicates that a larger
-social network might improve a child's ability to consider things from
-another person's point of view, or on the other hand,better perspective
-taking skills can help children build a larger social network (Burke et
-al., 2023).
+social cognition throughout infancy and childhood
+(\citeproc{ref-burkeChildrensSocialNetworks2022}{Burke et al., 2022},
+\citeproc{ref-burkeChildrensSocialNetwork2023}{2023}). Burke and
+colleagues (\citeproc{ref-burkeChildrensSocialNetwork2023}{2023})
+examined the relation between a three year-old's social network size and
+their perspective-taking skills. The researchers were observing the
+children's basic understanding that what they see may be different from
+what someone else sees
+(\citeproc{ref-burkeChildrensSocialNetwork2023}{Burke et al., 2023}).
+The results revealed that children with larger social networks displayed
+significantly better explicit perspective-taking skills. This finding
+indicates that a larger social network might improve a child's ability
+to consider things from another person's point of view, or on the other
+hand,better perspective taking skills can help children build a larger
+social network (\citeproc{ref-burkeChildrensSocialNetwork2023}{Burke et
+al., 2023}).
 
 Some indirect findings also support the role of social networks on the
 development of social cognition. It has been previously found that
 children aged 5-11 with at least one sibling are more likely to develop
 positive peer relationships because having a sibling allows children to
 have more opportunities to develop social and interpersonal skills
-during early childhood (Downey \& Condron, 2004). These findings support
-the close relationship between children's social network size and social
-cognition. However, the connection between social network size and
-social emotional development has been less examined. In addition, most
-studies focused on older children, the role of social network size
-during the first year of life remains unclear.
+during early childhood
+(\citeproc{ref-downeyPlayingWellOthers2004}{Downey \& Condron, 2004}).
+These findings support the close relationship between children's social
+network size and social cognition. However, the connection between
+social network size and social emotional development has been less
+examined. In addition, most studies focused on older children, the role
+of social network size during the first year of life remains unclear.
 
 Based on these gaps in previous studies, the current study will examine
 the relationship between social network size and response to strangers
@@ -336,81 +374,114 @@ of infants from 8 - 12 months of age. More specifically, we will focus
 on infants' neural responses, frontal alpha asymmetry (FAA), while
 watching socially interactive videos of strangers.
 
-\subsection{\texorpdfstring{\emph{Frontal Alpha
-Asymmetry}}{Frontal Alpha Asymmetry}}\label{frontal-alpha-asymmetry}
+\subsubsection{Frontal Alpha Asymmetry}\label{frontal-alpha-asymmetry}
 
 Frontal alpha asymmetry (FAA) is an important neural indicator of
-infants' approach/withdrawal tendency (Davidson \& Fox, 1982; Fox \&
-Davidson, 1986; Fox, 1991; Garstein et al., 2020; Harrewijn et al.,
-2019; Haworth et al., 2016). FAA is the measurement of the imbalance in
-cortical activation between the right and left frontal hemispheres,
-measured by psycho-physiological markers using electroencephalogram
-(EEG) (Davidson \& Fox, 1982; Fox \& Davidson, 1986; Fox, 1991).
+infants' approach/withdrawal tendency
+(\citeproc{ref-davidsonfox_1982_asymmetrical}{Davidson \& Fox, 1982};
+\citeproc{ref-fox_1991_if}{Fox, 1991};
+\citeproc{ref-foxdavidson_1986_tasteelicited}{Fox \& Davidson, 1986};
+\citeproc{ref-gartsteinStudyingInfantTemperament2003}{Gartstein \&
+Rothbart, 2003};
+\citeproc{ref-harrewijnFrontalAlphaAsymmetry2019}{Harrewijn et al.,
+2019};
+\citeproc{ref-howarthFrontalElectroencephalogramAsymmetry2016}{Howarth
+et al., 2016}). FAA is the measurement of the imbalance in cortical
+activation between the right and left frontal hemispheres, measured by
+psycho-physiological markers using electroencephalogram (EEG)
+(\citeproc{ref-davidsonfox_1982_asymmetrical}{Davidson \& Fox, 1982};
+\citeproc{ref-fox_1991_if}{Fox, 1991};
+\citeproc{ref-foxdavidson_1986_tasteelicited}{Fox \& Davidson, 1986}).
 Rightward/negative FAA signifies increased right hemispheric activation
 as compared to left and leftward/positive FAA signifies increased left
-hemispheric activation (Vincent et al., 2021). FAA is thought to be a
-moderator reflecting fearful inhibition and impulsivity-anger (Liu et
-al., 2021), with left FAA being associated with higher levels of
-activity/approach while right FAA is associated with higher levels of
-fear/withdrawal (Davidson \& Fox, 1982; Fox \& Davidson, 1986; Fox,
-1991; Garstein et al., 2020; Harrewijn et al., 2019; Haworth et al.,
-2016). Based on these findings, we will use FAA as a neural indicator of
-infants' approach/withdrawal tendency towards strangers.
+hemispheric activation (\citeproc{ref-vincentetal_2021_using}{Vincent et
+al., 2021}). FAA is thought to be a moderator reflecting fearful
+inhibition and impulsivity-anger
+(\citeproc{ref-liuFrontalEEGAsymmetry2021}{Liu et al., 2021}), with left
+FAA being associated with higher levels of activity/approach while right
+FAA is associated with higher levels of fear/withdrawal
+(\citeproc{ref-davidsonfox_1982_asymmetrical}{Davidson \& Fox, 1982};
+\citeproc{ref-fox_1991_if}{Fox, 1991};
+\citeproc{ref-foxdavidson_1986_tasteelicited}{Fox \& Davidson, 1986};
+\citeproc{ref-gartsteinStudyingInfantTemperament2003}{Gartstein \&
+Rothbart, 2003};
+\citeproc{ref-harrewijnFrontalAlphaAsymmetry2019}{Harrewijn et al.,
+2019};
+\citeproc{ref-howarthFrontalElectroencephalogramAsymmetry2016}{Howarth
+et al., 2016}). Based on these findings, we will use FAA as a neural
+indicator of infants' approach/withdrawal tendency towards strangers.
 
 It is advantageous to utilize FAA to study the relationship between
 social network size and infants' responses to strangers because neural
-indicators can be more sensitive than behavioral indicators (Davidson \&
-Fox, 1982; Fox \& Davidson, 1986; Fox, 1991; Harrewijn et al., 2019;
-Haworth et al., 2016). The behavioral changes of 8- to 12-month-olds
-might be too subtle to code, whereas neural indicators can be more
-sensitive to capture individual differences, given that FAA has been
-widely used to study individual differences (e.g.~motivation, affect,
-depression severity, Gollan et al., 2014). Furthermore, examining the
-relationship between social network size and FAA can enhance our
-understanding of how social networks may shape infant's brains.
+indicators can be more sensitive than behavioral indicators
+(\citeproc{ref-davidsonfox_1982_asymmetrical}{Davidson \& Fox, 1982};
+\citeproc{ref-fox_1991_if}{Fox, 1991};
+\citeproc{ref-foxdavidson_1986_tasteelicited}{Fox \& Davidson, 1986};
+\citeproc{ref-harrewijnFrontalAlphaAsymmetry2019}{Harrewijn et al.,
+2019};
+\citeproc{ref-howarthFrontalElectroencephalogramAsymmetry2016}{Howarth
+et al., 2016}). The behavioral changes of 8- to 12-month-olds might be
+too subtle to code, whereas neural indicators can be more sensitive to
+capture individual differences, given that FAA has been widely used to
+study individual differences (e.g.~motivation, affect, depression
+severity, \citeproc{ref-gollanFrontalAlphaEEG2014}{Gollan et al.,
+2014}). Furthermore, examining the relationship between social network
+size and FAA can enhance our understanding of how social networks may
+shape infant's brains.
 
 Previous studies suggest that larger social network sizes are associated
-with better perspective-taking skills (Burke et al., 2023) and social
-and interpersonal skills (Downey \& Condron, 2004), which indicates a
-positive relationship between social network sizes and social
-development. In the current study, we also expect social network sizes
-to be related to more positive responses to strangers. Since positive
-FAA is associated with approach tendencies in infants (Davidson \& Fox,
-1982; Fox \& Davidson, 1986; Fox, 1991), we hypothesize that an infant
-with a larger social network will be more likely to display more
-positive FAA to strangers.
+with better perspective-taking skills
+(\citeproc{ref-burkeChildrensSocialNetwork2023}{Burke et al., 2023}) and
+social and interpersonal skills
+(\citeproc{ref-downeyPlayingWellOthers2004}{Downey \& Condron, 2004}),
+which indicates a positive relationship between social network sizes and
+social development. In the current study, we also expect social network
+sizes to be related to more positive responses to strangers. Since
+positive FAA is associated with approach tendencies in infants
+(\citeproc{ref-davidsonfox_1982_asymmetrical}{Davidson \& Fox, 1982};
+\citeproc{ref-fox_1991_if}{Fox, 1991};
+\citeproc{ref-foxdavidson_1986_tasteelicited}{Fox \& Davidson, 1986}),
+we hypothesize that an infant with a larger social network will be more
+likely to display more positive FAA to strangers.
 
-\subsection{\texorpdfstring{\emph{The Moderating Effect of
-Temperament}}{The Moderating Effect of Temperament}}\label{the-moderating-effect-of-temperament}
+\subsubsection{The Moderating Effect of
+Temperament}\label{the-moderating-effect-of-temperament}
 
 Temperament was found to play a large role in an infant's responses to
-strangers (Rubin et al., 2009). Children who are shy or display reticent
-behavior will show more avoidance to strangers (Rubin et al., 2009).
+strangers (\citeproc{ref-rubinSocialWithdrawlChildhood2009}{Rubin et
+al., 2009}). Children who are shy or display reticent behavior will show
+more avoidance to strangers
+(\citeproc{ref-rubinSocialWithdrawlChildhood2009}{Rubin et al., 2009}).
 Furthermore, children with different temperament will react to the same
 environment differently, or in other words, temperament can moderate the
 effect of the environment on child development. Ertekin and colleagues
-(2021) found that infants with a more reactive temperament, including
-higher levels of fear, irritability, and activity may be more sensitive
-to the surrounding environment as they are more likely to be
-overwhelmed. More specifically, infants with a higher rate of recovery
-from distress were less impacted by adverse environments than infants
-with a low rate of recovery from distress (Ertekin et al., 2021).
-Another study found that temperament can moderate children's social
-wariness towards strangers of the same race and different races than
-their own (i.e.~`ingroup' versus `outgroup', Hwang et al., 2023). More
-shy children displayed greater social wariness towards strangers of a
-different race than of the same race to their own, while less shy
-children did not (Hwang et al., 2023). These findings suggest that
-individual differences in temperament can have a moderating effect
-between social environment and children's responses to strangers.
+(\citeproc{ref-ertekinTemperamentModeratesEffects2021}{2021}) found that
+infants with a more reactive temperament, including higher levels of
+fear, irritability, and activity may be more sensitive to the
+surrounding environment as they are more likely to be overwhelmed. More
+specifically, infants with a higher rate of recovery from distress were
+less impacted by adverse environments than infants with a low rate of
+recovery from distress
+(\citeproc{ref-ertekinTemperamentModeratesEffects2021}{Ertekin et al.,
+2021}). Another study found that temperament can moderate children's
+social wariness towards strangers of the same race and different races
+than their own (i.e.~`ingroup' versus `outgroup,'
+\citeproc{ref-hwangChildrensSocialWariness2023}{Hwang et al., 2023}).
+More shy children displayed greater social wariness towards strangers of
+a different race than of the same race to their own, while less shy
+children did not (\citeproc{ref-hwangChildrensSocialWariness2023}{Hwang
+et al., 2023}). These findings suggest that individual differences in
+temperament can have a moderating effect between social environment and
+children's responses to strangers.
 
 Based on these findings, the current study will examine the moderating
 role of temperament between social network size and infants' FAA to
 strangers. Specifically, we will focus on the fear dimension, which
 refers to the level of fearfulness or anxiousness in response to novel
-or unfamiliar stimuli (Gartstein \& Rothbart, 2003), given that this
-dimension is viewed as an important characteristic during the first year
-of life.
+or unfamiliar stimuli
+(\citeproc{ref-gartsteinStudyingInfantTemperament2003}{Gartstein \&
+Rothbart, 2003}), given that this dimension is viewed as an important
+characteristic during the first year of life.
 
 \subsection{Current Study}\label{current-study}
 
@@ -419,9 +490,11 @@ examine the relationship between social network sizes and neural
 responses to strangers during infancy. We used an infant's FAA as an
 indicator of the infant's neural response to strangers. Given the
 positive relation between social network sizes and children' social
-cognition (Burke et al., 2023; Downey \& Condron, 2004), we predicted
-that larger social network size will correlate with more positive FAA
-(i.e.~increased left frontal activation) toward strangers.
+cognition (\citeproc{ref-burkeChildrensSocialNetwork2023}{Burke et al.,
+2023}; \citeproc{ref-downeyPlayingWellOthers2004}{Downey \& Condron,
+2004}), we predicted that larger social network size will correlate with
+more positive FAA (i.e.~increased left frontal activation) toward
+strangers.
 
 The second question we were interested in is how temperament, especially
 fear, can moderate the relationship between social network size and
@@ -441,9 +514,9 @@ role. These factors are essential in understanding an infant's stranger
 anxiety/fear and are important for caregivers to take into consideration
 when scaffolding infants build their social networks.
 
-\subsection{Methods}\label{methods}
+\section{Methods}\label{methods}
 
-\subsection{\texorpdfstring{\emph{Participants}}{Participants}}\label{participants}
+\subsection{Participants}\label{participants}
 
 All participants in this study were recruited by the Infant Learning and
 Development Laboratory at the University of Chicago. The parents of
@@ -453,7 +526,7 @@ months of age, (2) English language spoken at least 80\% of the time at
 home, (3) full-term; 37 weeks and beyond gestational age, and (4) no
 developmental delays.
 
-\subsection{\texorpdfstring{\emph{Procedure}}{Procedure}}\label{procedure}
+\subsection{Procedure}\label{procedure}
 
 Our study uses an Electroencephalogram (EEG) machine and related
 materials (i.e.~infant EEG cap, software, and technical equipment) to
@@ -464,20 +537,26 @@ the other speaks French. Our analyses focus on infants' neural responses
 while watching the native speaker. To calculate FAA, we subtracted the
 natural log-transformed relative alpha power of the 6-9 Hz frequency
 band in the left hemisphere from the natural log-transformed relative
-alpha power in the right hemisphere (Anaya et al., 2021; Vincent et al.,
-2021; Fox et al., 2001). Therefore, in our calculations of FAA, stronger
-left frontal activation is indicated by a positive FAA score (Harrewijn
-et al., 2019; Vincent et al., 2021).
+alpha power in the right hemisphere
+(\citeproc{ref-anayaetal_2021_psychometric}{Anaya et al., 2021};
+\citeproc{ref-foxContinuityDiscontinuityBehavioral2001}{Fox et al.,
+2001}; \citeproc{ref-vincentetal_2021_using}{Vincent et al., 2021}).
+Therefore, in our calculations of FAA, stronger left frontal activation
+is indicated by a positive FAA score
+(\citeproc{ref-harrewijnFrontalAlphaAsymmetry2019}{Harrewijn et al.,
+2019}; \citeproc{ref-vincentetal_2021_using}{Vincent et al., 2021}).
 
 In order to measure an infant's temperament and social network size,
 parents were instructed to fill out the Revised Infant Behavior
 Questionnaire (IBQ-R), a parent report of a reaction on a seven point
-scale during the past one or two weeks, and Child Social Network
-Questionnaire (CSNQ), a demographic form for each person the child sees
-on a regular basis, regarding their child (Gartstein \& Rothbart, 2003;
-Burke et al., 2022).
+scale during the past one or two weeks
+(\citeproc{ref-gartsteinStudyingInfantTemperament2003}{Gartstein \&
+Rothbart, 2003}), and Child Social Network Questionnaire (CSNQ), a
+demographic form for each person the child sees on a regular basis,
+regarding their child
+(\citeproc{ref-burkeChildrensSocialNetworks2022}{Burke et al., 2022}).
 
-\subsection{\texorpdfstring{\emph{Analyses}}{Analyses}}\label{analyses}
+\subsection{Analyses}\label{analyses}
 
 This study used linear regression models to examine our hypotheses.
 First, to examine the relationship between social network sizes and
@@ -488,7 +567,7 @@ the moderating effect of fear between social network sizes and infants'
 responses to strangers, we conducted a moderating model with fear scores
 as the moderator between social network size and infants' FAA.
 
-\subsection{Results}\label{results}
+\section{Results}\label{results}
 
 The results presented below will accomplish the following aims. First,
 we present the descriptive information about the variables. Next we aim
@@ -533,25 +612,25 @@ Rows)}{\label{tbl-snq-faa}}}
 
 
 
-\multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{22}\selectfont{\global\setmainfont{Times New Roman}{PB\_10}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{22}\selectfont{\global\setmainfont{Times New Roman}{11}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{22}\selectfont{\global\setmainfont{Times New Roman}{EnTT}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{22}\selectfont{\global\setmainfont{Times New Roman}{-1000\ to\ 0}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{22}\selectfont{\global\setmainfont{Times New Roman}{0.005574083}}}} \\
-
-
-
-
-
 \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{22}\selectfont{\global\setmainfont{Times New Roman}{PB\_10}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{22}\selectfont{\global\setmainfont{Times New Roman}{11}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{22}\selectfont{\global\setmainfont{Times New Roman}{EnTT}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{22}\selectfont{\global\setmainfont{Times New Roman}{0\ to\ 1000}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{22}\selectfont{\global\setmainfont{Times New Roman}{0.020131267}}}} \\
 
 
 
 
 
-\multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{22}\selectfont{\global\setmainfont{Times New Roman}{PB\_11}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{22}\selectfont{\global\setmainfont{Times New Roman}{17}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{22}\selectfont{\global\setmainfont{Times New Roman}{EnTT}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{22}\selectfont{\global\setmainfont{Times New Roman}{-1000\ to\ 0}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{22}\selectfont{\global\setmainfont{Times New Roman}{0.037043985}}}} \\
+\multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{22}\selectfont{\global\setmainfont{Times New Roman}{PB\_10}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{22}\selectfont{\global\setmainfont{Times New Roman}{11}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{22}\selectfont{\global\setmainfont{Times New Roman}{EnTT}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{22}\selectfont{\global\setmainfont{Times New Roman}{-1000\ to\ 0}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{22}\selectfont{\global\setmainfont{Times New Roman}{0.005574083}}}} \\
 
 
 
 
 
 \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{22}\selectfont{\global\setmainfont{Times New Roman}{PB\_11}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{22}\selectfont{\global\setmainfont{Times New Roman}{17}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{22}\selectfont{\global\setmainfont{Times New Roman}{EnTT}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{22}\selectfont{\global\setmainfont{Times New Roman}{0\ to\ 1000}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{22}\selectfont{\global\setmainfont{Times New Roman}{0.019238154}}}} \\
+
+
+
+
+
+\multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{22}\selectfont{\global\setmainfont{Times New Roman}{PB\_11}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{22}\selectfont{\global\setmainfont{Times New Roman}{17}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{22}\selectfont{\global\setmainfont{Times New Roman}{EnTT}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{22}\selectfont{\global\setmainfont{Times New Roman}{-1000\ to\ 0}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{22}\selectfont{\global\setmainfont{Times New Roman}{0.037043985}}}} \\
 
 
 
@@ -591,17 +670,18 @@ and FAA.
 
 \begin{verbatim}
              Df Sum Sq Mean Sq F value  Pr(>F)   
-FAA           1    280  280.50   10.65 0.00135 **
-Residuals   158   4163   26.35                   
+FAA           1    245  245.04   9.068 0.00305 **
+Residuals   150   4053   27.02                   
 ---
 Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 \end{verbatim}
 
 Figure 1 below demonstrates the relationship between social network size
-and FAA for each participant during the two time periods. As we can see,
-FAA has a tendency to increase as social network size increases. This
-supports our hypothesis that a larger social network size will lead to
-more positive FAA.
+and FAA for each participant during the two time periods: watching the
+stranger reach towards an object and grasping/lifting the object. As we
+can see, FAA has a tendency to increase as social network size
+increases. This supports our hypothesis that a larger social network
+size will lead to more positive FAA.
 
 \begin{verbatim}
 `geom_smooth()` using formula = 'y ~ x'
@@ -620,7 +700,7 @@ of the time blocks.}
 
 \end{figure}
 
-\subsection{Discussion}\label{discussion}
+\section{Discussion}\label{discussion}
 
 The aim of our study was to answer two questions: what is the
 realtionship between social network size and FAA in infants towards
@@ -635,6 +715,120 @@ Therefore, we are be further interested in the moderating effect of fear
 in this relationship. The findings of this study will contribute to the
 understanding of the neurological reactions, and affecting factors,
 toward strangers during infancy.
+
+\clearpage
+
+\section{References}\label{references}
+
+\phantomsection\label{refs}
+\begin{CSLReferences}{1}{0}
+\bibitem[\citeproctext]{ref-anayaetal_2021_psychometric}
+Anaya, B., Ostlund, B., LoBue, V., Buss, K., \& Pérex-Edgar, K. (2021).
+Psychometric properties of infant electroencephalography:
+{Developmental} stability, reliability, and construct validity of
+frontal alpha asymmetry and delta--beta coupling. \emph{Developmental
+Psychobiology}, \emph{63}(6). \url{https://doi.org/10.1002/dev.22178}
+
+\bibitem[\citeproctext]{ref-burkeChildrensSocialNetwork2023}
+Burke, N., Brezack, N., Meyer, M., \& Woodward, A. (2023). Children's
+social network size is related to their perspective-taking skills.
+\emph{Frontiers in Developmental Psychology}, \emph{1}.
+\url{https://doi.org/10.3389/fdpys.2023.1221056}
+
+\bibitem[\citeproctext]{ref-burkeChildrensSocialNetworks2022}
+Burke, N., Brezack, N., \& Woodward, A. (2022). Children's social
+networks in developmental psychology: {A} network approach to capture
+and describe early social environments. \emph{Frontiers in Psychology},
+\emph{13}, 1009422. \url{https://doi.org/10.3389/fpsyg.2022.1009422}
+
+\bibitem[\citeproctext]{ref-davidsonfox_1982_asymmetrical}
+Davidson, R. J., \& Fox, N. A. (1982). Asymmetrical brain activity
+discriminates between positive and negative affective stimuli in human
+infants. \emph{Science}, \emph{218}(4578), 1235--1237.
+\url{https://doi.org/10.1126/science.7146906}
+
+\bibitem[\citeproctext]{ref-downeyPlayingWellOthers2004}
+Downey, D. B., \& Condron, D. J. (2004). Playing {Well} with {Others} in
+{Kindergarten}: {The Benefits} of {Siblings} at {Home}. \emph{Journal of
+Marriage and Family}, \emph{66}, 330--350.
+\url{https://doi.org/10.1111/j.1741-3737.2004.00024.x}
+
+\bibitem[\citeproctext]{ref-ertekinTemperamentModeratesEffects2021}
+Ertekin, Z., Gunnar, M. R., \& Berument, S. K. (2021). Temperament
+moderates the effects of early deprivation on infant attention.
+\emph{The Official Journal of the International Congress of Infant
+Studies}, \emph{26}(3), 455--468.
+https://doi.org/\url{https://doi-org.proxy.uchicago.edu/10.1111/infa.12396}
+
+\bibitem[\citeproctext]{ref-fox_1991_if}
+Fox, N. A. (1991). If it's not left, it's right: {Electroencephalograph}
+asymmetry and the development of emotion. \emph{American Psychologist},
+\emph{46}(8), 863--872. \url{https://doi.org/10.1037/0003-066X.46.8.863}
+
+\bibitem[\citeproctext]{ref-foxdavidson_1986_tasteelicited}
+Fox, N. A., \& Davidson, R. J. (1986). Taste-elicited changes in facial
+signs of emotion and the asymmetry of brain electrical activity in human
+newborns. \emph{Neuropsychologia}, \emph{24}(3), 417--422.
+https://doi.org/\url{https://doi.org/10.1016/0028-3932(86)90028-X}
+
+\bibitem[\citeproctext]{ref-foxContinuityDiscontinuityBehavioral2001}
+Fox, N. A., Henderson, H. A., Rubin, K. H., Calkins, S. D., \& Schmidt,
+L. A. (2001). Continuity and discontinuity of behavioral inhibition and
+exuberance: Psychophysiological and behavioral influences across the
+first four years of life. \emph{Child Development}, \emph{72}(1), 1--21.
+\url{https://doi.org/10.1111/1467-8624.00262}
+
+\bibitem[\citeproctext]{ref-gartsteinStudyingInfantTemperament2003}
+Gartstein, M. A., \& Rothbart, M. K. (2003). Studying infant temperament
+via the {Revised Infant Behavior Questionnaire}. \emph{Infant Behavior
+\& Development}, \emph{26}, 64--86.
+
+\bibitem[\citeproctext]{ref-gollanFrontalAlphaEEG2014}
+Gollan, J. K., Hoxha, D., Chihade, D., Pflieger, M. E., Rosebrock, L.,
+\& Cacioppo, J. (2014). Frontal alpha {EEG} asymmetry before and after
+behavioral activation treatment for depression. \emph{Biological
+Psychology}, \emph{99}, 198--208.
+\url{https://doi.org/10.1016/j.biopsycho.2014.03.003}
+
+\bibitem[\citeproctext]{ref-harrewijnFrontalAlphaAsymmetry2019}
+Harrewijn, A., Buzzell, G. A., Debnath, R., Leibenluft, E., Pine, D. S.,
+\& Fox, N. A. (2019). Frontal alpha asymmetry moderates the relations
+between behavioral inhibition and social-effect {ERN}. \emph{Biological
+Psychology}, \emph{141}, 10--16.
+\url{https://doi.org/doi:10.1016/j.biopsycho.2018.12.014}
+
+\bibitem[\citeproctext]{ref-howarthFrontalElectroencephalogramAsymmetry2016}
+Howarth, G. Z., Fettig, N. B., Curby, T. W., \& Bell, M. A. (2016).
+Frontal {Electroencephalogram Asymmetry} and {Temperament Across
+Infancy} and {Early Childhood}: {An Exploration} of {Stability} and
+{Bidirectional Relations}. \emph{Child Development}, \emph{87}(2),
+465--476. \url{https://doi.org/10.1111/cdev.12466}
+
+\bibitem[\citeproctext]{ref-hwangChildrensSocialWariness2023}
+Hwang, G., Filippi, C. A., Morales, S., Fox, N. A., \& Woodward, A.
+(2023). Children's social wariness toward a different-race stranger
+relates to individual differences in temperament. \emph{Developmental
+Science}, \emph{e13390}. \url{https://doi.org/10.1111/desc.13390}
+
+\bibitem[\citeproctext]{ref-liuFrontalEEGAsymmetry2021}
+Liu, R., Calkins, S. D., \& Bell, M. A. (2021). Frontal {EEG} asymmetry
+moderates the associations between negative temperament and behavioral
+problems during childhood. \emph{Development and Psychopathology},
+\emph{33}(3), 1016--1025.
+\url{https://doi.org/10.1017/S0954579420000309}
+
+\bibitem[\citeproctext]{ref-rubinSocialWithdrawlChildhood2009}
+Rubin, K. H., Coplan, R. J., \& Bowker, J. C. (2009). Social {Withdrawl}
+in {Childhood}. \emph{Annual Review of Psychology}.
+
+\bibitem[\citeproctext]{ref-vincentetal_2021_using}
+Vincent, K. M., Xie, W., \& Nelson, C. A. (2021). Using different
+methods for calculating frontal alpha asymmetry to study its development
+from infancy to 3 years of age in a large longitudinal sample.
+\emph{Development Psychobiology}, \emph{63}.
+https://doi.org/\url{https://doi-org.proxy.uchicago.edu/10.1002/dev.22163}
+
+\end{CSLReferences}
 
 
 

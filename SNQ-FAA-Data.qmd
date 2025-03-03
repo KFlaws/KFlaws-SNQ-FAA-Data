@@ -22,6 +22,7 @@ numbered-lines: false
 suppress-title-page: false
 link-citations: true
 draft-date: false
+bibliography: bibliography.bib
 lang: en
 language:
   citation-last-author-separator: "and"
@@ -65,50 +66,63 @@ conflicts_prefer(flextable::separate_header, .quiet = TRUE)
 
 ```
 
-  Infants learn about the world from the people around them. An infant’s social network allows them to explore the world and learn how to connect and communicate with others. It has been previously suggested that children with a larger social network size are better at taking others’ perspectives (Burke et al., 2023). In the current study, we aim to expand these findings from behavioral domain to neural domain and examine the relation between children’s social network size and their neural responses to strangers during infancy.
+  Infants learn about the world from the people around them. An infant’s social network allows them to explore the world and learn how to connect and communicate with others. It has been previously suggested that children with a larger social network size are better at taking others’ perspectives [@burkeChildrensSocialNetwork2023]. In the current study, we aim to expand these findings from behavioral domain to neural domain and examine the relation between children’s social network size and their neural responses to strangers during infancy.
 
 ## Literature Review
-## *Social Network Size*
-  Previous studies found that social networks play an important role in social cognition throughout infancy and childhood (Burke et al., 2022; Burke et al., 2023). Burke and colleagues (2023) examined the relation between a three year-old’s social network size and their perspective-taking skills. The researchers were observing the children’s basic understanding that what they see may be different from what someone else sees (Burke et al., 2023). The results revealed that children with larger social networks displayed significantly better explicit perspective-taking skills. This finding indicates that a larger social network might improve a child’s ability to consider things from another person’s point of view, or on the other hand,better perspective taking skills can help children build a larger social network (Burke et al., 2023). 
+### Social Network Size
 
-  Some indirect findings also support the role of social networks on the development of social cognition. It has been previously found that children aged 5-11 with at least one sibling are more likely to develop positive peer relationships because having a sibling allows children to have more opportunities to develop social and interpersonal skills during early childhood (Downey & Condron, 2004). These findings support the close relationship between children’s social network size and social cognition. However, the connection between social network size and social emotional development has been less examined. In addition, most studies focused on older children, the role of social network size during the first year of life remains unclear. 
+  Previous studies found that social networks play an important role in social cognition throughout infancy and childhood [@burkeChildrensSocialNetwork2023; @burkeChildrensSocialNetworks2022]. Burke and colleagues [-@burkeChildrensSocialNetwork2023] examined the relation between a three year-old’s social network size and their perspective-taking skills. The researchers were observing the children’s basic understanding that what they see may be different from what someone else sees [@burkeChildrensSocialNetwork2023]. The results revealed that children with larger social networks displayed significantly better explicit perspective-taking skills. This finding indicates that a larger social network might improve a child’s ability to consider things from another person’s point of view, or on the other hand,better perspective taking skills can help children build a larger social network [@burkeChildrensSocialNetwork2023]. 
+
+
+  Some indirect findings also support the role of social networks on the development of social cognition. It has been previously found that children aged 5-11 with at least one sibling are more likely to develop positive peer relationships because having a sibling allows children to have more opportunities to develop social and interpersonal skills during early childhood [@downeyPlayingWellOthers2004]. These findings support the close relationship between children’s social network size and social cognition. However, the connection between social network size and social emotional development has been less examined. In addition, most studies focused on older children, the role of social network size during the first year of life remains unclear. 
+
 
   Based on these gaps in previous studies, the current study will examine the relationship between social network size and response to strangers of infants from 8 - 12 months of age. More specifically, we will focus on infants’ neural responses, frontal alpha asymmetry (FAA), while watching socially interactive videos of strangers.
 
-## *Frontal Alpha Asymmetry*
-  Frontal alpha asymmetry (FAA) is an important neural indicator of infants’ approach/withdrawal tendency (Davidson & Fox, 1982; Fox & Davidson, 1986; Fox, 1991; Garstein et al., 2020; Harrewijn et al., 2019; Haworth et al., 2016). FAA is the measurement of the imbalance in cortical activation between the right and left frontal hemispheres, measured by psycho-physiological markers using electroencephalogram (EEG) (Davidson & Fox, 1982; Fox & Davidson, 1986; Fox, 1991). Rightward/negative FAA signifies increased right hemispheric activation as compared to left and leftward/positive FAA signifies increased left hemispheric activation (Vincent et al., 2021). FAA is thought to be a moderator reflecting fearful inhibition and impulsivity-anger (Liu et al., 2021), with left FAA being associated with higher levels of activity/approach while right FAA is associated with higher levels of fear/withdrawal (Davidson & Fox, 1982; Fox & Davidson, 1986; Fox, 1991; Garstein et al., 2020; Harrewijn et al., 2019; Haworth et al., 2016). Based on these findings, we will use FAA as a neural indicator of infants’ approach/withdrawal tendency towards strangers. 
 
-  It is advantageous to utilize FAA to study the relationship between social network size and infants’ responses to strangers because neural indicators can be more sensitive than behavioral indicators (Davidson & Fox, 1982; Fox & Davidson, 1986; Fox, 1991; Harrewijn et al., 2019; Haworth et al., 2016). The behavioral changes of 8- to 12-month-olds might be too subtle to code, whereas neural indicators can be more sensitive to capture individual differences, given that FAA has been widely used to study individual differences (e.g. motivation, affect, depression severity, Gollan et al., 2014). Furthermore, examining the relationship between social network size and FAA can enhance our understanding of how social networks may shape infant’s brains.
+### Frontal Alpha Asymmetry
 
-  Previous studies suggest that larger social network sizes are associated with better perspective-taking skills (Burke et al., 2023) and social and interpersonal skills (Downey & Condron, 2004), which indicates a positive relationship between social network sizes and social development. In the current study, we also expect social network sizes to be related to more positive responses to strangers. Since positive FAA is associated with approach tendencies in infants (Davidson & Fox, 1982; Fox & Davidson, 1986; Fox, 1991), we hypothesize that an infant with a larger social network will be more likely to display more positive FAA to strangers. 
+  Frontal alpha asymmetry (FAA) is an important neural indicator of infants’ approach/withdrawal tendency [@davidsonfox_1982_asymmetrical; @foxdavidson_1986_tasteelicited; @fox_1991_if; @gartsteinStudyingInfantTemperament2003; @harrewijnFrontalAlphaAsymmetry2019; @howarthFrontalElectroencephalogramAsymmetry2016]. FAA is the measurement of the imbalance in cortical activation between the right and left frontal hemispheres, measured by psycho-physiological markers using electroencephalogram (EEG) [@fox_1991_if; @foxdavidson_1986_tasteelicited; @davidsonfox_1982_asymmetrical]. Rightward/negative FAA signifies increased right hemispheric activation as compared to left and leftward/positive FAA signifies increased left hemispheric activation 
+[@vincentetal_2021_using]. FAA is thought to be a moderator reflecting fearful inhibition and impulsivity-anger [@liuFrontalEEGAsymmetry2021], with left FAA being associated with higher levels of activity/approach while right FAA is associated with higher levels of fear/withdrawal [@davidsonfox_1982_asymmetrical; @foxdavidson_1986_tasteelicited; @fox_1991_if; @gartsteinStudyingInfantTemperament2003; @harrewijnFrontalAlphaAsymmetry2019; @howarthFrontalElectroencephalogramAsymmetry2016]. Based on these findings, we will use FAA as a neural indicator of infants’ approach/withdrawal tendency towards strangers. 
 
-## *The Moderating Effect of Temperament*
-  Temperament was found to play a large role in an infant’s responses to strangers (Rubin et al., 2009). Children who are shy or display reticent behavior will show more avoidance to strangers (Rubin et al., 2009). Furthermore, children with different temperament will react to the same environment differently, or in other words, temperament can moderate the effect of the environment on child development. Ertekin and colleagues (2021) found that infants with a more reactive temperament, including higher levels of fear, irritability, and activity may be more sensitive to the surrounding environment as they are more likely to be overwhelmed. More specifically, infants with a higher rate of recovery from distress were less impacted by adverse environments than infants with a low rate of recovery from distress (Ertekin et al., 2021). Another study found that temperament can moderate children’s social wariness towards strangers of the same race and different races than their own (i.e. ‘ingroup’ versus ‘outgroup’, Hwang et al., 2023). More shy children displayed greater social wariness towards strangers of a different race than of the same race to their own, while less shy children did not (Hwang et al., 2023). These findings suggest that individual differences in temperament can have a moderating effect between social environment and children’s responses to strangers.
 
-  Based on these findings, the current study will examine the moderating role of temperament between social network size and infants’ FAA to strangers. Specifically, we will focus on the fear dimension, which refers to the level of fearfulness or anxiousness in response to novel or unfamiliar stimuli (Gartstein & Rothbart, 2003), given that this dimension is viewed as an important characteristic during the first year of life.
+  It is advantageous to utilize FAA to study the relationship between social network size and infants’ responses to strangers because neural indicators can be more sensitive than behavioral indicators [@davidsonfox_1982_asymmetrical; @foxdavidson_1986_tasteelicited; @fox_1991_if; @harrewijnFrontalAlphaAsymmetry2019; @howarthFrontalElectroencephalogramAsymmetry2016]. The behavioral changes of 8- to 12-month-olds might be too subtle to code, whereas neural indicators can be more sensitive to capture individual differences, given that FAA has been widely used to study individual differences [e.g. motivation, affect, depression severity, @gollanFrontalAlphaEEG2014]. Furthermore, examining the relationship between social network size and FAA can enhance our understanding of how social networks may shape infant’s brains.
+
+
+  Previous studies suggest that larger social network sizes are associated with better perspective-taking skills [@burkeChildrensSocialNetwork2023] and social and interpersonal skills [@downeyPlayingWellOthers2004], which indicates a positive relationship between social network sizes and social development. In the current study, we also expect social network sizes to be related to more positive responses to strangers. Since positive FAA is associated with approach tendencies in infants [@davidsonfox_1982_asymmetrical; @foxdavidson_1986_tasteelicited; @fox_1991_if], we hypothesize that an infant with a larger social network will be more likely to display more positive FAA to strangers. 
+
+### The Moderating Effect of Temperament
+
+  Temperament was found to play a large role in an infant’s responses to strangers [@rubinSocialWithdrawlChildhood2009]. Children who are shy or display reticent behavior will show more avoidance to strangers [@rubinSocialWithdrawlChildhood2009]. Furthermore, children with different temperament will react to the same environment differently, or in other words, temperament can moderate the effect of the environment on child development. Ertekin and colleagues [-@ertekinTemperamentModeratesEffects2021] found that infants with a more reactive temperament, including higher levels of fear, irritability, and activity may be more sensitive to the surrounding environment as they are more likely to be overwhelmed. More specifically, infants with a higher rate of recovery from distress were less impacted by adverse environments than infants with a low rate of recovery from distress [@ertekinTemperamentModeratesEffects2021]. Another study found that temperament can moderate children’s social wariness towards strangers of the same race and different races than their own [i.e. ‘ingroup’ versus ‘outgroup’, @hwangChildrensSocialWariness2023]. More shy children displayed greater social wariness towards strangers of a different race than of the same race to their own, while less shy children did not [@hwangChildrensSocialWariness2023]. These findings suggest that individual differences in temperament can have a moderating effect between social environment and children’s responses to strangers.
+
+  Based on these findings, the current study will examine the moderating role of temperament between social network size and infants’ FAA to strangers. Specifically, we will focus on the fear dimension, which refers to the level of fearfulness or anxiousness in response to novel or unfamiliar stimuli [@gartsteinStudyingInfantTemperament2003], given that this dimension is viewed as an important characteristic during the first year of life.
 
 ## Current Study
-  The current study aims to examine two questions. First, this study will examine the relationship between social network sizes and neural responses to strangers during infancy. We used an infant’s FAA as an indicator of the infant’s neural response to strangers. Given the positive relation between social network sizes and children’ social cognition (Burke et al., 2023; Downey & Condron, 2004), we predicted that larger social network size will correlate with more positive FAA (i.e. increased left frontal activation) toward strangers. 
+
+  The current study aims to examine two questions. First, this study will examine the relationship between social network sizes and neural responses to strangers during infancy. We used an infant’s FAA as an indicator of the infant’s neural response to strangers. Given the positive relation between social network sizes and children’ social cognition [@burkeChildrensSocialNetwork2023; @downeyPlayingWellOthers2004], we predicted that larger social network size will correlate with more positive FAA (i.e. increased left frontal activation) toward strangers. 
 
   The second question we were interested in is how temperament, especially fear, can moderate the relationship between social network size and responses to strangers during infancy. There are three possibilities. First, a high level of fear may weaken the relationship between social network size and an infant’s neural response to strangers. Second, a high level of fear may magnify the relationship between social network size and an infant’s neural response to strangers. The third possibility is that there is no influence of fear on the relationship between social network size and an infant's neural responses to strangers. 
 
   In summary, this study aimed to examine the connection between infants’ social network sizes and their neural response to strangers. It contributes to the understanding of how early social environments can shape infants’ brains and how individual temperament plays a moderating role. These factors are essential in understanding an infant’s stranger anxiety/fear and are important for caregivers to take into consideration when scaffolding infants build their social networks.
 
-## Methods
-## *Participants*
+# Methods
+## Participants
+
   All participants in this study were recruited by the Infant Learning and Development Laboratory at the University of Chicago. The parents of approximately 80 infants from 8 months to 12 months old were asked to participate in the study. Inclusion criteria is as follows: (1) 8 to 12 months of age, (2) English language spoken at least 80% of the time at home, (3) full-term; 37 weeks and beyond gestational age, and (4) no developmental delays.
 
-## *Procedure*
-  Our study uses an Electroencephalogram (EEG) machine and related materials (i.e. infant EEG cap, software, and technical equipment) to measure the infant's neural processing of strangers, specifically alpha wave frequency. During the EEG task, infants watched videos of two strangers grasping a toy alternatively. One stranger speaks English, and the other speaks French. Our analyses focus on infants’ neural responses while watching the native speaker. To calculate FAA, we subtracted the natural log-transformed relative alpha power of the 6-9 Hz frequency band in the left hemisphere from the natural log-transformed relative alpha power in the right hemisphere (Anaya et al., 2021; Vincent et al., 2021; Fox et al., 2001). Therefore, in our calculations of FAA, stronger left frontal activation is indicated by a positive FAA score (Harrewijn et al., 2019; Vincent et al., 2021). 
+## Procedure
 
-  In order to measure an infant’s temperament and social network size, parents were instructed to fill out the Revised Infant Behavior Questionnaire (IBQ-R), a parent report of a reaction on a seven point scale during the past one or two weeks, and Child Social Network Questionnaire (CSNQ), a demographic form for each person the child sees on a regular basis, regarding their child (Gartstein & Rothbart, 2003; Burke et al., 2022). 
+  Our study uses an Electroencephalogram (EEG) machine and related materials (i.e. infant EEG cap, software, and technical equipment) to measure the infant's neural processing of strangers, specifically alpha wave frequency. During the EEG task, infants watched videos of two strangers grasping a toy alternatively. One stranger speaks English, and the other speaks French. Our analyses focus on infants’ neural responses while watching the native speaker. To calculate FAA, we subtracted the natural log-transformed relative alpha power of the 6-9 Hz frequency band in the left hemisphere from the natural log-transformed relative alpha power in the right hemisphere [@anayaetal_2021_psychometric; @vincentetal_2021_using; @foxContinuityDiscontinuityBehavioral2001]. Therefore, in our calculations of FAA, stronger left frontal activation is indicated by a positive FAA score [@harrewijnFrontalAlphaAsymmetry2019; @vincentetal_2021_using]. 
 
-## *Analyses*
+  In order to measure an infant’s temperament and social network size, parents were instructed to fill out the Revised Infant Behavior Questionnaire (IBQ-R), a parent report of a reaction on a seven point scale during the past one or two weeks [@gartsteinStudyingInfantTemperament2003], and Child Social Network Questionnaire (CSNQ), a demographic form for each person the child sees on a regular basis, regarding their child [@burkeChildrensSocialNetworks2022]. 
+
+## Analyses
+
   This study used linear regression models to examine our hypotheses. First, to examine the relationship between social network sizes and infants’ neural responses to strangers, we conducted a linear regression model, with FAA while viewing the English speaking strangers as the outcome, and social network size as the predictor. Second, to examine the moderating effect of fear between social network sizes and infants’ responses to strangers, we conducted a moderating model with fear scores as the moderator between social network size and infants’ FAA. 
 
-## Results
+# Results
 
-The results presented below will accomplish the following aims. First, we present the descriptive information about the variables. Next we aim to answer the question: what is the relationship between social network size and frontal alpha asymmetry in infants? And finally, we will look at the potential moderating effect of temperament, specifically fear, between the realtionship of social network size and FAA.
+  The results presented below will accomplish the following aims. First, we present the descriptive information about the variables. Next we aim to answer the question: what is the relationship between social network size and frontal alpha asymmetry in infants? And finally, we will look at the potential moderating effect of temperament, specifically fear, between the realtionship of social network size and FAA.
 ```{r}
 #| label: load_dataset
 #| include: false
@@ -116,7 +130,6 @@ The results presented below will accomplish the following aims. First, we presen
 Expanded_VP_EEG_SNQ <- read.csv("SNQ-FAA Datasets/Expanded_VP_EEG_SNQ.csv", header=FALSE)
 snq <- Expanded_VP_EEG_SNQ
 ```
-
 
 ```{r}
 #| label: remove-columns
@@ -180,7 +193,6 @@ action_faa <- action_faa %>%
 
 action_faa <- action_faa[-1, ]
 ```
-
 
 ```{r}
 #| label: change-subject-names
@@ -274,7 +286,7 @@ anova_faa <- aov(SNQ ~ FAA, data = common_participants)
 summary.aov(anova_faa)
 ```
 
-Figure 1 below demonstrates the relationship between social network size and FAA for each participant during the two time periods. As we can see, FAA has a tendency to increase as social network size increases. This supports our hypothesis that a larger social network size will lead to more positive FAA.
+Figure 1 below demonstrates the relationship between social network size and FAA for each participant during the two time periods: watching the stranger reach towards an object and grasping/lifting the object. As we can see, FAA has a tendency to increase as social network size increases. This supports our hypothesis that a larger social network size will lead to more positive FAA.
 
 ```{r}
 #| label: fig-scatter-2
@@ -296,7 +308,7 @@ ggplot(common_participants, aes(x = SNQ, y = FAA))+
 
 ```
 
-## Discussion
+# Discussion
   The aim of our study was to answer two questions: what is the realtionship between social network size and FAA in infants towards strangers and what is the moderating effect of fear in this relationship?
 
   We have found evidence to support our first hypothesis, that a larger social network size is associated with more positive FAA while viewing the videos of strangers.
@@ -304,7 +316,8 @@ ggplot(common_participants, aes(x = SNQ, y = FAA))+
   Therefore, we are be further interested in the moderating effect of fear in this relationship.
   The findings of this study will contribute to the understanding of the neurological reactions, and affecting factors, toward strangers during infancy. 
 
-<<<<<<< HEAD
-Next, I have to calculate FAA for each participant. Once I do this, I can plot both social network size and FAA together which will give me the results and table I need related to the first question and hypothesis for my thesis. 
-=======
->>>>>>> a8c3156 (Final Project Draft 2 commit)
+\clearpage
+# References
+
+:::{#refs}
+:::
