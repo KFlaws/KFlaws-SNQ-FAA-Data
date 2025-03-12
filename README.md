@@ -6,6 +6,7 @@ My study examines the relationship between social network sizes and neural respo
 The second question we are interested in is how temperament, especially fear, can moderate the relationship between social network size and responses to strangers during infancy. There are three possibilities. First, a high level of fear may weaken the relationship between social network size and an infant’s neural response to strangers. Second, a high level of fear may magnify the relationship between social network size and an infant’s neural response to strangers. The third possibility is that there is no influence of fear on the relationship between social network size and an infant's neural responses to strangers. 
 
 Files:
+
 Manuscript qmd: SNQ-FAA-Data.qmd 
 
 Manuscript pdf: SNQ-FAA-Data.pdf 
