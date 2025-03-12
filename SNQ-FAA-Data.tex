@@ -229,18 +229,26 @@ St., Chicago, IL 60637, USA, Email: kflaws@uchicago.edu}
 
 
 
-\usepackage{fontspec}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
 \usepackage{multirow}
-\usepackage{multicol}
+\usepackage{wrapfig}
+\usepackage{float}
 \usepackage{colortbl}
+\usepackage{pdflscape}
+\usepackage{tabu}
+\usepackage{threeparttable}
+\usepackage{threeparttablex}
+\usepackage[normalem]{ulem}
+\usepackage{makecell}
+\usepackage{xcolor}
+\usepackage{fontspec}
+\usepackage{multicol}
 \usepackage{hhline}
 \newlength\Oldarrayrulewidth
 \newlength\Oldtabcolsep
-\usepackage{longtable}
-\usepackage{array}
 \usepackage{hyperref}
-\usepackage{float}
-\usepackage{wrapfig}
 \makeatletter
 \@ifpackageloaded{caption}{}{\usepackage{caption}}
 \AtBeginDocument{%
@@ -333,9 +341,9 @@ behavioral domain to neural domain and examine the relation between
 children's social network size and their neural responses to strangers
 during infancy.
 
-\subsection{Literature Review}\label{literature-review}
+\subsection{Literature Review}\label{sec-lit-review}
 
-\subsubsection{Social Network Size}\label{social-network-size}
+\subsubsection{Social Network Size}\label{sec-social-network-size}
 
 Previous studies found that social networks play an important role in
 social cognition throughout infancy and childhood
@@ -374,7 +382,8 @@ of infants from 8 - 12 months of age. More specifically, we will focus
 on infants' neural responses, frontal alpha asymmetry (FAA), while
 watching socially interactive videos of strangers.
 
-\subsubsection{Frontal Alpha Asymmetry}\label{frontal-alpha-asymmetry}
+\subsubsection{Frontal Alpha
+Asymmetry}\label{sec-frontal-alpha-asymmetry}
 
 Frontal alpha asymmetry (FAA) is an important neural indicator of
 infants' approach/withdrawal tendency
@@ -445,7 +454,7 @@ we hypothesize that an infant with a larger social network will be more
 likely to display more positive FAA to strangers.
 
 \subsubsection{The Moderating Effect of
-Temperament}\label{the-moderating-effect-of-temperament}
+Temperament}\label{sec-moderating-effect-of-temperament}
 
 Temperament was found to play a large role in an infant's responses to
 strangers (\citeproc{ref-rubinSocialWithdrawlChildhood2009}{Rubin et
@@ -483,7 +492,7 @@ or unfamiliar stimuli
 Rothbart, 2003}), given that this dimension is viewed as an important
 characteristic during the first year of life.
 
-\subsection{Current Study}\label{current-study}
+\subsection{Current Study}\label{sec-current-study}
 
 The current study aims to examine two questions. First, this study will
 examine the relationship between social network sizes and neural
@@ -514,9 +523,9 @@ role. These factors are essential in understanding an infant's stranger
 anxiety/fear and are important for caregivers to take into consideration
 when scaffolding infants build their social networks.
 
-\section{Methods}\label{methods}
+\section{Methods}\label{sec-methods}
 
-\subsection{Participants}\label{participants}
+\subsubsection{Participants}\label{sec-participants}
 
 All participants in this study were recruited by the Infant Learning and
 Development Laboratory at the University of Chicago. The parents of
@@ -526,7 +535,7 @@ months of age, (2) English language spoken at least 80\% of the time at
 home, (3) full-term; 37 weeks and beyond gestational age, and (4) no
 developmental delays.
 
-\subsection{Procedure}\label{procedure}
+\subsubsection{Procedure}\label{sec-procedure}
 
 Our study uses an Electroencephalogram (EEG) machine and related
 materials (i.e.~infant EEG cap, software, and technical equipment) to
@@ -556,18 +565,18 @@ demographic form for each person the child sees on a regular basis,
 regarding their child
 (\citeproc{ref-burkeChildrensSocialNetworks2022}{Burke et al., 2022}).
 
-\subsection{Analyses}\label{analyses}
+\subsubsection{Analyses}\label{sec-analyses}
 
-This study used linear regression models to examine our hypotheses.
-First, to examine the relationship between social network sizes and
-infants' neural responses to strangers, we conducted a linear regression
-model, with FAA while viewing the English speaking strangers as the
-outcome, and social network size as the predictor. Second, to examine
-the moderating effect of fear between social network sizes and infants'
-responses to strangers, we conducted a moderating model with fear scores
-as the moderator between social network size and infants' FAA.
+This study used linear mixed models to examine our hypotheses. First, to
+examine the relationship between social network sizes and infants'
+neural responses to strangers, we conducted a linear mixed model, with
+FAA while viewing the English speaking strangers as the outcome, and
+social network size as the predictor. Second, to examine the moderating
+effect of fear between social network sizes and infants' responses to
+strangers, we conducted a moderating model with fear scores as the
+moderator between social network size and infants' FAA.
 
-\section{Results}\label{results}
+\section{Results}\label{sec-results}
 
 The results presented below will accomplish the following aims. First,
 we present the descriptive information about the variables. Next we aim
@@ -594,57 +603,57 @@ Rows)}{\label{tbl-snq-faa}}}
 
 \providecommand{\ascline}[3]{\noalign{\global\arrayrulewidth #1}\arrayrulecolor[HTML]{#2}\cline{#3}}
 
-\begin{longtable*}[c]{|p{0.75in}|p{0.75in}|p{0.75in}|p{0.75in}|p{0.75in}}
+\begin{longtable*}[c]{|p{0.75in}|p{0.75in}|p{0.75in}|p{0.75in}}
 
 
 
-\ascline{0.75pt}{000000}{1-5}
+\ascline{0.75pt}{000000}{1-4}
 
-\multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{22}\selectfont{\global\setmainfont{Times New Roman}{ID}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{22}\selectfont{\global\setmainfont{Times New Roman}{SNQ}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{22}\selectfont{\global\setmainfont{Times New Roman}{Condition}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{22}\selectfont{\global\setmainfont{Times New Roman}{Time}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{22}\selectfont{\global\setmainfont{Times New Roman}{FAA}}}} \\
+\multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{22}\selectfont{\global\setmainfont{Times New Roman}{ID}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{22}\selectfont{\global\setmainfont{Times New Roman}{SNS}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{22}\selectfont{\global\setmainfont{Times New Roman}{Time}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{22}\selectfont{\global\setmainfont{Times New Roman}{FAA}}}} \\
 
-\ascline{0.75pt}{000000}{1-5}\endfirsthead 
+\ascline{0.75pt}{000000}{1-4}\endfirsthead 
 
-\ascline{0.75pt}{000000}{1-5}
+\ascline{0.75pt}{000000}{1-4}
 
-\multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{22}\selectfont{\global\setmainfont{Times New Roman}{ID}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{22}\selectfont{\global\setmainfont{Times New Roman}{SNQ}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{22}\selectfont{\global\setmainfont{Times New Roman}{Condition}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{22}\selectfont{\global\setmainfont{Times New Roman}{Time}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{22}\selectfont{\global\setmainfont{Times New Roman}{FAA}}}} \\
+\multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{22}\selectfont{\global\setmainfont{Times New Roman}{ID}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{22}\selectfont{\global\setmainfont{Times New Roman}{SNS}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{22}\selectfont{\global\setmainfont{Times New Roman}{Time}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{22}\selectfont{\global\setmainfont{Times New Roman}{FAA}}}} \\
 
-\ascline{0.75pt}{000000}{1-5}\endhead
-
-
-
-\multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{22}\selectfont{\global\setmainfont{Times New Roman}{PB\_10}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{22}\selectfont{\global\setmainfont{Times New Roman}{11}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{22}\selectfont{\global\setmainfont{Times New Roman}{EnTT}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{22}\selectfont{\global\setmainfont{Times New Roman}{0\ to\ 1000}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{22}\selectfont{\global\setmainfont{Times New Roman}{0.020131267}}}} \\
+\ascline{0.75pt}{000000}{1-4}\endhead
 
 
 
-
-
-\multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{22}\selectfont{\global\setmainfont{Times New Roman}{PB\_10}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{22}\selectfont{\global\setmainfont{Times New Roman}{11}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{22}\selectfont{\global\setmainfont{Times New Roman}{EnTT}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{22}\selectfont{\global\setmainfont{Times New Roman}{-1000\ to\ 0}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{22}\selectfont{\global\setmainfont{Times New Roman}{0.005574083}}}} \\
+\multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{22}\selectfont{\global\setmainfont{Times New Roman}{PB\_10}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{22}\selectfont{\global\setmainfont{Times New Roman}{11}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{22}\selectfont{\global\setmainfont{Times New Roman}{0\ to\ 1000}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{22}\selectfont{\global\setmainfont{Times New Roman}{0.02}}}} \\
 
 
 
 
 
-\multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{22}\selectfont{\global\setmainfont{Times New Roman}{PB\_11}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{22}\selectfont{\global\setmainfont{Times New Roman}{17}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{22}\selectfont{\global\setmainfont{Times New Roman}{EnTT}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{22}\selectfont{\global\setmainfont{Times New Roman}{0\ to\ 1000}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{22}\selectfont{\global\setmainfont{Times New Roman}{0.019238154}}}} \\
+\multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{22}\selectfont{\global\setmainfont{Times New Roman}{PB\_10}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{22}\selectfont{\global\setmainfont{Times New Roman}{11}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{22}\selectfont{\global\setmainfont{Times New Roman}{-1000\ to\ 0}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{22}\selectfont{\global\setmainfont{Times New Roman}{0.01}}}} \\
 
 
 
 
 
-\multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{22}\selectfont{\global\setmainfont{Times New Roman}{PB\_11}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{22}\selectfont{\global\setmainfont{Times New Roman}{17}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{22}\selectfont{\global\setmainfont{Times New Roman}{EnTT}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{22}\selectfont{\global\setmainfont{Times New Roman}{-1000\ to\ 0}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{22}\selectfont{\global\setmainfont{Times New Roman}{0.037043985}}}} \\
+\multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{22}\selectfont{\global\setmainfont{Times New Roman}{PB\_11}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{22}\selectfont{\global\setmainfont{Times New Roman}{17}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{22}\selectfont{\global\setmainfont{Times New Roman}{0\ to\ 1000}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{22}\selectfont{\global\setmainfont{Times New Roman}{0.02}}}} \\
 
 
 
 
 
-\multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{22}\selectfont{\global\setmainfont{Times New Roman}{PB\_13}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{22}\selectfont{\global\setmainfont{Times New Roman}{3}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{22}\selectfont{\global\setmainfont{Times New Roman}{EnTT}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{22}\selectfont{\global\setmainfont{Times New Roman}{0\ to\ 1000}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{22}\selectfont{\global\setmainfont{Times New Roman}{-0.018925968}}}} \\
+\multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{22}\selectfont{\global\setmainfont{Times New Roman}{PB\_11}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{22}\selectfont{\global\setmainfont{Times New Roman}{17}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{22}\selectfont{\global\setmainfont{Times New Roman}{-1000\ to\ 0}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{22}\selectfont{\global\setmainfont{Times New Roman}{0.04}}}} \\
 
 
 
 
 
-\multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{22}\selectfont{\global\setmainfont{Times New Roman}{PB\_13}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{22}\selectfont{\global\setmainfont{Times New Roman}{3}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{22}\selectfont{\global\setmainfont{Times New Roman}{EnTT}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{22}\selectfont{\global\setmainfont{Times New Roman}{-1000\ to\ 0}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{22}\selectfont{\global\setmainfont{Times New Roman}{-0.024349337}}}} \\
+\multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{22}\selectfont{\global\setmainfont{Times New Roman}{PB\_13}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{22}\selectfont{\global\setmainfont{Times New Roman}{3}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{22}\selectfont{\global\setmainfont{Times New Roman}{0\ to\ 1000}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{22}\selectfont{\global\setmainfont{Times New Roman}{-0.02}}}} \\
 
-\ascline{0.75pt}{000000}{1-5}
+
+
+
+
+\multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{22}\selectfont{\global\setmainfont{Times New Roman}{PB\_13}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{22}\selectfont{\global\setmainfont{Times New Roman}{3}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{22}\selectfont{\global\setmainfont{Times New Roman}{-1000\ to\ 0}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{22}\selectfont{\global\setmainfont{Times New Roman}{-0.02}}}} \\
+
+\ascline{0.75pt}{000000}{1-4}
 
 
 
@@ -661,46 +670,143 @@ Rows)}{\label{tbl-snq-faa}}}
 \renewcommand*{\arraystretch}{1}
 
 {\vspace{-20pt}
-\noindent \emph{Note.} Table 1 displays social network size (SNQ) and FAA data for the first three participants. Each participant has FAA measured for two conditions, -1000 to 0 and 0 to 1000.}
+\noindent \emph{Note.} Table 1 displays social network size (SNQ) and FAA data for the first three participants.}
 
 \end{table}
 
-The statistics below detail a 1-way ANOVA between social network size
-and FAA.
+Table~\ref{tbl-snq-faa} displays examples of social network size, as
+measured by the SNQ, and FAA data. Each participant has two instances of
+measured FAA. The -1000 to 0 time frame represents FAA while the actor
+in the video was reaching towards an object while the 0 to 1000 time
+frame represents FAA while the actor in the video was grasping an
+object.
 
-\begin{verbatim}
-             Df Sum Sq Mean Sq F value  Pr(>F)   
-FAA           1    245  245.04   9.068 0.00305 **
-Residuals   150   4053   27.02                   
----
-Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
-\end{verbatim}
+Table~\ref{tbl-summary-statistics-sns} and
+Table~\ref{tbl-summary-statistics-faa} display descriptive information
+about social network size and FAA respectively. There are 152
+participants in this study with a mean social network size of 10.89 and
+a mean level of FAA of 0.01.
 
-Figure 1 below demonstrates the relationship between social network size
-and FAA for each participant during the two time periods: watching the
-stranger reach towards an object and grasping/lifting the object. As we
-can see, FAA has a tendency to increase as social network size
-increases. This supports our hypothesis that a larger social network
-size will lead to more positive FAA.
+\begin{table}
 
-\begin{verbatim}
-`geom_smooth()` using formula = 'y ~ x'
-\end{verbatim}
+{\caption{{Descriptive Statistics - Social Network
+Size}{\label{tbl-summary-statistics-sns}}}
+\vspace{-20pt}}
+
+\begin{longtable*}[t]{rrrrrr}
+\\
+\toprule
+Mean SNS & Median SNS & SD SNS & Min SNS & Max SNS & Range SNS\\
+\midrule
+10.89 & 10 & 5.34 & 2 & 25 & 23\\
+\bottomrule
+\end{longtable*}
+
+\end{table}
+
+\begin{table}
+
+{\caption{{Descriptive Statistics -
+FAA}{\label{tbl-summary-statistics-faa}}}
+\vspace{-20pt}}
+
+\begin{longtable*}[t]{rrrrrr}
+\\
+\toprule
+Mean FAA & Median FAA & SD FAA & Min FAA & Max FAA & Range FAA\\
+\midrule
+0.01 & 0.01 & 0.03 & -0.06 & 0.1 & 0.16\\
+\bottomrule
+\end{longtable*}
+
+\end{table}
+
+Figure~\ref{fig-scatter-sns-faa} demonstrates the relationship between
+social network size and FAA for each participant during the two time
+periods: watching the stranger reach towards an object and
+grasping/lifting the object. As we can see, FAA has a tendency to
+increase as social network size increases. This supports our hypothesis
+that a larger social network size will lead to more positive FAA.
+
+The difference in levels of FAA between the participant with the highest
+and lowest social network size is 0.04.
 
 \begin{figure}[!htbp]
 
 {\caption{{Social Network Size and FAA by Time
-Blocks}{\label{fig-scatter-2}}}}
+Blocks}{\label{fig-scatter-sns-faa}}}}
 
-\pandocbounded{\includegraphics[keepaspectratio]{SNQ-FAA-Data_files/figure-pdf/fig-scatter-2-1.pdf}}
+\pandocbounded{\includegraphics[keepaspectratio]{SNQ-FAA-Data_files/figure-pdf/fig-scatter-sns-faa-1.pdf}}
 
 {\noindent \emph{Note.} Figure 1 displays levels of FAA and infants'
-social network sizes. Each participant has two occurences, one in each
-of the time blocks.}
+social network sizes.}
 
 \end{figure}
 
-\section{Discussion}\label{discussion}
+\begin{table}
+
+{\caption{{Linear Mixed Model between FAA and
+SNS}{\label{tbl-lmm-faa-sns}}}
+\vspace{-20pt}}
+
+\end{table}
+
+However, from Table~\ref{tbl-lmm-faa-sns} we can see this relationship
+is not statistically significant (\emph{p} = .030). The marginal
+R-squared = 0.056, which means that only 5.6\% of the variance is
+explained by the fixed effects of social network size and the
+conditional R-squared = 0.88, which suggests that a large portion of the
+variance is explained by random effects or individual differences. The
+ICC of 0.824 emphasizes that random effects dominate the variance in
+this model.
+
+Figure~\ref{fig-total-sample-scatter} displays social network size and
+FAA including temepramental fear as a moderator. The darker the data
+points the higher the levels of parent reported fear. From the figure,
+we can see that as social network size increases, FAA also increases.
+Additionally, the gradient of temperamental fear demonstrates infant's
+with higher fear have both more negative FAA and smaller social network
+sizes.
+
+There are 4 less participants in this model as only 72 completed all
+three aspects of this study (SNQ, IBQ, and EEG measuring).
+
+\begin{figure}[!htbp]
+
+{\caption{{Social Network Size, FAA, and Fear
+Level}{\label{fig-total-sample-scatter}}}}
+
+\pandocbounded{\includegraphics[keepaspectratio]{SNQ-FAA-Data_files/figure-pdf/fig-total-sample-scatter-1.pdf}}
+
+{\noindent \emph{Note.} Figure 2 displays levels of FAA and social
+network sizes including a gradient of temperamental fear level. Darker
+data points indicate a higher level of parent reported fear.}
+
+\end{figure}
+
+\begin{table}
+
+{\caption{{Linear Mixed Model: FAA, Temperament, Social Network
+Size}{\label{tbl-lmm-total-sample}}}
+\vspace{-20pt}}
+
+\end{table}
+
+However, again, these relationships are not significant as seen in
+Table~\ref{tbl-lmm-total-sample} (\emph{p} = .635). The marginal
+R-squared = 0.063, which tells us that only 6.3\% of the variance is
+explained by the fixed effects of social network size and fear as
+measured by the SNQ and IBQ respectively. While this is low, there was a
+slight increase of in comparison to our first model where only 5.6\% of
+the variance was explained by fixed effects. This increase suggests that
+level of temperamental fear does have an impact on the relationship
+between social network size and FAA. The conditional R-squared = 0.886,
+which suggests that 88.6\% of the variance is explained by random
+effects or individual differences. This is about the same as the first
+model. The ICC of 0.823 emphasizes that random effects dominate the
+variance in this model as well as the first.
+
+\section{Discussion}\label{sec-discussion}
 
 The aim of our study was to answer two questions: what is the
 realtionship between social network size and FAA in infants towards
@@ -709,16 +815,25 @@ relationship?
 
 We have found evidence to support our first hypothesis, that a larger
 social network size is associated with more positive FAA while viewing
-the videos of strangers.
+the videos of strangers. However, the evidence is not statistically
+significant and the variance is largely explained by individual
+differences. One limitation to proving our hypothesis was our small
+sample size. Further research is needed to provide more conclusive
+results.
 
-Therefore, we are be further interested in the moderating effect of fear
-in this relationship. The findings of this study will contribute to the
-understanding of the neurological reactions, and affecting factors,
-toward strangers during infancy.
+Due to the evidence relating to our first hypothesis, we were further
+interested in the moderating effect of fear in this relationship. We
+have found that a high level of fear magnified the relationship between
+social network size and an infant's neural response to strangers, seen
+through the increase in variance explained by the fixed effects.
+
+The findings of this study will contribute to the understanding of the
+neurological reactions, and affecting factors, toward strangers during
+infancy.
 
 \clearpage
 
-\section{References}\label{references}
+\section{References}\label{sec-references}
 
 \phantomsection\label{refs}
 \begin{CSLReferences}{1}{0}

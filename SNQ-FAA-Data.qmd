@@ -15,7 +15,7 @@ author:
       region: IL
       country: USA
       postal-code: 60637
-abstract: "Multiple previous studies have reported the close relationship between children’s social network size and social cognition. However, the connection between social network size and social emotional development has been less examined. The current study aims to examine the connection between infants’ social network sizes and their neural response to strangers. We will examine the relationship between social network sizes and neural responses to strangers during infancy using an infant’s frontal alpha asymmetry (FAA) as a neural indicator. Additionally, we will investigate how temperament, especially fear, can moderate the relationship between social network size and responses to strangers during infancy. Our study will use an Electroencephalogram (EEG) machine to measure the infant's neural processing of strangers, specifically alpha wave frequency, and in turn calculate the infant’s FAA while watching videos of strangers. In order to measure an infant’s temperament and social network size, parents will be instructed to fill out the Revised Infant Behavior Questionnaire (IBQ-R) and Child Social Network Questionnaire (CSNQ). If we find that a larger social network size is associated with more positive FAA while viewing the videos of strangers, we will be further interested in the moderating effect of fear in this relationship. If we find that fear acts as a moderator, we will be able to determine if fear increases or decreases the effectiveness of social network size on infant’s responses to strangers. The findings of this study will contribute to the understanding of the neurological reactions, and affecting factors, toward strangers during infancy."
+abstract: "Multiple previous studies have reported the close relationship between children’s social network size and social cognition. However, the connection between social network size and social emotional development has been less examined. The current study aims to examine the connection between infants’ social network sizes and their neural response to strangers, as a pointer to their social emotional development. We will examine how social network sizes are related to neural responses to strangers during infancy using an infant’s frontal alpha asymmetry (FAA), measuring alpha wave frequency, as a neural indicator. Additionally, we will investigate how temperament, especially fear, can moderate the relationship between social network size and responses to strangers during infancy. Our study will use an Electroencephalogram (EEG) machine to measure the infant's neural processing of strangers, specifically alpha wave frequency, and in turn calculate the infant’s FAA while watching videos of strangers. In order to measure an infant’s temperament and social network size, parents will be instructed to fill out the Revised Infant Behavior Questionnaire (IBQ-R) and Child Social Network Questionnaire (CSNQ). We found that larger social network sizes are associated with more positive FAA while viewing the videos of strangers, however, there is only a weak correlation. We found that fear acts as a moderator, which increases the effectiveness of social network size on infant’s responses to strangers. The findings of this study will contribute to the understanding of the neurological reactions, and affecting factors, toward strangers during infancy."
 keywords: [social network size, frontal alpha asymmetry, fear, temperament, infancy]
 floatsintext: true
 numbered-lines: false
@@ -23,6 +23,7 @@ suppress-title-page: false
 link-citations: true
 draft-date: false
 bibliography: bibliography.bib
+author-note: false
 lang: en
 language:
   citation-last-author-separator: "and"
@@ -58,18 +59,35 @@ library(flextable)
 library(ftExtra)
 library(knitr)
 library(dplyr)
+library(stringr)
+library(forcats)
 library(readr)
 library(ggplot2)
 library(lme4)
+library(lmerTest)
+library(broom)
+library(broom.mixed)
+library(papaja)
+library(tinylabels)
+library(sjPlot)
+library(papaja)
+library(performance)
+library(kableExtra)
+library(stargazer)
+library(apaTables)
+library(jtools)
+library(MuMIn)
+set.seed(1234)
 conflicts_prefer(dplyr::filter, .quiet = TRUE)
 conflicts_prefer(flextable::separate_header, .quiet = TRUE)
+conflicts_prefer(lme4::lmer)
 
 ```
 
   Infants learn about the world from the people around them. An infant’s social network allows them to explore the world and learn how to connect and communicate with others. It has been previously suggested that children with a larger social network size are better at taking others’ perspectives [@burkeChildrensSocialNetwork2023]. In the current study, we aim to expand these findings from behavioral domain to neural domain and examine the relation between children’s social network size and their neural responses to strangers during infancy.
 
-## Literature Review
-### Social Network Size
+## Literature Review {#sec-lit-review}
+### Social Network Size {#sec-social-network-size}
 
   Previous studies found that social networks play an important role in social cognition throughout infancy and childhood [@burkeChildrensSocialNetwork2023; @burkeChildrensSocialNetworks2022]. Burke and colleagues [-@burkeChildrensSocialNetwork2023] examined the relation between a three year-old’s social network size and their perspective-taking skills. The researchers were observing the children’s basic understanding that what they see may be different from what someone else sees [@burkeChildrensSocialNetwork2023]. The results revealed that children with larger social networks displayed significantly better explicit perspective-taking skills. This finding indicates that a larger social network might improve a child’s ability to consider things from another person’s point of view, or on the other hand,better perspective taking skills can help children build a larger social network [@burkeChildrensSocialNetwork2023]. 
 
@@ -80,7 +98,7 @@ conflicts_prefer(flextable::separate_header, .quiet = TRUE)
   Based on these gaps in previous studies, the current study will examine the relationship between social network size and response to strangers of infants from 8 - 12 months of age. More specifically, we will focus on infants’ neural responses, frontal alpha asymmetry (FAA), while watching socially interactive videos of strangers.
 
 
-### Frontal Alpha Asymmetry
+### Frontal Alpha Asymmetry {#sec-frontal-alpha-asymmetry}
 
   Frontal alpha asymmetry (FAA) is an important neural indicator of infants’ approach/withdrawal tendency [@davidsonfox_1982_asymmetrical; @foxdavidson_1986_tasteelicited; @fox_1991_if; @gartsteinStudyingInfantTemperament2003; @harrewijnFrontalAlphaAsymmetry2019; @howarthFrontalElectroencephalogramAsymmetry2016]. FAA is the measurement of the imbalance in cortical activation between the right and left frontal hemispheres, measured by psycho-physiological markers using electroencephalogram (EEG) [@fox_1991_if; @foxdavidson_1986_tasteelicited; @davidsonfox_1982_asymmetrical]. Rightward/negative FAA signifies increased right hemispheric activation as compared to left and leftward/positive FAA signifies increased left hemispheric activation 
 [@vincentetal_2021_using]. FAA is thought to be a moderator reflecting fearful inhibition and impulsivity-anger [@liuFrontalEEGAsymmetry2021], with left FAA being associated with higher levels of activity/approach while right FAA is associated with higher levels of fear/withdrawal [@davidsonfox_1982_asymmetrical; @foxdavidson_1986_tasteelicited; @fox_1991_if; @gartsteinStudyingInfantTemperament2003; @harrewijnFrontalAlphaAsymmetry2019; @howarthFrontalElectroencephalogramAsymmetry2016]. Based on these findings, we will use FAA as a neural indicator of infants’ approach/withdrawal tendency towards strangers. 
@@ -91,13 +109,13 @@ conflicts_prefer(flextable::separate_header, .quiet = TRUE)
 
   Previous studies suggest that larger social network sizes are associated with better perspective-taking skills [@burkeChildrensSocialNetwork2023] and social and interpersonal skills [@downeyPlayingWellOthers2004], which indicates a positive relationship between social network sizes and social development. In the current study, we also expect social network sizes to be related to more positive responses to strangers. Since positive FAA is associated with approach tendencies in infants [@davidsonfox_1982_asymmetrical; @foxdavidson_1986_tasteelicited; @fox_1991_if], we hypothesize that an infant with a larger social network will be more likely to display more positive FAA to strangers. 
 
-### The Moderating Effect of Temperament
+### The Moderating Effect of Temperament {#sec-moderating-effect-of-temperament}
 
   Temperament was found to play a large role in an infant’s responses to strangers [@rubinSocialWithdrawlChildhood2009]. Children who are shy or display reticent behavior will show more avoidance to strangers [@rubinSocialWithdrawlChildhood2009]. Furthermore, children with different temperament will react to the same environment differently, or in other words, temperament can moderate the effect of the environment on child development. Ertekin and colleagues [-@ertekinTemperamentModeratesEffects2021] found that infants with a more reactive temperament, including higher levels of fear, irritability, and activity may be more sensitive to the surrounding environment as they are more likely to be overwhelmed. More specifically, infants with a higher rate of recovery from distress were less impacted by adverse environments than infants with a low rate of recovery from distress [@ertekinTemperamentModeratesEffects2021]. Another study found that temperament can moderate children’s social wariness towards strangers of the same race and different races than their own [i.e. ‘ingroup’ versus ‘outgroup’, @hwangChildrensSocialWariness2023]. More shy children displayed greater social wariness towards strangers of a different race than of the same race to their own, while less shy children did not [@hwangChildrensSocialWariness2023]. These findings suggest that individual differences in temperament can have a moderating effect between social environment and children’s responses to strangers.
 
   Based on these findings, the current study will examine the moderating role of temperament between social network size and infants’ FAA to strangers. Specifically, we will focus on the fear dimension, which refers to the level of fearfulness or anxiousness in response to novel or unfamiliar stimuli [@gartsteinStudyingInfantTemperament2003], given that this dimension is viewed as an important characteristic during the first year of life.
 
-## Current Study
+## Current Study {#sec-current-study}
 
   The current study aims to examine two questions. First, this study will examine the relationship between social network sizes and neural responses to strangers during infancy. We used an infant’s FAA as an indicator of the infant’s neural response to strangers. Given the positive relation between social network sizes and children’ social cognition [@burkeChildrensSocialNetwork2023; @downeyPlayingWellOthers2004], we predicted that larger social network size will correlate with more positive FAA (i.e. increased left frontal activation) toward strangers. 
 
@@ -105,22 +123,22 @@ conflicts_prefer(flextable::separate_header, .quiet = TRUE)
 
   In summary, this study aimed to examine the connection between infants’ social network sizes and their neural response to strangers. It contributes to the understanding of how early social environments can shape infants’ brains and how individual temperament plays a moderating role. These factors are essential in understanding an infant’s stranger anxiety/fear and are important for caregivers to take into consideration when scaffolding infants build their social networks.
 
-# Methods
-## Participants
+# Methods {#sec-methods}
+### Participants {#sec-participants}
 
   All participants in this study were recruited by the Infant Learning and Development Laboratory at the University of Chicago. The parents of approximately 80 infants from 8 months to 12 months old were asked to participate in the study. Inclusion criteria is as follows: (1) 8 to 12 months of age, (2) English language spoken at least 80% of the time at home, (3) full-term; 37 weeks and beyond gestational age, and (4) no developmental delays.
 
-## Procedure
+### Procedure {#sec-procedure}
 
   Our study uses an Electroencephalogram (EEG) machine and related materials (i.e. infant EEG cap, software, and technical equipment) to measure the infant's neural processing of strangers, specifically alpha wave frequency. During the EEG task, infants watched videos of two strangers grasping a toy alternatively. One stranger speaks English, and the other speaks French. Our analyses focus on infants’ neural responses while watching the native speaker. To calculate FAA, we subtracted the natural log-transformed relative alpha power of the 6-9 Hz frequency band in the left hemisphere from the natural log-transformed relative alpha power in the right hemisphere [@anayaetal_2021_psychometric; @vincentetal_2021_using; @foxContinuityDiscontinuityBehavioral2001]. Therefore, in our calculations of FAA, stronger left frontal activation is indicated by a positive FAA score [@harrewijnFrontalAlphaAsymmetry2019; @vincentetal_2021_using]. 
 
   In order to measure an infant’s temperament and social network size, parents were instructed to fill out the Revised Infant Behavior Questionnaire (IBQ-R), a parent report of a reaction on a seven point scale during the past one or two weeks [@gartsteinStudyingInfantTemperament2003], and Child Social Network Questionnaire (CSNQ), a demographic form for each person the child sees on a regular basis, regarding their child [@burkeChildrensSocialNetworks2022]. 
 
-## Analyses
+### Analyses {#sec-analyses}
 
-  This study used linear regression models to examine our hypotheses. First, to examine the relationship between social network sizes and infants’ neural responses to strangers, we conducted a linear regression model, with FAA while viewing the English speaking strangers as the outcome, and social network size as the predictor. Second, to examine the moderating effect of fear between social network sizes and infants’ responses to strangers, we conducted a moderating model with fear scores as the moderator between social network size and infants’ FAA. 
+  This study uses linear mixed models (LMM) to examine our hypotheses. First, to examine the relationship between social network sizes and infants’ neural responses to strangers, we conducted a LMM, on FAA of each action window (reaching and grasping), with social network size and language condition as the fixed effects and subject ID as a random effect. Second, to examine the moderating effect of temperamental fear between social network sizes and infants’ responses to strangers, we conducted a LMM on FAA of each action window (reaching, grasping), with social network size, temperamental fear, their interaction, and the language condition as the fixed effects and subject ID as a random effect. 
 
-# Results
+# Results {#sec-results}
 
   The results presented below will accomplish the following aims. First, we present the descriptive information about the variables. Next we aim to answer the question: what is the relationship between social network size and frontal alpha asymmetry in infants? And finally, we will look at the potential moderating effect of temperament, specifically fear, between the realtionship of social network size and FAA.
 ```{r}
@@ -169,7 +187,8 @@ snq <- snq %>%
 
 participant_counts <- snq %>%
   group_by(V1) %>%
-  tally()
+  tally() %>%
+  mutate(V1 = fct_reorder(V1, n, .desc = TRUE))
 
 ```
 
@@ -189,7 +208,8 @@ action_faa <- FAA_infants_reachgrasp_relative.csv
 ## Remove rows for foreign speaker (only measuring FAA in response to native speaker). Remove row 1 which is currently not being recognized as the column labels.
 
 action_faa <- action_faa %>%
-  filter(V2 != "FrTT")
+  filter(V2 != "FrTT") %>%
+  mutate(V2 = fct_drop(V2))
 
 action_faa <- action_faa[-1, ]
 ```
@@ -202,10 +222,10 @@ action_faa <- action_faa[-1, ]
 
 colnames(action_faa) <- c("ID", "Condition", "Time", "FAA")
 
-action_faa$"ID" <- case_when(
-  grepl("^VPEEG_PB_", action_faa$"ID") ~ sub("^VPEEG_(PB_\\d+)_.*$", "\\1", action_faa$"ID"),
-  grepl("^VPEEG_SB_", action_faa$"ID") ~ sub("^VPEEG_(SB_\\d+)_.*$", "\\1", action_faa$"ID"),
-  TRUE ~ action_faa$"ID")
+action_faa$ID <- case_when(
+  str_detect(action_faa$ID, "^VPEEG_PB_") ~ str_replace(action_faa$ID, "^VPEEG_(PB_\\d+)_.*$", "\\1"),
+  str_detect(action_faa$ID, "^VPEEG_SB_") ~ str_replace(action_faa$ID, "^VPEEG_(SB_\\d+)_.*$", "\\1"),
+  TRUE ~ action_faa$ID)
 
 ```
 
@@ -218,106 +238,273 @@ action_faa$"ID" <- case_when(
 
 common_participants <- merge(participant_counts, action_faa, by = "ID", "V1")
 
-## This left me with 70 participants who completed the snq and eeg parts of the study.
+## This left me with 76 participants who completed the snq and eeg parts of the study.
 ```
 
 ```{r}
 #| label: column-cleaning
 #| include: false
 
-#I am fixing the column names so the data is easier to work with
+#I am fixing the columns and column names so the data is easier to work with
 
-colnames(common_participants) <- c("ID", "SNQ", "Condition", "Time", "FAA")
+common_participants <- common_participants %>%
+  select(-"Condition")
+colnames(common_participants) <- c("ID", "SNS", "Time", "FAA")
 
+common_participants <- common_participants %>%
+  mutate(FAA = as.numeric(FAA))
 ```
 
 ```{r}
 #| label: tbl-snq-faa
 #| tbl-cap: "Social Network Size and FAA Data (First 6 Rows)"
-#| apa-note: Table 1 displays social network size (SNQ) and FAA data for the first three participants. Each participant has FAA measured for two conditions, -1000 to 0 and 0 to 1000.
+#| apa-note: Table 1 displays social network size (SNQ) and FAA data for the first three participants.
 
 head(common_participants) %>%
   flextable() %>%
-  theme_apa()
+  flextable::theme_apa()
 
 ```
 
-```{r}
-#| label: tbl-snq-faa-2
-#| eval: false
-#| include: false
-#| tbl-cap: SNQ and FAA Data
+  @tbl-snq-faa displays examples of social network size, as measured by the SNQ, and FAA data. Each participant has two instances of measured FAA. The -1000 to 0 time frame represents FAA while the actor in the video was reaching towards an object while the 0 to 1000 time frame represents FAA while the actor in the video was grasping an object.
 
-kable(head(common_participants))
-```
-
+  @tbl-summary-statistics-sns and @tbl-summary-statistics-faa display descriptive information about social network size and FAA respectively. There are `r nrow(common_participants)` participants in this study with a mean social network size of `r round(mean(common_participants$SNS), 2)` and a mean level of FAA of `r round(mean(common_participants$FAA), 2)`. 
 
 ```{r}
-#| label: lmm
+#| label: summ-stats-sns
 #| include: false
 
-## I need to create a linear mixed model because each participant has two instances of faa data (from -1000 to 0 and 0 to 1000). I will use the common_participants dataset so then I can plot snq and faa.
+summ_stats_sns <- common_participants %>%
+    summarize(
+            "Mean SNS" = mean(SNS, na.rm = TRUE), 
+            "Median SNS" = median(SNS, na.rm = TRUE), 
+            "SD SNS" = sd(SNS, na.rm = TRUE), 
+            "Min SNS" = min(SNS, na.rm = TRUE), 
+            "Max SNS" = max(SNS, na.rm = TRUE), 
+            "Range SNS" = max(SNS, na.rm = TRUE) - min(SNS, na.rm = TRUE))
 
-common_participants$FAA <- as.numeric(common_participants$FAA)
-lmm <- lmer(FAA ~ SNQ + (1 | ID), data = common_participants)
 ```
 
 ```{r}
-#| label: fig-lmm
-#| eval: false
-#| apa-note: Plotting LMM
-#| fig-cap: Random Effects for ID
+#| label: tbl-summary-statistics-sns
+#| tbl-cap: "Descriptive Statistics - Social Network Size"
+
+knitr::kable(summ_stats_sns, 
+             caption = "Descriptive Statistics - Social Network Size", 
+             booktabs = TRUE, 
+             digits = 2) %>%
+  kableExtra::kable_styling(full_width = FALSE, position = "center")
+
+```
+
+```{r}
+#| label: summ-stats-faa
 #| include: false
 
-# Extract random effects
-random_effects <- ranef(lmm)$ID
-
-# Plot random effects
-plot(random_effects, main = "Random Effects for ID")
+summ_stats_faa <- common_participants %>%
+summarize(
+            "Mean FAA" = mean(FAA, na.rm = TRUE), 
+            "Median FAA" = median(FAA, na.rm = TRUE), 
+            "SD FAA" = sd(FAA, na.rm = TRUE), 
+            "Min FAA" = min(FAA, na.rm = TRUE), 
+            "Max FAA" = max(FAA, na.rm = TRUE), 
+            "Range FAA" = max(FAA, na.rm = TRUE) - min(FAA, na.rm = TRUE))
 
 ```
 
-The statistics below detail a 1-way ANOVA between social network size and FAA.
-
 ```{r}
-#| label: anova-1way
+#| label: tbl-summary-statistics-faa
+#| tbl-cap: "Descriptive Statistics - FAA"
 
-anova_faa <- aov(SNQ ~ FAA, data = common_participants)
-summary.aov(anova_faa)
+knitr::kable(summ_stats_faa, 
+             caption = "Descriptive Statistics - FAA",
+             booktabs = TRUE, 
+             digits = 2) %>%
+  kableExtra::kable_styling(full_width = FALSE, position = "center")
+
 ```
 
-Figure 1 below demonstrates the relationship between social network size and FAA for each participant during the two time periods: watching the stranger reach towards an object and grasping/lifting the object. As we can see, FAA has a tendency to increase as social network size increases. This supports our hypothesis that a larger social network size will lead to more positive FAA.
+```{r}
+#| label: tbl-anova-1way
+#| tbl-cap: "1-way ANOVA"
+#| include: false
+
+## This code chunk is a 1-way ANOVA between social network size and FAA. I am not including this in my manuscript because I have the linear mixed models above.
+
+anova_faa <- aov(SNS ~ FAA, data = common_participants)
+
+anova_faa <- tidy(anova_faa)
+
+anova_faa %>%
+  kable(digits = 3, caption = "1-way ANOVA")
+  
+```
+
+  @fig-scatter-sns-faa demonstrates the relationship between social network size and FAA for each participant during the two time periods: watching the stranger reach towards an object and grasping/lifting the object. As we can see, FAA has a tendency to increase as social network size increases. This supports our hypothesis that a larger social network size will lead to more positive FAA. 
+  
+The difference in levels of FAA between the participant with the highest and lowest social network size is `r round(head(common_participants$FAA[common_participants$SNS == max(common_participants$SNS)], 1) - head(common_participants$FAA[common_participants$SNS == min(common_participants$SNS)], 1), 2)`. 
 
 ```{r}
-#| label: fig-scatter-2
+#| label: fig-scatter-sns-faa
 #| fig-cap: "Social Network Size and FAA by Time Blocks"
-#| apa-note: Figure 1 displays levels of FAA and infants' social network sizes. Each participant has two occurences, one in each of the time blocks.
+#| apa-note: Figure 1 displays levels of FAA and infants' social network sizes. 
 #| fig-width: 7
 #| fig-height: 5
+#| echo: false
+#| message: false 
+#| warning: false
 
 ## Categorize Time
 common_participants$Time <- factor(common_participants$Time, levels = c("-1000 to 0", "0 to 1000"))
 
 ## Create scatterplot, adjust color and size of points, add linear regression line and smoothed conditional means, add facet, adjust grid lines and background colors
-ggplot(common_participants, aes(x = SNQ, y = FAA))+
-  geom_point()+
-  geom_smooth(method = "lm", linetype = "dashed", color = "blue", linewidth = .8)+
-  facet_wrap(~ Time)+
- theme(panel.grid.major = element_line(linewidth = 0.2, color = "lightgrey"), panel.grid.minor = element_line(linewidth = 0.1, color = "lightgrey"), panel.background = element_rect(fill = "white"))+
-   labs(x = "Social Network Size", y ="FAA")
+ggplot(common_participants, aes(x = SNS, y = FAA, shape = Time)) +
+  geom_point(size = 2) +
+  geom_smooth(method = "lm", linetype = "dashed", color = "blue", linewidth = 0.8) +
+  facet_wrap(~ Time) +
+  scale_shape_manual(values = c(16, 17)) +  # 16 = filled circle, 17 = filled triangle
+  theme(
+    panel.grid.major = element_line(linewidth = 0.2, color = "lightgrey"), 
+    panel.grid.minor = element_line(linewidth = 0.1, color = "lightgrey"), 
+    panel.background = element_rect(fill = "white")
+  ) +
+  labs(x = "Social Network Size", y = "FAA") 
 
 ```
 
-# Discussion
-  The aim of our study was to answer two questions: what is the realtionship between social network size and FAA in infants towards strangers and what is the moderating effect of fear in this relationship?
+```{r}
+#| label: create-model-function
+#| include: false
 
-  We have found evidence to support our first hypothesis, that a larger social network size is associated with more positive FAA while viewing the videos of strangers.
+## I am creating a function to use for when I am creating tables out of my linear mixed models. 
 
-  Therefore, we are be further interested in the moderating effect of fear in this relationship.
+generate_lmm_tbl <- function(model, show_ci = FALSE, show_df = TRUE, 
+                                 show_zeroinf = FALSE, show_re_var = FALSE, 
+                                 show_ngroups = FALSE, p_style = "numeric") {
+  tab_model(model, show.ci = show_ci, show.df = show_df, show.zeroinf = show_zeroinf, show.re.var = show_re_var, show.ngroups = show_ngroups, p.style = p_style)}
+
+```
+
+```{r}
+#| label: tbl-lmm-faa-sns
+#| tbl-cap: "Linear Mixed Model between FAA and SNS"
+
+## I need to create a linear mixed model because each participant has two instances of faa data (from -1000 to 0 and 0 to 1000). I will use the common_participants dataset so then I can plot snq and faa.
+
+common_participants$FAA <- as.numeric(common_participants$FAA)
+lmm <- lmer(FAA ~ SNS + (1 | ID), data = common_participants)
+
+generate_lmm_tbl(lmm)
+
+r2_values <- r2_nakagawa(lmm)
+
+icc_value <- icc(lmm)
+
+```
+
+  However, from @tbl-lmm-faa-sns we can see this relationship is not statistically significant (*p* = `r papaja::apa_p(0.030)`). The marginal R-squared = `r round(r2_values$R2_marginal, 3)`, which means that only 5.6% of the variance is explained by the fixed effects of social network size and the conditional R-squared = `r round(r2_values$R2_conditional, 3)`, which suggests that a large portion of the variance is explained by random effects or individual differences. The ICC of `r round(icc_value$ICC_unadjusted, 3)` emphasizes that random effects dominate the variance in this model. 
+
+```{r}
+#| label: fig-scatter-alt
+#| apa-note: Figure 2 displays average levels of FAA throughout the action trials and infants' social network sizes.
+#| fig-cap: "Social Network Size and Average FAA by Time Blocks"
+#| fig-height: 5
+#| fig-width: 7
+#| include: false
+
+## Creating an alternative scatter plot that averages FAA across the two time periods. I am unsure right now which one will be used in my manuscript so for now I am not running this specific code.
+
+## Average FAA
+common_participants_avg <- common_participants %>%
+  group_by(ID, SNS) %>%
+  summarize(mean_FAA = sum(FAA) / length(FAA))
+
+## Create scatterplot, adjust color and size of points, add linear regression line and smoothed conditional means, add facet, adjust grid lines and background colors
+ggplot(common_participants_avg, aes(x = SNS, y = mean_FAA))+
+  geom_point()+
+  geom_smooth(method = "lm", linetype = "dashed", color = "blue", linewidth = .8)+
+ theme(panel.grid.major = element_line(linewidth = 0.2, color = "lightgrey"), panel.grid.minor = element_line(linewidth = 0.1, color = "lightgrey"), panel.background = element_rect(fill = "white"))+
+   labs(x = "Social Network Size", y ="Average FAA")
+
+```
+
+```{r}
+#| label: merge-ibq-data
+#| include: false
+
+VPEEG_IBQ.csv <- read.csv("VPEEG_IBQ.csv", header=FALSE)
+ibq <- VPEEG_IBQ.csv
+colnames(ibq) <- c("mean_IBQ", "ID")
+
+ibq <- ibq[-1, ]
+
+# Merging IBQ data to get sample size
+total_sample <- merge(common_participants_avg, ibq, by = "ID")
+nrow(total_sample)
+length(total_sample$ID)
+
+## Merging IBQ with non-averaged data for LMM
+total_sample_long <- merge(common_participants, ibq, by = "ID")
+
+```
+
+  @fig-total-sample-scatter displays social network size and FAA including temepramental fear as a moderator. The darker the data points the higher the levels of parent reported fear. From the figure, we can see that as social network size increases, FAA also increases. Additionally, the gradient of temperamental fear demonstrates infant's with higher fear have both more negative FAA and smaller social network sizes.
+  
+  There are `r (nrow(common_participants_avg) - nrow(total_sample))` less participants in this model as only `r nrow(total_sample)` completed all three aspects of this study (SNQ, IBQ, and EEG measuring).
+
+```{r}
+#| label: fig-total-sample-scatter
+#| fig-cap: "Social Network Size, FAA, and Fear Level"
+#| apa-note: Figure 2 displays levels of FAA and social network sizes including a gradient of temperamental fear level. Darker data points indicate a higher level of parent reported fear.
+#| fig-width: 6
+#| fig-height: 5
+#| echo: false
+#| message: false
+#| warning: false
+
+if (nrow(total_sample) > 10) {
+  ggplot(total_sample, aes(x = SNS, y = mean_FAA, color = as.numeric(mean_IBQ))) +
+    geom_point(size = 3) + 
+    geom_smooth(method = "lm", color = "black", se = FALSE) +
+    scale_color_gradient(low = "lightblue", high = "darkred") + 
+    labs(x = "Social Network Size", y = "FAA", color = "Fear Level") + 
+    theme_minimal() + 
+    theme(text = element_text(size = 14))
+} else {
+  message("Not enough data points to plot a regression line.")
+}
+```
+
+```{r}
+#| label: tbl-lmm-total-sample
+#| tbl-cap: "Linear Mixed Model: FAA, Temperament, Social Network Size"
+
+total_sample_long$mean_IBQ <- as.numeric(total_sample_long$mean_IBQ)
+
+lmm_total <- lmer(FAA ~ SNS + mean_IBQ + SNS:mean_IBQ + Time + (1 | ID), data = total_sample_long)
+
+generate_lmm_tbl(lmm_total)
+
+r2_values_total <- r2_nakagawa(lmm_total)
+
+icc_value_total <- icc(lmm_total)
+
+```
+
+  However, again, these relationships are not significant as seen in @tbl-lmm-total-sample (*p* = `r papaja::apa_p(0.635)`). The marginal R-squared = `r round(r2_values_total$R2_marginal, 3)`, which tells us that only 6.3% of the variance is explained by the fixed effects of social network size and fear as measured by the SNQ and IBQ respectively. While this is low, there was a slight increase of in comparison to our first model where only 5.6% of the variance was explained by fixed effects. This increase suggests that level of temperamental fear does have an impact on the relationship between social network size and FAA. 
+  The conditional R-squared = `r round(r2_values_total$R2_conditional, 3)`, which suggests that 88.6% of the variance is explained by random effects or individual differences. This is about the same as the first model. The ICC of `r round(icc_value_total$ICC_unadjusted, 3)` emphasizes that random effects dominate the variance in this model as well as the first.
+
+# Discussion {#sec-discussion}
+  The aim of our study was to answer two questions: what is the relationship between social network size and FAA in infants towards strangers and what is the moderating effect of fear in this relationship?
+
+  We have found evidence to support our first hypothesis, that a larger social network size is associated with more positive FAA while viewing the videos of strangers. However, the evidence is not statistically significant and the variance is largely explained by individual differences. One limitation to proving our hypothesis was our small sample size. Further research is needed to provide more conclusive results.
+
+  Due to the evidence relating to our first hypothesis, we were further interested in the moderating effect of fear in this relationship. We have found that a high level of fear magnified the relationship between social network size and an infant's neural response to strangers, seen through the increase in variance explained by the fixed effects.
+  
   The findings of this study will contribute to the understanding of the neurological reactions, and affecting factors, toward strangers during infancy. 
 
 \clearpage
-# References
+# References {#sec-references}
 
 :::{#refs}
 :::

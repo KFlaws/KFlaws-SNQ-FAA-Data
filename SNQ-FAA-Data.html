@@ -7,6 +7,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Kristen Flaws">
+<meta name="keywords" content="social network size, frontal alpha asymmetry, fear, temperament, infancy">
+<meta name="description" content="SOCIAL NETWORK SIZE, FRONTAL ALPHA ASYMMETRY, &amp; TEMPERAMENT">
 
 <title>The relationship between social network size and frontal alpha asymmetry to strangers during infancy: The moderation of temperament</title>
 <style>
@@ -21,277 +23,549 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
 }
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
 }
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
 }
-</style>
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="SNQ-FAA-Data_files/libs/clipboard/clipboard.min.js"></script>
 <script src="SNQ-FAA-Data_files/libs/quarto-html/quarto.js"></script>
 <script src="SNQ-FAA-Data_files/libs/quarto-html/popper.min.js"></script>
 <script src="SNQ-FAA-Data_files/libs/quarto-html/tippy.umd.min.js"></script>
-<script src="SNQ-FAA-Data_files/libs/quarto-html/anchor.min.js"></script>
 <link href="SNQ-FAA-Data_files/libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="SNQ-FAA-Data_files/libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="SNQ-FAA-Data_files/libs/bootstrap/bootstrap.min.js"></script>
 <link href="SNQ-FAA-Data_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="SNQ-FAA-Data_files/libs/bootstrap/bootstrap-973236bd072d72a04ee9cd82dcc9cb29.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="SNQ-FAA-Data_files/libs/bootstrap/bootstrap-61c9f5fe3bf7f1d5f9219c551e9df0c2.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="SNQ-FAA-Data_files/libs/tabwid-1.1.3/tabwid.css" rel="stylesheet">
+<script src="SNQ-FAA-Data_files/libs/tabwid-1.1.3/tabwid.js"></script>
+<script src="SNQ-FAA-Data_files/libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="SNQ-FAA-Data_files/libs/lightable-0.0.1/lightable.css" rel="stylesheet">
 
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
 
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="_extensions/wjschne/apaquarto/apa.css">
 </head>
 
-<body class="fullcontent">
+<body>
 
-<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
-
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article toc-left">
+<div id="quarto-sidebar-toc-left" class="sidebar toc-left">
+  <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#sec-methods" id="toc-sec-methods" class="nav-link active" data-scroll-target="#sec-methods">Methods</a>
+  <ul class="collapse">
+  <li><a href="#sec-participants" id="toc-sec-participants" class="nav-link" data-scroll-target="#sec-participants">Participants</a></li>
+  <li><a href="#sec-procedure" id="toc-sec-procedure" class="nav-link" data-scroll-target="#sec-procedure">Procedure</a></li>
+  <li><a href="#sec-analyses" id="toc-sec-analyses" class="nav-link" data-scroll-target="#sec-analyses">Analyses</a></li>
+  </ul></li>
+  <li><a href="#sec-results" id="toc-sec-results" class="nav-link" data-scroll-target="#sec-results">Results</a></li>
+  <li><a href="#sec-discussion" id="toc-sec-discussion" class="nav-link" data-scroll-target="#sec-discussion">Discussion</a></li>
+  <li><a href="#sec-references" id="toc-sec-references" class="nav-link" data-scroll-target="#sec-references">References</a></li>
+  </ul>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="SNQ-FAA-Data.docx"><i class="bi bi-file-word"></i>MS Word (apaquarto)</a></li><li><a href="SNQ-FAA-Data.pdf"><i class="bi bi-file-pdf"></i>Typst (apaquarto)</a></li><li><a href="SNQ-FAA-Data.pdf"><i class="bi bi-file-pdf"></i>PDF (apaquarto)</a></li></ul></div></nav>
+</div>
+<div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+</div>
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">The relationship between social network size and frontal alpha asymmetry to strangers during infancy: The moderation of temperament</h1>
-</div>
 
 
-<div class="quarto-title-meta-author">
-  <div class="quarto-title-meta-heading">Author</div>
-  <div class="quarto-title-meta-heading">Affiliation</div>
-  
-    <div class="quarto-title-meta-contents">
-    <p class="author">Kristen Flaws <a href="mailto:kflaws@uchicago.edu" class="quarto-title-author-email"><i class="bi bi-envelope"></i></a> </p>
-  </div>
-  <div class="quarto-title-meta-contents">
-        <p class="affiliation">
-            University of Chicago
-          </p>
-      </div>
-  </div>
 
-<div class="quarto-title-meta">
+<br>
 
-      
-  
-    
-  </div>
-  
+<br>
 
+<section id="title" class="level1 title unnumbered unlisted">
+<h1 class="title unnumbered unlisted">The relationship between social network size and frontal alpha asymmetry to strangers during infancy: The moderation of temperament</h1>
+<div class="Author">
+<br>
 
-</header>
-
-
-<p>Load SNQ Dataset</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>
-Attaching package: 'dplyr'</code></pre>
+<p>Kristen Flaws</p>
+<p>MA Program in the Social Sciences, University of Chicago</p>
 </div>
-<div class="cell-output cell-output-stderr">
-<pre><code>The following objects are masked from 'package:stats':
-
-    filter, lag</code></pre>
+</section>
+<section id="author-note" class="level1 unnumbered unlisted AuthorNote">
+<h1 class="unnumbered unlisted AuthorNote">Author Note</h1>
+</section>
+<section id="abstract" class="level1 unnumbered unlisted AuthorNote">
+<h1 class="unnumbered unlisted AuthorNote">Abstract</h1>
+<div class="AbstractFirstParagraph">
+<p>Multiple previous studies have reported the close relationship between children’s social network size and social cognition. However, the connection between social network size and social emotional development has been less examined. The current study aims to examine the connection between infants’ social network sizes and their neural response to strangers. We will examine the relationship between social network sizes and neural responses to strangers during infancy using an infant’s frontal alpha asymmetry (FAA) as a neural indicator. Additionally, we will investigate how temperament, especially fear, can moderate the relationship between social network size and responses to strangers during infancy. Our study will use an Electroencephalogram (EEG) machine to measure the infant’s neural processing of strangers, specifically alpha wave frequency, and in turn calculate the infant’s FAA while watching videos of strangers. In order to measure an infant’s temperament and social network size, parents will be instructed to fill out the Revised Infant Behavior Questionnaire (IBQ-R) and Child Social Network Questionnaire (CSNQ). If we find that a larger social network size is associated with more positive FAA while viewing the videos of strangers, we will be further interested in the moderating effect of fear in this relationship. If we find that fear acts as a moderator, we will be able to determine if fear increases or decreases the effectiveness of social network size on infant’s responses to strangers. The findings of this study will contribute to the understanding of the neurological reactions, and affecting factors, toward strangers during infancy.</p>
 </div>
-<div class="cell-output cell-output-stderr">
-<pre><code>The following objects are masked from 'package:base':
-
-    intersect, setdiff, setequal, union</code></pre>
+<p><em>Keywords</em>: social network size, frontal alpha asymmetry, fear, temperament, infancy</p>
+</section>
+<section id="firstheader" class="level1 title unnumbered unlisted">
+<h1 class="title unnumbered unlisted">The relationship between social network size and frontal alpha asymmetry to strangers during infancy: The moderation of temperament</h1>
+<p>Infants learn about the world from the people around them. An infant’s social network allows them to explore the world and learn how to connect and communicate with others. It has been previously suggested that children with a larger social network size are better at taking others’ perspectives <span class="citation" data-cites="burkeChildrensSocialNetwork2023">(<a href="#ref-burkeChildrensSocialNetwork2023" role="doc-biblioref">Burke et al., 2023</a>)</span>. In the current study, we aim to expand these findings from behavioral domain to neural domain and examine the relation between children’s social network size and their neural responses to strangers during infancy.</p>
+<section id="sec-lit-review" class="level2">
+<h2 data-anchor-id="sec-lit-review">Literature Review</h2>
+<section id="sec-social-network-size" class="level3">
+<h3 data-anchor-id="sec-social-network-size">Social Network Size</h3>
+<p>Previous studies found that social networks play an important role in social cognition throughout infancy and childhood <span class="citation" data-cites="burkeChildrensSocialNetwork2023 burkeChildrensSocialNetworks2022">(<a href="#ref-burkeChildrensSocialNetworks2022" role="doc-biblioref">Burke et al., 2022</a>, <a href="#ref-burkeChildrensSocialNetwork2023" role="doc-biblioref">2023</a>)</span>. Burke and colleagues <span class="citation" data-cites="burkeChildrensSocialNetwork2023">(<a href="#ref-burkeChildrensSocialNetwork2023" role="doc-biblioref">2023</a>)</span> examined the relation between a three year-old’s social network size and their perspective-taking skills. The researchers were observing the children’s basic understanding that what they see may be different from what someone else sees <span class="citation" data-cites="burkeChildrensSocialNetwork2023">(<a href="#ref-burkeChildrensSocialNetwork2023" role="doc-biblioref">Burke et al., 2023</a>)</span>. The results revealed that children with larger social networks displayed significantly better explicit perspective-taking skills. This finding indicates that a larger social network might improve a child’s ability to consider things from another person’s point of view, or on the other hand,better perspective taking skills can help children build a larger social network <span class="citation" data-cites="burkeChildrensSocialNetwork2023">(<a href="#ref-burkeChildrensSocialNetwork2023" role="doc-biblioref">Burke et al., 2023</a>)</span>.</p>
+<p>Some indirect findings also support the role of social networks on the development of social cognition. It has been previously found that children aged 5-11 with at least one sibling are more likely to develop positive peer relationships because having a sibling allows children to have more opportunities to develop social and interpersonal skills during early childhood <span class="citation" data-cites="downeyPlayingWellOthers2004">(<a href="#ref-downeyPlayingWellOthers2004" role="doc-biblioref">Downey &amp; Condron, 2004</a>)</span>. These findings support the close relationship between children’s social network size and social cognition. However, the connection between social network size and social emotional development has been less examined. In addition, most studies focused on older children, the role of social network size during the first year of life remains unclear.</p>
+<p>Based on these gaps in previous studies, the current study will examine the relationship between social network size and response to strangers of infants from 8 - 12 months of age. More specifically, we will focus on infants’ neural responses, frontal alpha asymmetry (FAA), while watching socially interactive videos of strangers.</p>
+</section>
+<section id="sec-frontal-alpha-asymmetry" class="level3">
+<h3 data-anchor-id="sec-frontal-alpha-asymmetry">Frontal Alpha Asymmetry</h3>
+<p>Frontal alpha asymmetry (FAA) is an important neural indicator of infants’ approach/withdrawal tendency <span class="citation" data-cites="davidsonfox_1982_asymmetrical foxdavidson_1986_tasteelicited fox_1991_if gartsteinStudyingInfantTemperament2003 harrewijnFrontalAlphaAsymmetry2019 howarthFrontalElectroencephalogramAsymmetry2016">(<a href="#ref-davidsonfox_1982_asymmetrical" role="doc-biblioref">Davidson &amp; Fox, 1982</a>; <a href="#ref-fox_1991_if" role="doc-biblioref">Fox, 1991</a>; <a href="#ref-foxdavidson_1986_tasteelicited" role="doc-biblioref">Fox &amp; Davidson, 1986</a>; <a href="#ref-gartsteinStudyingInfantTemperament2003" role="doc-biblioref">Gartstein &amp; Rothbart, 2003</a>; <a href="#ref-harrewijnFrontalAlphaAsymmetry2019" role="doc-biblioref">Harrewijn et al., 2019</a>; <a href="#ref-howarthFrontalElectroencephalogramAsymmetry2016" role="doc-biblioref">Howarth et al., 2016</a>)</span>. FAA is the measurement of the imbalance in cortical activation between the right and left frontal hemispheres, measured by psycho-physiological markers using electroencephalogram (EEG) <span class="citation" data-cites="fox_1991_if foxdavidson_1986_tasteelicited davidsonfox_1982_asymmetrical">(<a href="#ref-davidsonfox_1982_asymmetrical" role="doc-biblioref">Davidson &amp; Fox, 1982</a>; <a href="#ref-fox_1991_if" role="doc-biblioref">Fox, 1991</a>; <a href="#ref-foxdavidson_1986_tasteelicited" role="doc-biblioref">Fox &amp; Davidson, 1986</a>)</span>. Rightward/negative FAA signifies increased right hemispheric activation as compared to left and leftward/positive FAA signifies increased left hemispheric activation <span class="citation" data-cites="vincentetal_2021_using">(<a href="#ref-vincentetal_2021_using" role="doc-biblioref">Vincent et al., 2021</a>)</span>. FAA is thought to be a moderator reflecting fearful inhibition and impulsivity-anger <span class="citation" data-cites="liuFrontalEEGAsymmetry2021">(<a href="#ref-liuFrontalEEGAsymmetry2021" role="doc-biblioref">Liu et al., 2021</a>)</span>, with left FAA being associated with higher levels of activity/approach while right FAA is associated with higher levels of fear/withdrawal <span class="citation" data-cites="davidsonfox_1982_asymmetrical foxdavidson_1986_tasteelicited fox_1991_if gartsteinStudyingInfantTemperament2003 harrewijnFrontalAlphaAsymmetry2019 howarthFrontalElectroencephalogramAsymmetry2016">(<a href="#ref-davidsonfox_1982_asymmetrical" role="doc-biblioref">Davidson &amp; Fox, 1982</a>; <a href="#ref-fox_1991_if" role="doc-biblioref">Fox, 1991</a>; <a href="#ref-foxdavidson_1986_tasteelicited" role="doc-biblioref">Fox &amp; Davidson, 1986</a>; <a href="#ref-gartsteinStudyingInfantTemperament2003" role="doc-biblioref">Gartstein &amp; Rothbart, 2003</a>; <a href="#ref-harrewijnFrontalAlphaAsymmetry2019" role="doc-biblioref">Harrewijn et al., 2019</a>; <a href="#ref-howarthFrontalElectroencephalogramAsymmetry2016" role="doc-biblioref">Howarth et al., 2016</a>)</span>. Based on these findings, we will use FAA as a neural indicator of infants’ approach/withdrawal tendency towards strangers.</p>
+<p>It is advantageous to utilize FAA to study the relationship between social network size and infants’ responses to strangers because neural indicators can be more sensitive than behavioral indicators <span class="citation" data-cites="davidsonfox_1982_asymmetrical foxdavidson_1986_tasteelicited fox_1991_if harrewijnFrontalAlphaAsymmetry2019 howarthFrontalElectroencephalogramAsymmetry2016">(<a href="#ref-davidsonfox_1982_asymmetrical" role="doc-biblioref">Davidson &amp; Fox, 1982</a>; <a href="#ref-fox_1991_if" role="doc-biblioref">Fox, 1991</a>; <a href="#ref-foxdavidson_1986_tasteelicited" role="doc-biblioref">Fox &amp; Davidson, 1986</a>; <a href="#ref-harrewijnFrontalAlphaAsymmetry2019" role="doc-biblioref">Harrewijn et al., 2019</a>; <a href="#ref-howarthFrontalElectroencephalogramAsymmetry2016" role="doc-biblioref">Howarth et al., 2016</a>)</span>. The behavioral changes of 8- to 12-month-olds might be too subtle to code, whereas neural indicators can be more sensitive to capture individual differences, given that FAA has been widely used to study individual differences <span class="citation" data-cites="gollanFrontalAlphaEEG2014">(e.g.&nbsp;motivation, affect, depression severity, <a href="#ref-gollanFrontalAlphaEEG2014" role="doc-biblioref">Gollan et al., 2014</a>)</span>. Furthermore, examining the relationship between social network size and FAA can enhance our understanding of how social networks may shape infant’s brains.</p>
+<p>Previous studies suggest that larger social network sizes are associated with better perspective-taking skills <span class="citation" data-cites="burkeChildrensSocialNetwork2023">(<a href="#ref-burkeChildrensSocialNetwork2023" role="doc-biblioref">Burke et al., 2023</a>)</span> and social and interpersonal skills <span class="citation" data-cites="downeyPlayingWellOthers2004">(<a href="#ref-downeyPlayingWellOthers2004" role="doc-biblioref">Downey &amp; Condron, 2004</a>)</span>, which indicates a positive relationship between social network sizes and social development. In the current study, we also expect social network sizes to be related to more positive responses to strangers. Since positive FAA is associated with approach tendencies in infants <span class="citation" data-cites="davidsonfox_1982_asymmetrical foxdavidson_1986_tasteelicited fox_1991_if">(<a href="#ref-davidsonfox_1982_asymmetrical" role="doc-biblioref">Davidson &amp; Fox, 1982</a>; <a href="#ref-fox_1991_if" role="doc-biblioref">Fox, 1991</a>; <a href="#ref-foxdavidson_1986_tasteelicited" role="doc-biblioref">Fox &amp; Davidson, 1986</a>)</span>, we hypothesize that an infant with a larger social network will be more likely to display more positive FAA to strangers.</p>
+</section>
+<section id="sec-moderating-effect-of-temperament" class="level3">
+<h3 data-anchor-id="sec-moderating-effect-of-temperament">The Moderating Effect of Temperament</h3>
+<p>Temperament was found to play a large role in an infant’s responses to strangers <span class="citation" data-cites="rubinSocialWithdrawlChildhood2009">(<a href="#ref-rubinSocialWithdrawlChildhood2009" role="doc-biblioref">Rubin et al., 2009</a>)</span>. Children who are shy or display reticent behavior will show more avoidance to strangers <span class="citation" data-cites="rubinSocialWithdrawlChildhood2009">(<a href="#ref-rubinSocialWithdrawlChildhood2009" role="doc-biblioref">Rubin et al., 2009</a>)</span>. Furthermore, children with different temperament will react to the same environment differently, or in other words, temperament can moderate the effect of the environment on child development. Ertekin and colleagues <span class="citation" data-cites="ertekinTemperamentModeratesEffects2021">(<a href="#ref-ertekinTemperamentModeratesEffects2021" role="doc-biblioref">2021</a>)</span> found that infants with a more reactive temperament, including higher levels of fear, irritability, and activity may be more sensitive to the surrounding environment as they are more likely to be overwhelmed. More specifically, infants with a higher rate of recovery from distress were less impacted by adverse environments than infants with a low rate of recovery from distress <span class="citation" data-cites="ertekinTemperamentModeratesEffects2021">(<a href="#ref-ertekinTemperamentModeratesEffects2021" role="doc-biblioref">Ertekin et al., 2021</a>)</span>. Another study found that temperament can moderate children’s social wariness towards strangers of the same race and different races than their own <span class="citation" data-cites="hwangChildrensSocialWariness2023">(i.e.&nbsp;‘ingroup’ versus ‘outgroup,’ <a href="#ref-hwangChildrensSocialWariness2023" role="doc-biblioref">Hwang et al., 2023</a>)</span>. More shy children displayed greater social wariness towards strangers of a different race than of the same race to their own, while less shy children did not <span class="citation" data-cites="hwangChildrensSocialWariness2023">(<a href="#ref-hwangChildrensSocialWariness2023" role="doc-biblioref">Hwang et al., 2023</a>)</span>. These findings suggest that individual differences in temperament can have a moderating effect between social environment and children’s responses to strangers.</p>
+<p>Based on these findings, the current study will examine the moderating role of temperament between social network size and infants’ FAA to strangers. Specifically, we will focus on the fear dimension, which refers to the level of fearfulness or anxiousness in response to novel or unfamiliar stimuli <span class="citation" data-cites="gartsteinStudyingInfantTemperament2003">(<a href="#ref-gartsteinStudyingInfantTemperament2003" role="doc-biblioref">Gartstein &amp; Rothbart, 2003</a>)</span>, given that this dimension is viewed as an important characteristic during the first year of life.</p>
+</section>
+</section>
+<section id="sec-current-study" class="level2">
+<h2 data-anchor-id="sec-current-study">Current Study</h2>
+<p>The current study aims to examine two questions. First, this study will examine the relationship between social network sizes and neural responses to strangers during infancy. We used an infant’s FAA as an indicator of the infant’s neural response to strangers. Given the positive relation between social network sizes and children’ social cognition <span class="citation" data-cites="burkeChildrensSocialNetwork2023 downeyPlayingWellOthers2004">(<a href="#ref-burkeChildrensSocialNetwork2023" role="doc-biblioref">Burke et al., 2023</a>; <a href="#ref-downeyPlayingWellOthers2004" role="doc-biblioref">Downey &amp; Condron, 2004</a>)</span>, we predicted that larger social network size will correlate with more positive FAA (i.e.&nbsp;increased left frontal activation) toward strangers.</p>
+<p>The second question we were interested in is how temperament, especially fear, can moderate the relationship between social network size and responses to strangers during infancy. There are three possibilities. First, a high level of fear may weaken the relationship between social network size and an infant’s neural response to strangers. Second, a high level of fear may magnify the relationship between social network size and an infant’s neural response to strangers. The third possibility is that there is no influence of fear on the relationship between social network size and an infant’s neural responses to strangers.</p>
+<p>In summary, this study aimed to examine the connection between infants’ social network sizes and their neural response to strangers. It contributes to the understanding of how early social environments can shape infants’ brains and how individual temperament plays a moderating role. These factors are essential in understanding an infant’s stranger anxiety/fear and are important for caregivers to take into consideration when scaffolding infants build their social networks.</p>
+</section>
+</section>
+<section id="sec-methods" class="level1">
+<h1>Methods</h1>
+<section id="sec-participants" class="level3">
+<h3 data-anchor-id="sec-participants">Participants</h3>
+<p>All participants in this study were recruited by the Infant Learning and Development Laboratory at the University of Chicago. The parents of approximately 80 infants from 8 months to 12 months old were asked to participate in the study. Inclusion criteria is as follows: (1) 8 to 12 months of age, (2) English language spoken at least 80% of the time at home, (3) full-term; 37 weeks and beyond gestational age, and (4) no developmental delays.</p>
+</section>
+<section id="sec-procedure" class="level3">
+<h3 data-anchor-id="sec-procedure">Procedure</h3>
+<p>Our study uses an Electroencephalogram (EEG) machine and related materials (i.e.&nbsp;infant EEG cap, software, and technical equipment) to measure the infant’s neural processing of strangers, specifically alpha wave frequency. During the EEG task, infants watched videos of two strangers grasping a toy alternatively. One stranger speaks English, and the other speaks French. Our analyses focus on infants’ neural responses while watching the native speaker. To calculate FAA, we subtracted the natural log-transformed relative alpha power of the 6-9 Hz frequency band in the left hemisphere from the natural log-transformed relative alpha power in the right hemisphere <span class="citation" data-cites="anayaetal_2021_psychometric vincentetal_2021_using foxContinuityDiscontinuityBehavioral2001">(<a href="#ref-anayaetal_2021_psychometric" role="doc-biblioref">Anaya et al., 2021</a>; <a href="#ref-foxContinuityDiscontinuityBehavioral2001" role="doc-biblioref">Fox et al., 2001</a>; <a href="#ref-vincentetal_2021_using" role="doc-biblioref">Vincent et al., 2021</a>)</span>. Therefore, in our calculations of FAA, stronger left frontal activation is indicated by a positive FAA score <span class="citation" data-cites="harrewijnFrontalAlphaAsymmetry2019 vincentetal_2021_using">(<a href="#ref-harrewijnFrontalAlphaAsymmetry2019" role="doc-biblioref">Harrewijn et al., 2019</a>; <a href="#ref-vincentetal_2021_using" role="doc-biblioref">Vincent et al., 2021</a>)</span>.</p>
+<p>In order to measure an infant’s temperament and social network size, parents were instructed to fill out the Revised Infant Behavior Questionnaire (IBQ-R), a parent report of a reaction on a seven point scale during the past one or two weeks <span class="citation" data-cites="gartsteinStudyingInfantTemperament2003">(<a href="#ref-gartsteinStudyingInfantTemperament2003" role="doc-biblioref">Gartstein &amp; Rothbart, 2003</a>)</span>, and Child Social Network Questionnaire (CSNQ), a demographic form for each person the child sees on a regular basis, regarding their child <span class="citation" data-cites="burkeChildrensSocialNetworks2022">(<a href="#ref-burkeChildrensSocialNetworks2022" role="doc-biblioref">Burke et al., 2022</a>)</span>.</p>
+</section>
+<section id="sec-analyses" class="level3">
+<h3 data-anchor-id="sec-analyses">Analyses</h3>
+<p>This study used linear mixed models to examine our hypotheses. First, to examine the relationship between social network sizes and infants’ neural responses to strangers, we conducted a linear mixed model, with FAA while viewing the English speaking strangers as the outcome, and social network size as the predictor. Second, to examine the moderating effect of fear between social network sizes and infants’ responses to strangers, we conducted a moderating model with fear scores as the moderator between social network size and infants’ FAA.</p>
+</section>
+</section>
+<section id="sec-results" class="level1">
+<h1>Results</h1>
+<p>The results presented below will accomplish the following aims. First, we present the descriptive information about the variables. Next we aim to answer the question: what is the relationship between social network size and frontal alpha asymmetry in infants? And finally, we will look at the potential moderating effect of temperament, specifically fear, between the realtionship of social network size and FAA.</p>
+<div class="cell FigureWithNote" data-apa-note="Table 1 displays social network size (SNQ) and FAA data for the first three participants." prefix="" data-tblnum="1" data-custom-style="FigureWithNote">
+<div id="tbl-snq-faa" class="cell quarto-float quarto-figure quarto-figure-center" data-tblnum="1" prefix="" data-apa-note="Table 1 displays social network size (SNQ) and FAA data for the first three participants.">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-snq-faa-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="FigureTitle" data-custom-style="FigureTitle">
+<p>Table&nbsp;1</p>
 </div>
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readr)</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>Expanded_VP_EEG_SNQ <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"~/Desktop/d2mr/Expanded_VP_EEG_SNQ.csv"</span>, <span class="at">header=</span><span class="cn">FALSE</span>)</span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>snq <span class="ot">&lt;-</span> Expanded_VP_EEG_SNQ</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="Caption" data-custom-style="Caption">
+<p>Social Network Size and FAA Data (First 6 Rows)</p>
 </div>
-<p>Remove Unnecessary Columns</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># The SNQ collects demographic information that is not neccesary for what I am looking at. I am using this code to remove all columns that I do not need.</span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>snq <span class="ot">&lt;-</span> snq <span class="sc">%&gt;%</span></span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span><span class="dv">5</span>, <span class="sc">-</span><span class="dv">6</span>, <span class="sc">-</span><span class="dv">7</span>, <span class="sc">-</span><span class="dv">8</span>, <span class="sc">-</span><span class="dv">9</span>, <span class="sc">-</span><span class="dv">10</span>, <span class="sc">-</span><span class="dv">11</span>, <span class="sc">-</span><span class="dv">12</span>, <span class="sc">-</span><span class="dv">13</span>, <span class="sc">-</span><span class="dv">14</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>Remove Repeated Rows</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Repeated rows are indicated with a 1 in column V2. All rows that are necessary for counting social network size have 'NA' in that column.</span></span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>snq <span class="ot">&lt;-</span> <span class="fu">subset</span>(snq, V2 <span class="sc">!=</span> <span class="dv">1</span> <span class="sc">|</span> <span class="fu">is.na</span>(V2))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>Rename</p>
-<p>Remove Column V2</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Now that I have removed all unnecessary rows, column V2 only has 'NA' values and therfore can be removed. The cleaned data set that is left is all I need to calculate social network size for each participant.</span></span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>snq <span class="ot">&lt;-</span> snq <span class="sc">%&gt;%</span></span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span><span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>Count Occurrences for Each Participant</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Now I can calculate social network size for each participant. I need R to count the number of occurrences for each participant. The number produced for each participant is their social network size that I will use for my data analysis.</span></span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>participant_counts <span class="ot">&lt;-</span> snq <span class="sc">%&gt;%</span></span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(V1) <span class="sc">%&gt;%</span></span>
-<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tally</span>()</span>
-<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(participant_counts)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 119 × 2
-   V1                n
-   &lt;chr&gt;         &lt;int&gt;
- 1 16890            16
- 2 HARRISONTYLER    21
- 3 NB_01            13
- 4 NB_02            14
- 5 NB_03             8
- 6 NB_05            22
- 7 NB_06            24
- 8 NB_07             5
- 9 NB_09            14
-10 NB_10            12
-# ℹ 109 more rows</code></pre>
-</div>
-</div>
-<p>Next Steps:</p>
-<p>Next, I have to calculate FAA for each participant. Once I do this, I can plot both social network size and FAA together which will give me the results and table I need related to the first question and hypothesis for my thesis.</p>
-<p>Beginning to calculate FAA</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readr)</span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>FAA_infants_reachgrasp_relative.csv <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"~/Desktop/d2mr/Faa_infants_reachgrasp_relative.csv"</span>, <span class="at">header =</span> <span class="cn">FALSE</span>)</span>
-<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>action_faa <span class="ot">&lt;-</span> FAA_infants_reachgrasp_relative.csv</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>Remove Unnecessary Rows</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Remove rows for foreign speaker (only measuring FAA in response to native speaker). Remove row 1 which is currently not being recognized as the column labels.</span></span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
-<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>action_faa <span class="ot">&lt;-</span> action_faa <span class="sc">%&gt;%</span></span>
-<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(V2 <span class="sc">!=</span> <span class="st">"FrTT"</span>)</span>
-<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>action_faa <span class="ot">&lt;-</span> action_faa[<span class="sc">-</span><span class="dv">1</span>, ]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>Change Subject Names to Match</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Attempting to change the subject names in the FAA data document because I need the participat id numbers to match between both datasets. First I need to add column names</span></span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(action_faa) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"ID"</span>, <span class="st">"Condition"</span>, <span class="st">"Time"</span>, <span class="st">"FAA"</span>)</span>
-<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>action_faa<span class="sc">$</span><span class="st">"ID"</span> <span class="ot">&lt;-</span> <span class="fu">case_when</span>(</span>
-<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">grepl</span>(<span class="st">"^VPEEG_PB_"</span>, action_faa<span class="sc">$</span><span class="st">"ID"</span>) <span class="sc">~</span> <span class="fu">sub</span>(<span class="st">"^VPEEG_(PB_</span><span class="sc">\\</span><span class="st">d+)_.*$"</span>, <span class="st">"</span><span class="sc">\\</span><span class="st">1"</span>, action_faa<span class="sc">$</span><span class="st">"ID"</span>),</span>
-<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">grepl</span>(<span class="st">"^VPEEG_SB_"</span>, action_faa<span class="sc">$</span><span class="st">"ID"</span>) <span class="sc">~</span> <span class="fu">sub</span>(<span class="st">"^VPEEG_(SB_</span><span class="sc">\\</span><span class="st">d+)_.*$"</span>, <span class="st">"</span><span class="sc">\\</span><span class="st">1"</span>, action_faa<span class="sc">$</span><span class="st">"ID"</span>),</span>
-<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>  <span class="cn">TRUE</span> <span class="sc">~</span> action_faa<span class="sc">$</span><span class="st">"ID"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>Combine Datasets</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="do">## I need to combine the snq and faa datasets to see which how many total participants we have (ie participants that completed both aspects of the study)</span></span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="do">## Once I do this, I can calculate FAA(?) and create LMM(?)</span></span>
-<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>common_participants <span class="ot">&lt;-</span> <span class="fu">merge</span>(participant_counts, action_faa, <span class="at">by =</span> <span class="st">"ID"</span>, <span class="st">"V1"</span>)</span>
-<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a><span class="do">## This left me with 70 participants who completed the snq and eeg parts of the study.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>Remove Unnecessary Columns and Name Columns</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co">#I am fixing the column names so the data is easier to work with</span></span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(common_participants) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"ID"</span>, <span class="st">"SNQ"</span>, <span class="st">"Condition"</span>, <span class="st">"Time"</span>, <span class="st">"FAA"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>Linear Mixed Model</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="do">## I need to create a linear mixed model because each participant has two instances of faa data (from -1000 to 0 and 0 to 1000). I will use the common_participants dataset so then I can plot snq and faa.</span></span>
-<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(lme4)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Loading required package: Matrix</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>common_participants<span class="sc">$</span>FAA <span class="ot">&lt;-</span> <span class="fu">as.numeric</span>(common_participants<span class="sc">$</span>FAA)</span>
-<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>lmm <span class="ot">&lt;-</span> <span class="fu">lmer</span>(FAA <span class="sc">~</span> SNQ <span class="sc">+</span> (<span class="dv">1</span> <span class="sc">|</span> ID), <span class="at">data =</span> common_participants)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>Plotting the Linear Mixed Model</p>
-<div class="cell" data-apa-note="Plotting LMM">
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Extract random effects</span></span>
-<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>random_effects <span class="ot">&lt;-</span> <span class="fu">ranef</span>(lmm)<span class="sc">$</span>ID</span>
-<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot random effects</span></span>
-<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(random_effects, <span class="at">main =</span> <span class="st">"Random Effects for ID"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div id="fig-lmm" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-lmm-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="SNQ-FAA-Data_files/figure-html/fig-lmm-1.png" class="img-fluid figure-img" width="672">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-lmm-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;1: Random Effects for ID
 </figcaption>
-</figure>
-</div>
-</div>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>anova_faa <span class="ot">&lt;-</span> <span class="fu">aov</span>(SNQ <span class="sc">~</span> FAA, <span class="at">data =</span> common_participants)</span>
-<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary.aov</span>(anova_faa)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>             Df Sum Sq Mean Sq F value  Pr(&gt;F)   
-FAA           1    280  280.50   10.65 0.00135 **
-Residuals   158   4163   26.35                   
----
-Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
-</div>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a><span class="do">## Categorize Time</span></span>
-<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>common_participants<span class="sc">$</span>Time <span class="ot">&lt;-</span> <span class="fu">factor</span>(common_participants<span class="sc">$</span>Time, <span class="at">levels =</span> <span class="fu">c</span>(<span class="st">"-1000 to 0"</span>, <span class="st">"0 to 1000"</span>))</span>
-<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a><span class="do">## Create scatterplot, adjust color and size of points, add linear regression line and smoothed conditional means, add facet, adjust grid lines and background colors</span></span>
-<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(common_participants, <span class="fu">aes</span>(<span class="at">x =</span> SNQ, <span class="at">y =</span> FAA))<span class="sc">+</span></span>
-<span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>()<span class="sc">+</span></span>
-<span id="cb22-8"><a href="#cb22-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>, <span class="at">linetype =</span> <span class="st">"dashed"</span>, <span class="at">color =</span> <span class="st">"blue"</span>, <span class="at">linewidth =</span> .<span class="dv">8</span>)<span class="sc">+</span></span>
-<span id="cb22-9"><a href="#cb22-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span> Time)<span class="sc">+</span></span>
-<span id="cb22-10"><a href="#cb22-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Social Network Size"</span>, <span class="st">"FAA"</span>, <span class="at">title =</span> <span class="st">"SNQxFAA"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>`geom_smooth()` using formula = 'y ~ x'</code></pre>
-</div>
+<div aria-describedby="tbl-snq-faa-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="SNQ-FAA-Data_files/figure-html/scatter-2-1.png" class="img-fluid figure-img" width="672"></p>
+<div class="tabwid"><style>.cl-831e89de{}.cl-830dbb18{font-family:'Times New Roman';font-size:11pt;font-weight:normal;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-83162992{margin:0;text-align:center;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 2;background-color:transparent;}.cl-831664d4{width:0.75in;background-color:transparent;vertical-align: middle;border-bottom: 0.75pt solid rgba(0, 0, 0, 1.00);border-top: 0.75pt solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-831664e8{width:0.75in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-831664f2{width:0.75in;background-color:transparent;vertical-align: middle;border-bottom: 0.75pt solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}</style><table data-quarto-disable-processing="true" class="cl-831e89de"><thead><tr style="overflow-wrap:break-word;"><th class="cl-831664d4"><p class="cl-83162992"><span class="cl-830dbb18">ID</span></p></th><th class="cl-831664d4"><p class="cl-83162992"><span class="cl-830dbb18">SNS</span></p></th><th class="cl-831664d4"><p class="cl-83162992"><span class="cl-830dbb18">Time</span></p></th><th class="cl-831664d4"><p class="cl-83162992"><span class="cl-830dbb18">FAA</span></p></th></tr></thead><tbody><tr style="overflow-wrap:break-word;"><td class="cl-831664e8"><p class="cl-83162992"><span class="cl-830dbb18">PB_10</span></p></td><td class="cl-831664e8"><p class="cl-83162992"><span class="cl-830dbb18">11</span></p></td><td class="cl-831664e8"><p class="cl-83162992"><span class="cl-830dbb18">0 to 1000</span></p></td><td class="cl-831664e8"><p class="cl-83162992"><span class="cl-830dbb18">0.02</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-831664e8"><p class="cl-83162992"><span class="cl-830dbb18">PB_10</span></p></td><td class="cl-831664e8"><p class="cl-83162992"><span class="cl-830dbb18">11</span></p></td><td class="cl-831664e8"><p class="cl-83162992"><span class="cl-830dbb18">-1000 to 0</span></p></td><td class="cl-831664e8"><p class="cl-83162992"><span class="cl-830dbb18">0.01</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-831664e8"><p class="cl-83162992"><span class="cl-830dbb18">PB_11</span></p></td><td class="cl-831664e8"><p class="cl-83162992"><span class="cl-830dbb18">17</span></p></td><td class="cl-831664e8"><p class="cl-83162992"><span class="cl-830dbb18">0 to 1000</span></p></td><td class="cl-831664e8"><p class="cl-83162992"><span class="cl-830dbb18">0.02</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-831664e8"><p class="cl-83162992"><span class="cl-830dbb18">PB_11</span></p></td><td class="cl-831664e8"><p class="cl-83162992"><span class="cl-830dbb18">17</span></p></td><td class="cl-831664e8"><p class="cl-83162992"><span class="cl-830dbb18">-1000 to 0</span></p></td><td class="cl-831664e8"><p class="cl-83162992"><span class="cl-830dbb18">0.04</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-831664e8"><p class="cl-83162992"><span class="cl-830dbb18">PB_13</span></p></td><td class="cl-831664e8"><p class="cl-83162992"><span class="cl-830dbb18">3</span></p></td><td class="cl-831664e8"><p class="cl-83162992"><span class="cl-830dbb18">0 to 1000</span></p></td><td class="cl-831664e8"><p class="cl-83162992"><span class="cl-830dbb18">-0.02</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-831664f2"><p class="cl-83162992"><span class="cl-830dbb18">PB_13</span></p></td><td class="cl-831664f2"><p class="cl-83162992"><span class="cl-830dbb18">3</span></p></td><td class="cl-831664f2"><p class="cl-83162992"><span class="cl-830dbb18">-1000 to 0</span></p></td><td class="cl-831664f2"><p class="cl-83162992"><span class="cl-830dbb18">-0.02</span></p></td></tr></tbody></table></div>
+</div>
+</div>
+</figure>
+</div>
+<div class="FigureNote" data-custom-style="FigureNote">
+<p><em>Note</em>. Table 1 displays social network size (SNQ) and FAA data for the first three participants.</p>
+</div>
+</div>
+<p><a href="#tbl-snq-faa" class="quarto-xref" aria-expanded="false">Table&nbsp;1</a> displays examples of social network size, as measured by the SNQ, and FAA data. Each participant has two instances of measured FAA. The -1000 to 0 time frame represents FAA while the actor in the video was reaching towards an object while the 0 to 1000 time frame represents FAA while the actor in the video was grasping an object.</p>
+<p><a href="#tbl-summary-statistics-sns" class="quarto-xref" aria-expanded="false">Table&nbsp;2</a> and <a href="#tbl-summary-statistics-faa" class="quarto-xref" aria-expanded="false">Table&nbsp;3</a> display descriptive information about social network size and FAA respectively. There are 152 participants in this study with a mean social network size of 10.89 and a mean level of FAA of 0.01.</p>
+<div class="cell FigureWithoutNote" prefix="" data-tblnum="2" data-custom-style="FigureWithoutNote">
+<div id="tbl-summary-statistics-sns" class="cell quarto-float quarto-figure quarto-figure-center" prefix="" data-tblnum="2">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-summary-statistics-sns-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="FigureTitle" data-custom-style="FigureTitle">
+<p>Table&nbsp;2</p>
+</div>
+<div class="Caption" data-custom-style="Caption">
+<p>Descriptive Statistics - Social Network Size</p>
+</div>
+</figcaption>
+<div aria-describedby="tbl-summary-statistics-sns-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<table class="table do-not-create-environment cell caption-top table-sm table-striped small" data-quarto-postprocess="true">
+<caption>Descriptive Statistics - Social Network Size</caption>
+<thead>
+<tr class="header">
+<th style="text-align: right;" data-quarto-table-cell-role="th">Mean SNS</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Median SNS</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">SD SNS</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Min SNS</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Max SNS</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Range SNS</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">10.89</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">5.34</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">25</td>
+<td style="text-align: right;">23</td>
+</tr>
+</tbody>
+</table>
+
+
+</div>
+</div>
+</figure>
+</div>
+</div>
+<div class="cell FigureWithoutNote" prefix="" data-tblnum="3" data-custom-style="FigureWithoutNote">
+<div id="tbl-summary-statistics-faa" class="cell quarto-float quarto-figure quarto-figure-center" prefix="" data-tblnum="3">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-summary-statistics-faa-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="FigureTitle" data-custom-style="FigureTitle">
+<p>Table&nbsp;3</p>
+</div>
+<div class="Caption" data-custom-style="Caption">
+<p>Descriptive Statistics - FAA</p>
+</div>
+</figcaption>
+<div aria-describedby="tbl-summary-statistics-faa-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<table class="table do-not-create-environment cell caption-top table-sm table-striped small" data-quarto-postprocess="true">
+<caption>Descriptive Statistics - FAA</caption>
+<thead>
+<tr class="header">
+<th style="text-align: right;" data-quarto-table-cell-role="th">Mean FAA</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Median FAA</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">SD FAA</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Min FAA</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Max FAA</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Range FAA</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">0.01</td>
+<td style="text-align: right;">0.01</td>
+<td style="text-align: right;">0.03</td>
+<td style="text-align: right;">-0.06</td>
+<td style="text-align: right;">0.1</td>
+<td style="text-align: right;">0.16</td>
+</tr>
+</tbody>
+</table>
+
+
+</div>
+</div>
+</figure>
+</div>
+</div>
+<div class="AfterWithoutNote" data-custom-style="AfterWithoutNote">
+<p><a href="#fig-scatter-sns-faa" class="quarto-xref" aria-expanded="false">Figure&nbsp;1</a> demonstrates the relationship between social network size and FAA for each participant during the two time periods: watching the stranger reach towards an object and grasping/lifting the object. As we can see, FAA has a tendency to increase as social network size increases. This supports our hypothesis that a larger social network size will lead to more positive FAA.</p>
+</div>
+<p>The difference in levels of FAA between the participant with the highest and lowest social network size is 0.04.</p>
+<div class="cell FigureWithNote" data-apa-note="Figure 1 displays levels of FAA and infants' social network sizes." data-custom-style="FigureWithNote">
+<div class="cell-output-display">
+<div id="fig-scatter-sns-faa" class="quarto-float quarto-figure quarto-figure-center" prefix="" data-fignum="1">
+<figure class="quarto-float quarto-float-fig figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-scatter-sns-faa-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="FigureTitle" data-custom-style="FigureTitle">
+<p>Figure&nbsp;1</p>
+</div>
+<div class="Caption" data-custom-style="Caption">
+<p>Social Network Size and FAA by Time Blocks</p>
+</div>
+</figcaption>
+<div aria-describedby="fig-scatter-sns-faa-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="SNQ-FAA-Data_files/figure-html/fig-scatter-sns-faa-1.svg" class="img-fluid figure-img" width="672">
+</div>
 </figure>
 </div>
 </div>
 </div>
+<div class="FigureNote" data-custom-style="FigureNote">
+<p><em>Note</em>. Figure 1 displays levels of FAA and infants’ social network sizes.</p>
+</div>
+<div class="cell FigureWithoutNote" prefix="" data-tblnum="4" data-custom-style="FigureWithoutNote">
+<div id="tbl-lmm-faa-sns" class="cell quarto-float quarto-figure quarto-figure-center" prefix="" data-tblnum="4">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-lmm-faa-sns-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="FigureTitle" data-custom-style="FigureTitle">
+<p>Table&nbsp;4</p>
+</div>
+<div class="Caption" data-custom-style="Caption">
+<p>Linear Mixed Model between FAA and SNS</p>
+</div>
+</figcaption>
+<div aria-describedby="tbl-lmm-faa-sns-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<table style="border-collapse:collapse; border:none;">
+<tbody><tr>
+<th style="border-top: double; text-align:center; font-style:normal; font-weight:bold; padding:0.2cm;  text-align:left; ">&nbsp;</th>
+<th colspan="3" style="border-top: double; text-align:center; font-style:normal; font-weight:bold; padding:0.2cm; ">FAA</th>
+</tr>
+<tr>
+<td style=" text-align:center; border-bottom:1px solid; font-style:italic; font-weight:normal;  text-align:left; ">Predictors</td>
+<td style=" text-align:center; border-bottom:1px solid; font-style:italic; font-weight:normal;  ">Estimates</td>
+<td style=" text-align:center; border-bottom:1px solid; font-style:italic; font-weight:normal;  ">p</td>
+<td style=" text-align:center; border-bottom:1px solid; font-style:italic; font-weight:normal;  ">df</td>
+</tr>
+<tr>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:left; ">(Intercept)</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">-0.01</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">0.295</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">148.00</td>
+</tr>
+<tr>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:left; ">SNS</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">0.00</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  "><strong>0.030</strong></td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">148.00</td>
+</tr>
+
+<tr>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:left; padding-top:0.1cm; padding-bottom:0.1cm;">ICC</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; padding-top:0.1cm; padding-bottom:0.1cm; text-align:left;" colspan="3">0.87</td>
+</tr><tr>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:left; padding-top:0.1cm; padding-bottom:0.1cm; border-top:1px solid;">Observations</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; padding-top:0.1cm; padding-bottom:0.1cm; text-align:left; border-top:1px solid;" colspan="3">152</td>
+</tr>
+<tr>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:left; padding-top:0.1cm; padding-bottom:0.1cm;">Marginal R<sup>2</sup> / Conditional R<sup>2</sup></td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; padding-top:0.1cm; padding-bottom:0.1cm; text-align:left;" colspan="3">0.056 / 0.880</td>
+</tr>
+
+</tbody></table>
+
+</div>
+</div>
+</figure>
+</div>
+</div>
+<div class="AfterWithoutNote" data-custom-style="AfterWithoutNote">
+<p>However, from <a href="#tbl-lmm-faa-sns" class="quarto-xref" aria-expanded="false">Table&nbsp;4</a> we can see this relationship is not statistically significant (<em>p</em> = .030). The marginal R-squared = 0.056, which means that only 5.6% of the variance is explained by the fixed effects of social network size and the conditional R-squared = 0.88, which suggests that a large portion of the variance is explained by random effects or individual differences. The ICC of 0.824 emphasizes that random effects dominate the variance in this model.</p>
+</div>
+<p><a href="#fig-total-sample-scatter" class="quarto-xref" aria-expanded="false">Figure&nbsp;2</a> displays social network size and FAA including temepramental fear as a moderator. The darker the data points the higher the levels of parent reported fear. From the figure, we can see that as social network size increases, FAA also increases. Additionally, the gradient of temperamental fear demonstrates infant’s with higher fear have both more negative FAA and smaller social network sizes.</p>
+<p>There are 4 less participants in this model as only 72 completed all three aspects of this study (SNQ, IBQ, and EEG measuring).</p>
+<div class="cell FigureWithNote" data-apa-note="Figure 2 displays levels of FAA and social network sizes including a gradient of temperamental fear level. Darker data points indicate a higher level of parent reported fear." data-custom-style="FigureWithNote">
+<div class="cell-output-display">
+<div id="fig-total-sample-scatter" class="quarto-float quarto-figure quarto-figure-center" prefix="" data-fignum="2">
+<figure class="quarto-float quarto-float-fig figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-total-sample-scatter-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="FigureTitle" data-custom-style="FigureTitle">
+<p>Figure&nbsp;2</p>
+</div>
+<div class="Caption" data-custom-style="Caption">
+<p>Social Network Size, FAA, and Fear Level</p>
+</div>
+</figcaption>
+<div aria-describedby="fig-total-sample-scatter-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="SNQ-FAA-Data_files/figure-html/fig-total-sample-scatter-1.svg" class="img-fluid figure-img" width="576">
+</div>
+</figure>
+</div>
+</div>
+</div>
+<div class="FigureNote" data-custom-style="FigureNote">
+<p><em>Note</em>. Figure 2 displays levels of FAA and social network sizes including a gradient of temperamental fear level. Darker data points indicate a higher level of parent reported fear.</p>
+</div>
+<div class="cell FigureWithoutNote" prefix="" data-tblnum="5" data-custom-style="FigureWithoutNote">
+<div id="tbl-lmm-total-sample" class="cell quarto-float quarto-figure quarto-figure-center" prefix="" data-tblnum="5">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-lmm-total-sample-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="FigureTitle" data-custom-style="FigureTitle">
+<p>Table&nbsp;5</p>
+</div>
+<div class="Caption" data-custom-style="Caption">
+<p>Linear Mixed Model: FAA, Temperament, Social Network Size</p>
+</div>
+</figcaption>
+<div aria-describedby="tbl-lmm-total-sample-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<table style="border-collapse:collapse; border:none;">
+<tbody><tr>
+<th style="border-top: double; text-align:center; font-style:normal; font-weight:bold; padding:0.2cm;  text-align:left; ">&nbsp;</th>
+<th colspan="3" style="border-top: double; text-align:center; font-style:normal; font-weight:bold; padding:0.2cm; ">FAA</th>
+</tr>
+<tr>
+<td style=" text-align:center; border-bottom:1px solid; font-style:italic; font-weight:normal;  text-align:left; ">Predictors</td>
+<td style=" text-align:center; border-bottom:1px solid; font-style:italic; font-weight:normal;  ">Estimates</td>
+<td style=" text-align:center; border-bottom:1px solid; font-style:italic; font-weight:normal;  ">p</td>
+<td style=" text-align:center; border-bottom:1px solid; font-style:italic; font-weight:normal;  ">df</td>
+</tr>
+<tr>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:left; ">(Intercept)</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">0.01</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">0.605</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">135.00</td>
+</tr>
+<tr>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:left; ">SNS</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">0.00</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">0.971</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">135.00</td>
+</tr>
+<tr>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:left; ">mean IBQ</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">-0.00</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">0.418</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">135.00</td>
+</tr>
+<tr>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:left; ">Time [0 to 1000]</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">-0.00</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">0.588</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">135.00</td>
+</tr>
+<tr>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:left; ">SNS × mean IBQ</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">0.00</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">0.635</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">135.00</td>
+</tr>
+
+<tr>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:left; padding-top:0.1cm; padding-bottom:0.1cm;">ICC</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; padding-top:0.1cm; padding-bottom:0.1cm; text-align:left;" colspan="3">0.88</td>
+</tr><tr>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:left; padding-top:0.1cm; padding-bottom:0.1cm; border-top:1px solid;">Observations</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; padding-top:0.1cm; padding-bottom:0.1cm; text-align:left; border-top:1px solid;" colspan="3">142</td>
+</tr>
+<tr>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:left; padding-top:0.1cm; padding-bottom:0.1cm;">Marginal R<sup>2</sup> / Conditional R<sup>2</sup></td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; padding-top:0.1cm; padding-bottom:0.1cm; text-align:left;" colspan="3">0.063 / 0.886</td>
+</tr>
+
+</tbody></table>
+
+</div>
+</div>
+</figure>
+</div>
+</div>
+<div class="AfterWithoutNote" data-custom-style="AfterWithoutNote">
+<p>However, again, these relationships are not significant as seen in <a href="#tbl-lmm-total-sample" class="quarto-xref" aria-expanded="false">Table&nbsp;5</a> (<em>p</em> = .635). The marginal R-squared = 0.063, which tells us that only 6.3% of the variance is explained by the fixed effects of social network size and fear as measured by the SNQ and IBQ respectively. While this is low, there was a slight increase of in comparison to our first model where only 5.6% of the variance was explained by fixed effects. This increase suggests that level of temperamental fear does have an impact on the relationship between social network size and FAA. The conditional R-squared = 0.886, which suggests that 88.6% of the variance is explained by random effects or individual differences. This is about the same as the first model. The ICC of 0.823 emphasizes that random effects dominate the variance in this model as well as the first.</p>
+</div>
+</section>
+<section id="sec-discussion" class="level1">
+<h1>Discussion</h1>
+<p>The aim of our study was to answer two questions: what is the realtionship between social network size and FAA in infants towards strangers and what is the moderating effect of fear in this relationship?</p>
+<p>We have found evidence to support our first hypothesis, that a larger social network size is associated with more positive FAA while viewing the videos of strangers. However, the evidence is not statistically significant and the variance is largely explained by individual differences. One limitation to proving our hypothesis was our small sample size. Further research is needed to provide more conclusive results.</p>
+<p>Due to the evidence relating to our first hypothesis, we were further interested in the moderating effect of fear in this relationship. We have found that a high level of fear magnified the relationship between social network size and an infant’s neural response to strangers, seen through the increase in variance explained by the fixed effects.</p>
+<p>The findings of this study will contribute to the understanding of the neurological reactions, and affecting factors, toward strangers during infancy.</p>
+</section>
+<section id="sec-references" class="level1">
+<h1>References</h1>
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="ref-anayaetal_2021_psychometric" class="csl-entry" role="listitem">
+Anaya, B., Ostlund, B., LoBue, V., Buss, K., &amp; Pérex-Edgar, K. (2021). Psychometric properties of infant electroencephalography: <span>Developmental</span> stability, reliability, and construct validity of frontal alpha asymmetry and delta–beta coupling. <em>Developmental Psychobiology</em>, <em>63</em>(6). <a href="https://doi.org/10.1002/dev.22178">https://doi.org/10.1002/dev.22178</a>
+</div>
+<div id="ref-burkeChildrensSocialNetwork2023" class="csl-entry" role="listitem">
+Burke, N., Brezack, N., Meyer, M., &amp; Woodward, A. (2023). Children’s social network size is related to their perspective-taking skills. <em>Frontiers in Developmental Psychology</em>, <em>1</em>. <a href="https://doi.org/10.3389/fdpys.2023.1221056">https://doi.org/10.3389/fdpys.2023.1221056</a>
+</div>
+<div id="ref-burkeChildrensSocialNetworks2022" class="csl-entry" role="listitem">
+Burke, N., Brezack, N., &amp; Woodward, A. (2022). Children’s social networks in developmental psychology: <span>A</span> network approach to capture and describe early social environments. <em>Frontiers in Psychology</em>, <em>13</em>, 1009422. <a href="https://doi.org/10.3389/fpsyg.2022.1009422">https://doi.org/10.3389/fpsyg.2022.1009422</a>
+</div>
+<div id="ref-davidsonfox_1982_asymmetrical" class="csl-entry" role="listitem">
+Davidson, R. J., &amp; Fox, N. A. (1982). Asymmetrical brain activity discriminates between positive and negative affective stimuli in human infants. <em>Science</em>, <em>218</em>(4578), 1235–1237. <a href="https://doi.org/10.1126/science.7146906">https://doi.org/10.1126/science.7146906</a>
+</div>
+<div id="ref-downeyPlayingWellOthers2004" class="csl-entry" role="listitem">
+Downey, D. B., &amp; Condron, D. J. (2004). Playing <span>Well</span> with <span>Others</span> in <span>Kindergarten</span>: <span>The Benefits</span> of <span>Siblings</span> at <span>Home</span>. <em>Journal of Marriage and Family</em>, <em>66</em>, 330–350. <a href="https://doi.org/10.1111/j.1741-3737.2004.00024.x">https://doi.org/10.1111/j.1741-3737.2004.00024.x</a>
+</div>
+<div id="ref-ertekinTemperamentModeratesEffects2021" class="csl-entry" role="listitem">
+Ertekin, Z., Gunnar, M. R., &amp; Berument, S. K. (2021). Temperament moderates the effects of early deprivation on infant attention. <em>The Official Journal of the International Congress of Infant Studies</em>, <em>26</em>(3), 455–468. https://doi.org/<a href="https://doi-org.proxy.uchicago.edu/10.1111/infa.12396">https://doi-org.proxy.uchicago.edu/10.1111/infa.12396</a>
+</div>
+<div id="ref-fox_1991_if" class="csl-entry" role="listitem">
+Fox, N. A. (1991). If it’s not left, it’s right: <span>Electroencephalograph</span> asymmetry and the development of emotion. <em>American Psychologist</em>, <em>46</em>(8), 863–872. <a href="https://doi.org/10.1037/0003-066X.46.8.863">https://doi.org/10.1037/0003-066X.46.8.863</a>
+</div>
+<div id="ref-foxdavidson_1986_tasteelicited" class="csl-entry" role="listitem">
+Fox, N. A., &amp; Davidson, R. J. (1986). Taste-elicited changes in facial signs of emotion and the asymmetry of brain electrical activity in human newborns. <em>Neuropsychologia</em>, <em>24</em>(3), 417–422. https://doi.org/<a href="https://doi.org/10.1016/0028-3932(86)90028-X">https://doi.org/10.1016/0028-3932(86)90028-X</a>
+</div>
+<div id="ref-foxContinuityDiscontinuityBehavioral2001" class="csl-entry" role="listitem">
+Fox, N. A., Henderson, H. A., Rubin, K. H., Calkins, S. D., &amp; Schmidt, L. A. (2001). Continuity and discontinuity of behavioral inhibition and exuberance: Psychophysiological and behavioral influences across the first four years of life. <em>Child Development</em>, <em>72</em>(1), 1–21. <a href="https://doi.org/10.1111/1467-8624.00262">https://doi.org/10.1111/1467-8624.00262</a>
+</div>
+<div id="ref-gartsteinStudyingInfantTemperament2003" class="csl-entry" role="listitem">
+Gartstein, M. A., &amp; Rothbart, M. K. (2003). Studying infant temperament via the <span>Revised Infant Behavior Questionnaire</span>. <em>Infant Behavior &amp; Development</em>, <em>26</em>, 64–86.
+</div>
+<div id="ref-gollanFrontalAlphaEEG2014" class="csl-entry" role="listitem">
+Gollan, J. K., Hoxha, D., Chihade, D., Pflieger, M. E., Rosebrock, L., &amp; Cacioppo, J. (2014). Frontal alpha <span>EEG</span> asymmetry before and after behavioral activation treatment for depression. <em>Biological Psychology</em>, <em>99</em>, 198–208. <a href="https://doi.org/10.1016/j.biopsycho.2014.03.003">https://doi.org/10.1016/j.biopsycho.2014.03.003</a>
+</div>
+<div id="ref-harrewijnFrontalAlphaAsymmetry2019" class="csl-entry" role="listitem">
+Harrewijn, A., Buzzell, G. A., Debnath, R., Leibenluft, E., Pine, D. S., &amp; Fox, N. A. (2019). Frontal alpha asymmetry moderates the relations between behavioral inhibition and social-effect <span>ERN</span>. <em>Biological Psychology</em>, <em>141</em>, 10–16. <a href="https://doi.org/doi:10.1016/j.biopsycho.2018.12.014">https://doi.org/doi:10.1016/j.biopsycho.2018.12.014</a>
+</div>
+<div id="ref-howarthFrontalElectroencephalogramAsymmetry2016" class="csl-entry" role="listitem">
+Howarth, G. Z., Fettig, N. B., Curby, T. W., &amp; Bell, M. A. (2016). Frontal <span>Electroencephalogram Asymmetry</span> and <span>Temperament Across Infancy</span> and <span>Early Childhood</span>: <span>An Exploration</span> of <span>Stability</span> and <span>Bidirectional Relations</span>. <em>Child Development</em>, <em>87</em>(2), 465–476. <a href="https://doi.org/10.1111/cdev.12466">https://doi.org/10.1111/cdev.12466</a>
+</div>
+<div id="ref-hwangChildrensSocialWariness2023" class="csl-entry" role="listitem">
+Hwang, G., Filippi, C. A., Morales, S., Fox, N. A., &amp; Woodward, A. (2023). Children’s social wariness toward a different-race stranger relates to individual differences in temperament. <em>Developmental Science</em>, <em>e13390</em>. <a href="https://doi.org/10.1111/desc.13390">https://doi.org/10.1111/desc.13390</a>
+</div>
+<div id="ref-liuFrontalEEGAsymmetry2021" class="csl-entry" role="listitem">
+Liu, R., Calkins, S. D., &amp; Bell, M. A. (2021). Frontal <span>EEG</span> asymmetry moderates the associations between negative temperament and behavioral problems during childhood. <em>Development and Psychopathology</em>, <em>33</em>(3), 1016–1025. <a href="https://doi.org/10.1017/S0954579420000309">https://doi.org/10.1017/S0954579420000309</a>
+</div>
+<div id="ref-rubinSocialWithdrawlChildhood2009" class="csl-entry" role="listitem">
+Rubin, K. H., Coplan, R. J., &amp; Bowker, J. C. (2009). Social <span>Withdrawl</span> in <span>Childhood</span>. <em>Annual Review of Psychology</em>.
+</div>
+<div id="ref-vincentetal_2021_using" class="csl-entry" role="listitem">
+Vincent, K. M., Xie, W., &amp; Nelson, C. A. (2021). Using different methods for calculating frontal alpha asymmetry to study its development from infancy to 3 years of age in a large longitudinal sample. <em>Development Psychobiology</em>, <em>63</em>. https://doi.org/<a href="https://doi-org.proxy.uchicago.edu/10.1002/dev.22163">https://doi-org.proxy.uchicago.edu/10.1002/dev.22163</a>
+</div>
+</div>
+</section>
 
 </main>
 <!-- /main column -->
@@ -315,13 +589,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
   toggleBodyColorPrimary();  
-  const icon = "";
-  const anchorJS = new window.AnchorJS();
-  anchorJS.options = {
-    placement: 'right',
-    icon: icon
-  };
-  anchorJS.add('.anchored');
   const isCodeAnnotation = (el) => {
     for (const clz of el.classList) {
       if (clz.startsWith('code-annotation-')) {                     
