@@ -14,13 +14,12 @@ Before submitting your research project draft for grading, confirm:
 
 To complete this assessment:
 
-1. Complete the basic information section in full. 
+1. Complete the basic information section and AI statement. 
 2. Confirm all links are correct and accessible
 3. Check off all objectives you are attempting to demonstrate
     1. To earn 30 points you must demonstrate each objective. However, you do not need to attempt all objectives with each draft if your goal is to build the project over time.
     2. If the objective is demonstrated somewhere other than the .qmd, add a note in the grader comments section for where to find it (e.g., "see `data-cleaning.R` lines 20-30").
 4. Optionally, complete the reflection section, which may earn engagement points.
-
 
 ## Basic information
 
@@ -32,9 +31,9 @@ Section: 1
 
 Research project title: SNQ-FAA-Data
 
-Submission date: 2/26/2025
+Submission date: 3/12/2025
 
-Submission number (1-4): 2
+Submission number (1-4): 3
 
 Project GitHub repository URL: https://github.com/KFlaws/KFlaws-SNQ-FAA-Data.git
 
@@ -46,16 +45,11 @@ Filename of knitted .pdf: SNQ-FAA-Data.pdf
 
 Describe whether and how you used AI/LLMs when completing this project: 
 
-I used ChatGPT for this project to help me understand error messages when they came up.
+I used ChatGPT for this project to help me understand error messages when they came up and for more detailed coding to reach more objectives.
 
 Optionally (for engagement points) reflect on your use of AI:
 
-I tried to not use ChatGPT for error messages as much as in previous mini-projects, 
-however it is very useful! For this attempt, I made my best effort to follow the slides
-or other walk-throughs to sort out my issues. Still, ChatGPT has been super helpful for me
-especially when I start to get very frustrated with something not working. For this project
-specifically, I used ChatGPT to effectively solve particular issues from my first draft
-(ex. making sure my files are going to a relative, not absolute, path).
+ChatGPT was very helpful for me to be able to understand error messages and how to solve issues. However, it did not always give me a useful solution so I outsourced to stack overflow and other online resources to aid with my coding. ChatGPT was also helpful for me to be able to understand how to meet specific objectives on the final project. I used it to know what codes to add, how to include more inline code and correct my inline code, and to make sure I understood exactly what was being asked of me. 
 
 ## Overall requirements
 
@@ -152,9 +146,9 @@ Refer to the website for general tips on meeting these objectives and an FAQ.
     1. Uses all three types of operators
     2. Uses multiple operators in data transformation pipelines and/or inline R code
 
-        -   [ ] Objective attempt
+        -   [X] Objective attempt
         -   [ ] Objective met
-        -   Grader comments:
+        -   Grader comments: Example of arithmetic operators in line 400; example of comparison and logical operators in line 65.
 
 7.  Parse and define functions and arguments
 
@@ -162,9 +156,9 @@ Refer to the website for general tips on meeting these objectives and an FAQ.
     2. User-defined function(s) run(s) without error and produces expected output in at least 2 contexts
     3. Functions are well-documented with comments
 
-        -   [ ] Objective attempt
+        -   [X] Objective attempt
         -   [ ] Objective met
-        -   Grader comments:
+        -   Grader comments: Example in lines 375-386
 
 8.  Parse and write conditional statements and/or loops
 
@@ -200,7 +194,7 @@ Refer to the website for general tips on meeting these objectives and an FAQ.
     1. Uses ate least 2 unique `stringr` functions 
     2. Uses `stringr` functions in a data transformation pipeline
 
-        -   [ ] Objective attempt
+        -   [X] Objective attempt
         -   [ ] Objective met
         -   Grader comments:
 
@@ -210,7 +204,7 @@ Refer to the website for general tips on meeting these objectives and an FAQ.
     2. Uses `forcats` functions in a data transformation pipeline
     - NOTE: Though they are base R functions, `factor()` and `levels()` can be used to meet this objective as long as they are used in a way that demonstrates the same skills as `forcats` functions, which should involve including optional arguments
 
-        -   [ ] Objective attempt
+        -   [X] Objective attempt
         -   [ ] Objective met
         -   Grader comments:
 
@@ -264,7 +258,7 @@ Refer to the website for general tips on meeting these objectives and an FAQ.
     2. Calculates summary/descriptive statistics for at least 1 non-numeric variable (e.g., frequencies, proportions)
     3. Presents results in narrative text, table, or plot
 
-        -   [ ] Objective attempt
+        -   [X] Objective attempt
         -   [ ] Objective met
         -   Grader comments:
 
@@ -285,7 +279,7 @@ Refer to the website for general tips on meeting these objectives and an FAQ.
     3. Discriminates between informative and non-informative statistics and presents only the former in narrative text
     4. Uses dynamic inline R code to render data-dependent text
 
-        -   [ ] Objective attempt
+        -   [X] Objective attempt
         -   [ ] Objective met
         -   Grader comments:
 
@@ -297,7 +291,7 @@ Refer to the website for general tips on meeting these objectives and an FAQ.
     2. Uses at least 2 citation forms (e.g., (Author, Year), Author (Year), etc.)
     3. May use `cite_r()` to cite R and R packages
 
-        -   [ ] Objective attempt
+        -   [X] Objective attempt
         -   [ ] Objective met
         -   Grader comments:
 
@@ -309,7 +303,7 @@ Refer to the website for general tips on meeting these objectives and an FAQ.
     4. May include R and R package citations with `cite_r()`
     5. May include references not cited in-text
 
-        -   [ ] Objective attempt
+        -   [X] Objective attempt
         -   [ ] Objective met
         -   Grader comments:
 
@@ -357,9 +351,9 @@ Refer to the website for general tips on meeting these objectives and an FAQ.
     4. Results are not displayed as raw R output
     5. Chunks are organized sensibly and appear near the text they support
 
-        -   [ ] Objective attempt
+        -   [X] Objective attempt
         -   [ ] Objective met
-        -   Grader comments:
+        -   Grader comments: Hypothesis text example lines 327-341 (not included in render)
 
 ### R Markdown and Quarto
 
@@ -389,7 +383,7 @@ Refer to the website for general tips on meeting these objectives and an FAQ.
     2. Replaces static text with inline R references in at least 1 character context
     3. Ideally, uses inline R references for *all* data-dependent text
 
-        -   [ ] Objective attempt
+        -   [X] Objective attempt
         -   [ ] Objective met
         -   Grader comments:
 
@@ -397,7 +391,7 @@ Refer to the website for general tips on meeting these objectives and an FAQ.
 
     1. Uses inline R functions to render at least 3 unique data-dependent text outputs (e.g., performs rounding, calculates means, subtracts one list length from another, etc. -- inline rather than in a code chunk)
 
-        -   [ ] Objective attempt
+        -   [X] Objective attempt
         -   [ ] Objective met
         -   Grader comments:
         
@@ -412,6 +406,15 @@ Refer to the website for general tips on meeting these objectives and an FAQ.
         -   [ ] Objective met
         -   Grader comments:  No references section. Headings not formatted correctly (Lit review should be heading 2: "## Literature Review", subsections should be H3: "### Social Network Size", etc.) ~~Be sure that when you do attempt this objective you revise your YAML header to output to PDF instead of HTML.~~
 
+## Reflection (Optional)
+
+Optionally (for engagement points) write a brief reflection about your work on this project. You can use this space to answer the following questions, but feel free to ignore these questions and write about whatever you think is most important.
+
+This course and creating this project was hard. I got frustrated and almost gave up on certain aspects many times, but I am so proud of myself for pushing through and proud of the result! I came into this course with 0 experience with coding or anything like this so to see myself come so far and create my manuscript has been the most rewarding part. This course was extremely necessary for me as I would be so lost on my thesis without it and I would definitely recommend this course to future MAPSS students who need to understand R for their thesis. 
+
+I am most proud of my figures in this project. Although it seems like basic coding now (after the fact), being able to create and manipulate graphs in this way is something I have never been able to do before, so it is very cool to see my work come to life in my final project. I am proud of the result as a whole because coding was something I never thought I could do, let alone start to think some aspects were easy! I belive I fully committed to best practicies in all regards which will help me for future projects later in my career.
+
+I am still struggling with rendering to apaquarto-pdf which I recognize may not get me the point for the final objective. My render to HTML works perfectly so please reference that for the full manuscript! My PDF render still is not labeling tables correctly and excluding some tables. I tried everything I could think of to fix this, but ultimately fell short. This is something I will continue to work on as I work toward finishing my thesis!
 
 ## Grading
 
