@@ -119,11 +119,15 @@ conflicts_prefer(lme4::lmer)
 
   The current study aims to examine two questions. First, this study will examine the relationship between social network sizes and neural responses to strangers during infancy. We used an infant’s FAA as an indicator of the infant’s neural response to strangers. Given the positive relation between social network sizes and children’ social cognition [@burkeChildrensSocialNetwork2023; @downeyPlayingWellOthers2004], we predicted that larger social network size will correlate with more positive FAA (i.e. increased left frontal activation) toward strangers. 
 
-  The second question we were interested in is how temperament, especially fear, can moderate the relationship between social network size and responses to strangers during infancy. There are three possibilities. First, a high level of fear may weaken the relationship between social network size and an infant’s neural response to strangers. Second, a high level of fear may magnify the relationship between social network size and an infant’s neural response to strangers. The third possibility is that there is no influence of fear on the relationship between social network size and an infant's neural responses to strangers. 
+Second, we are interested in how temperament, especially fear, can moderate the relationship between social network size and an infant’s responses to strangers. There are several possibilities.  One possibility is that infants’ temperamental fear may magnify the association between social network size and FAA to strangers, given that infants with greater fear were found to have more sensitivity to the influence of environments [@ertekinTemperamentModeratesEffects2021]. In addition, if infants show greater fear of novel stimuli and also exhibit more negative FAA to strangers, parents might be more reluctant to introduce new environments and new people to infants, leading to smaller social networks. Another possibility could be that infants’ temperamental fear might weaken the association between social network size and FAA to strangers. Infants with greater fear might show negative FAA to strangers regardless of their social network sizes, while infants with less fear might be more likely to benefit from having a larger social network, thereby showing more positive FAA to strangers.
+
 
   In summary, this study aimed to examine the connection between infants’ social network sizes and their neural response to strangers. It contributes to the understanding of how early social environments can shape infants’ brains and how individual temperament plays a moderating role. These factors are essential in understanding an infant’s stranger anxiety/fear and are important for caregivers to take into consideration when scaffolding infants build their social networks.
 
 # Methods {#sec-methods}
+
+  This study uses EEG recordings in combination with parent reports to measure an infant’s social network size, temperamental fear, and FAA in response to strangers.
+
 ### Participants {#sec-participants}
 
   All participants in this study were recruited by the Infant Learning and Development Laboratory at the University of Chicago. The parents of approximately 80 infants from 8 months to 12 months old were asked to participate in the study. Inclusion criteria is as follows: (1) 8 to 12 months of age, (2) English language spoken at least 80% of the time at home, (3) full-term; 37 weeks and beyond gestational age, and (4) no developmental delays.
@@ -132,7 +136,9 @@ conflicts_prefer(lme4::lmer)
 
   Our study uses an Electroencephalogram (EEG) machine and related materials (i.e. infant EEG cap, software, and technical equipment) to measure the infant's neural processing of strangers, specifically alpha wave frequency. During the EEG task, infants watched videos of two strangers grasping a toy alternatively. One stranger speaks English, and the other speaks French. Our analyses focus on infants’ neural responses while watching the native speaker. To calculate FAA, we subtracted the natural log-transformed relative alpha power of the 6-9 Hz frequency band in the left hemisphere from the natural log-transformed relative alpha power in the right hemisphere [@anayaetal_2021_psychometric; @vincentetal_2021_using; @foxContinuityDiscontinuityBehavioral2001]. Therefore, in our calculations of FAA, stronger left frontal activation is indicated by a positive FAA score [@harrewijnFrontalAlphaAsymmetry2019; @vincentetal_2021_using]. 
 
-  In order to measure an infant’s temperament and social network size, parents were instructed to fill out the Revised Infant Behavior Questionnaire (IBQ-R), a parent report of a reaction on a seven point scale during the past one or two weeks [@gartsteinStudyingInfantTemperament2003], and Child Social Network Questionnaire (CSNQ), a demographic form for each person the child sees on a regular basis, regarding their child [@burkeChildrensSocialNetworks2022]. 
+  Infant social network information will be measured by parent report with the Child Social Network Questionnaire (CSNQ), a demographic form for each person the child sees on a regular basis [@burkeChildrensSocialNetworks2022]. For the purposes of this study, we were interested in the size of an infants’ social network and calculated the number of people within each participants’ social network.
+
+  In order to measure an infant’s temperamental fear, parents were instructed to fill out the Revised Infant Behavior Questionnaire (IBQ-R), a parent report of a reaction on a seven point scale during the past one or two weeks [@gartsteinStudyingInfantTemperament2003], The fear subscale contains 16 items related to an infants’ ‘startle or distress to sudden changes in stimulation, novel physical objects or social stimuli; inhibited approach to novelty’ [@gartsteinStudyingInfantTemperament2003]. We will use the average point rating across the 16 items as an infant’s temperamental fear score.
 
 ### Analyses {#sec-analyses}
 
@@ -432,7 +438,7 @@ ggplot(common_participants_avg, aes(x = SNS, y = mean_FAA))+
 #| label: merge-ibq-data
 #| include: false
 
-VPEEG_IBQ.csv <- read.csv("VPEEG_IBQ.csv", header=FALSE)
+VPEEG_IBQ.csv <- read.csv("SNQ-FAA Datasets/VPEEG_IBQ.csv", header=FALSE)
 ibq <- VPEEG_IBQ.csv
 colnames(ibq) <- c("mean_IBQ", "ID")
 
